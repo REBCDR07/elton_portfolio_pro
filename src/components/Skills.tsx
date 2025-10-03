@@ -1,3 +1,5 @@
+
+
 import { useState } from 'react';
 import {
   ChevronDown,
@@ -147,7 +149,7 @@ export default function Skills() {
   };
 
   return (
-    <section id="skills" className="py-32 relative bg-slate-950 overflow-hidden">
+    <section id="skills" className="py-20 md:py-32 relative bg-slate-950 overflow-hidden">
       {/* Background Elements */}
       <div className="absolute inset-0">
         <div className="absolute top-1/4 right-20 w-96 h-96 bg-purple-500/5 rounded-full blur-3xl animate-pulse"></div>
@@ -156,7 +158,7 @@ export default function Skills() {
 
       <div className="container mx-auto px-4 relative z-10">
         {/* Section Header */}
-        <div className="text-center mb-20">
+        <div className="text-center mb-16 md:mb-20">
           <div className="inline-flex items-center gap-2 bg-slate-800/50 backdrop-blur-xl border border-cyan-500/30 rounded-full px-6 py-3 mb-6">
             <Terminal className="w-4 h-4 text-cyan-400" />
             <span className="text-sm text-cyan-400 font-medium" style={{ fontFamily: 'Orbitron, monospace' }}>
@@ -164,34 +166,34 @@ export default function Skills() {
             </span>
           </div>
 
-          <h2 className="text-5xl md:text-7xl font-bold mb-6" style={{ fontFamily: 'Orbitron, monospace' }}>
+          <h2 className="text-4xl sm:text-5xl md:text-7xl font-bold mb-6" style={{ fontFamily: 'Orbitron, monospace' }}>
             MES <span className="bg-gradient-to-r from-purple-400 via-blue-500 to-cyan-500 bg-clip-text text-transparent">COMPÉTENCES</span>
           </h2>
 
-          <p className="text-xl text-slate-400 max-w-3xl mx-auto leading-relaxed" style={{ fontFamily: 'Rajdhani, sans-serif' }}>
+          <p className="text-lg md:text-xl text-slate-400 max-w-3xl mx-auto leading-relaxed" style={{ fontFamily: 'Rajdhani, sans-serif' }}>
             Un panel diversifié de compétences techniques et humaines acquises
             au fil de mes expériences et projets professionnels.
           </p>
         </div>
 
         {/* AI Tools Section */}
-        <div className="mb-20">
-          <h3 className="text-3xl font-bold mb-10 text-center text-white" style={{ fontFamily: 'Orbitron, monospace' }}>
+        <div className="mb-16 md:mb-20">
+          <h3 className="text-2xl md:text-3xl font-bold mb-10 text-center text-white" style={{ fontFamily: 'Orbitron, monospace' }}>
             AI_TOOLS
           </h3>
 
-          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6 max-w-6xl mx-auto">
+          <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 md:gap-6 max-w-6xl mx-auto">
             {aiTools.map((tool, index) => (
               <div
                 key={tool.name}
-                className="group relative bg-slate-900/50 backdrop-blur-xl border border-slate-700/50 p-6 rounded-2xl hover:scale-105 hover:border-cyan-500/50 transition-all duration-300"
+                className="group relative bg-slate-900/50 backdrop-blur-xl border border-slate-700/50 p-4 md:p-6 rounded-2xl hover:scale-105 hover:border-cyan-500/50 transition-all duration-300"
               >
                 <div className={`absolute inset-0 bg-gradient-to-br ${tool.color} opacity-0 group-hover:opacity-10 rounded-2xl transition-opacity`}></div>
                 <div className="relative">
                   <div className={`inline-flex p-3 rounded-xl bg-gradient-to-br ${tool.color} mb-4`}>
                     <tool.icon className="h-6 w-6 text-white" />
                   </div>
-                  <h4 className="font-bold text-lg text-white" style={{ fontFamily: 'Orbitron, monospace' }}>
+                  <h4 className="font-bold text-base md:text-lg text-white" style={{ fontFamily: 'Orbitron, monospace' }}>
                     {tool.name}
                   </h4>
                 </div>
@@ -201,8 +203,8 @@ export default function Skills() {
         </div>
 
         {/* Technical Skills */}
-        <div className="mb-20">
-          <h3 className="text-3xl font-bold mb-10 text-center text-white" style={{ fontFamily: 'Orbitron, monospace' }}>
+        <div className="mb-16 md:mb-20">
+          <h3 className="text-2xl md:text-3xl font-bold mb-10 text-center text-white" style={{ fontFamily: 'Orbitron, monospace' }}>
             TECH_SKILLS
           </h3>
 
@@ -219,13 +221,13 @@ export default function Skills() {
                   <Button
                     variant="ghost"
                     onClick={() => toggleCategory(category)}
-                    className="w-full p-6 justify-between text-left hover:bg-slate-800/50"
+                    className="w-full p-4 md:p-6 justify-between text-left hover:bg-slate-800/50"
                   >
                     <div className="flex items-center gap-4">
                       <div className="p-3 bg-cyan-500/10 rounded-xl">
                         <Icon className="h-6 w-6 text-cyan-400" />
                       </div>
-                      <span className="font-bold text-lg text-white" style={{ fontFamily: 'Orbitron, monospace' }}>
+                      <span className="font-bold text-base md:text-lg text-white" style={{ fontFamily: 'Orbitron, monospace' }}>
                         {category.toUpperCase().replace(/ /g, '_')}
                       </span>
                     </div>
@@ -237,13 +239,13 @@ export default function Skills() {
                   </Button>
 
                   {isExpanded && (
-                    <div className="px-6 pb-6 space-y-3">
+                    <div className="px-4 md:px-6 pb-6 space-y-3">
                       {skills.map((skill, idx) => (
                         <div
                           key={idx}
-                          className="flex items-center justify-between p-4 bg-slate-800/50 rounded-xl border border-slate-700/50 hover:border-cyan-500/30 transition-colors group"
+                          className="flex flex-wrap items-center justify-between p-3 md:p-4 bg-slate-800/50 rounded-xl border border-slate-700/50 hover:border-cyan-500/30 transition-colors group"
                         >
-                          <div className="flex items-center gap-3 flex-1">
+                          <div className="flex items-center gap-3 flex-1 min-w-[120px]">
                             {skill.icon && (
                               <img
                                 src={skill.icon}
@@ -260,7 +262,7 @@ export default function Skills() {
                             </span>
                           </div>
                           {skill.level && (
-                            <div className="flex items-center gap-3">
+                            <div className="flex items-center gap-3 mt-2 sm:mt-0">
                               {renderLevelDots(skill.level as keyof typeof levelConfig)}
                               <Badge className={`${levelConfig[skill.level as keyof typeof levelConfig].color} text-white border-0 text-xs font-bold`} style={{ fontFamily: 'Orbitron, monospace' }}>
                                 {levelConfig[skill.level as keyof typeof levelConfig].label.toUpperCase()}
@@ -279,22 +281,22 @@ export default function Skills() {
 
         {/* Soft Skills */}
         <div>
-          <h3 className="text-3xl font-bold mb-10 text-center text-white" style={{ fontFamily: 'Orbitron, monospace' }}>
+          <h3 className="text-2xl md:text-3xl font-bold mb-10 text-center text-white" style={{ fontFamily: 'Orbitron, monospace' }}>
             SOFT_SKILLS
           </h3>
 
-          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6 max-w-6xl mx-auto">
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-4 md:gap-6 max-w-6xl mx-auto">
             {softSkills.map((skill) => (
               <div
                 key={skill.name}
-                className="group relative bg-slate-900/50 backdrop-blur-xl border border-slate-700/50 p-8 rounded-2xl hover:scale-105 hover:border-cyan-500/50 transition-all duration-300 text-center"
+                className="group relative bg-slate-900/50 backdrop-blur-xl border border-slate-700/50 p-6 md:p-8 rounded-2xl hover:scale-105 hover:border-cyan-500/50 transition-all duration-300 text-center"
               >
                 <div className={`absolute inset-0 bg-gradient-to-br ${skill.color} opacity-0 group-hover:opacity-10 rounded-2xl transition-opacity`}></div>
                 <div className="relative">
                   <div className={`inline-flex p-4 rounded-xl bg-gradient-to-br ${skill.color} mb-4`}>
                     <skill.icon className="h-7 w-7 text-white" />
                   </div>
-                  <h4 className="font-bold text-lg text-white" style={{ fontFamily: 'Orbitron, monospace' }}>
+                  <h4 className="font-bold text-sm md:text-lg text-white" style={{ fontFamily: 'Orbitron, monospace' }}>
                     {skill.name.toUpperCase()}
                   </h4>
                 </div>

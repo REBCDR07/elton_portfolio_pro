@@ -1,3 +1,5 @@
+
+
 import { Download, ExternalLink, Linkedin, Github, Facebook, Terminal, Users } from 'lucide-react';
 import team1Image from '@/assets/team1.jpg';
 import team2Image from '@/assets/team2.jpg';
@@ -47,7 +49,7 @@ const teamMembers = [
 
 export default function Team() {
   return (
-    <section id="equipe" className="py-32 relative bg-slate-950 overflow-hidden">
+    <section id="equipe" className="py-20 md:py-32 relative bg-slate-950 overflow-hidden">
       {/* Background Elements */}
       <div className="absolute inset-0">
         <div className="absolute top-1/4 left-1/4 w-96 h-96 bg-cyan-500/5 rounded-full blur-3xl animate-pulse"></div>
@@ -59,7 +61,7 @@ export default function Team() {
 
       <div className="container mx-auto px-4 relative z-10">
         {/* Section Header */}
-        <div className="text-center mb-20">
+        <div className="text-center mb-16 md:mb-20">
           <div className="inline-flex items-center gap-2 bg-slate-800/50 backdrop-blur-xl border border-cyan-500/30 rounded-full px-6 py-3 mb-6">
             <Terminal className="w-4 h-4 text-cyan-400" />
             <span className="text-sm text-cyan-400 font-medium" style={{ fontFamily: 'Orbitron, monospace' }}>
@@ -67,11 +69,11 @@ export default function Team() {
             </span>
           </div>
 
-          <h2 className="text-5xl md:text-7xl font-bold mb-6" style={{ fontFamily: 'Orbitron, monospace' }}>
+          <h2 className="text-4xl sm:text-5xl md:text-7xl font-bold mb-6" style={{ fontFamily: 'Orbitron, monospace' }}>
             NOTRE <span className="bg-gradient-to-r from-cyan-400 via-blue-500 to-purple-500 bg-clip-text text-transparent">ÉQUIPE</span>
           </h2>
 
-          <p className="text-xl text-slate-400 max-w-3xl mx-auto leading-relaxed" style={{ fontFamily: 'Rajdhani, sans-serif' }}>
+          <p className="text-lg md:text-xl text-slate-400 max-w-3xl mx-auto leading-relaxed" style={{ fontFamily: 'Rajdhani, sans-serif' }}>
             Rencontrez les talents qui composent notre équipe de développement.
             Des passionnés qui transforment les idées en réalité digitale.
           </p>
@@ -89,7 +91,7 @@ export default function Team() {
 
               {/* Profile Image */}
               <div className="relative">
-                <div className="aspect-square p-6">
+                <div className="aspect-square p-4 md:p-6">
                   {member.image ? (
                     <img
                       src={member.image}
@@ -106,7 +108,7 @@ export default function Team() {
                   )}
                 </div>
 
-                <div className="absolute top-8 right-8">
+                <div className="absolute top-6 right-6 md:top-8 md:right-8">
                   <div className="bg-slate-900/90 backdrop-blur-xl border border-slate-700/50 rounded-full px-3 py-1 flex items-center gap-2">
                     <div className="w-2 h-2 bg-green-400 rounded-full animate-pulse"></div>
                     <span className="text-xs text-white font-bold" style={{ fontFamily: 'Orbitron, monospace' }}>
@@ -118,7 +120,7 @@ export default function Team() {
 
               {/* Member Info */}
               <div className="p-6 pt-0 relative">
-                <h3 className="text-2xl font-bold text-white mb-2 group-hover:text-cyan-400 transition-colors" style={{ fontFamily: 'Orbitron, monospace' }}>
+                <h3 className="text-xl md:text-2xl font-bold text-white mb-2 group-hover:text-cyan-400 transition-colors" style={{ fontFamily: 'Orbitron, monospace' }}>
                   {member.name}
                 </h3>
 
@@ -127,7 +129,7 @@ export default function Team() {
                 </p>
 
                 
-                <p className="text-slate-300 text-base leading-relaxed mb-6 min-h-[84px]" style={{ fontFamily: 'Rajdhani, sans-serif' }}>
+                <p className="text-slate-300 text-base leading-relaxed mb-6 min-h-[72px] md:min-h-[84px]" style={{ fontFamily: 'Rajdhani, sans-serif' }}>
                   {member.bio}
                 </p>
 
@@ -171,10 +173,10 @@ export default function Team() {
         </div>
 
         {/* Bottom CTA */}
-        <div className="text-center mt-20">
-          <div className="inline-flex flex-col items-center gap-6 bg-slate-800/30 backdrop-blur-xl border border-cyan-500/30 rounded-3xl p-8 max-w-2xl hover:border-cyan-400 transition-all">
+        <div className="text-center mt-16 md:mt-20">
+          <div className="inline-flex flex-col items-center gap-6 bg-slate-800/30 backdrop-blur-xl border border-cyan-500/30 rounded-3xl p-6 md:p-8 max-w-2xl hover:border-cyan-400 transition-all">
             <Users className="w-12 h-12 text-cyan-400" />
-            <h3 className="text-2xl font-bold text-white" style={{ fontFamily: 'Orbitron, monospace' }}>
+            <h3 className="text-xl md:text-2xl font-bold text-white" style={{ fontFamily: 'Orbitron, monospace' }}>
               REJOIGNEZ L'ÉQUIPE
             </h3>
             <p className="text-slate-400" style={{ fontFamily: 'Rajdhani, sans-serif' }}>
