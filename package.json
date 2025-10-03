@@ -10,6 +10,20 @@
     "lint": "eslint .",
     "preview": "vite preview"
   },
+
+  {
+  "@context": "https://schema.org",
+  "@type": "Person",
+  "name": "Elton Hounnou",
+  "jobTitle": "Développeur Web Fullstack",
+  "url": "https://eltonhounnou.com",
+  "sameAs": [
+    "https://linkedin.com/in/ton-profil",
+    "https://github.com/ton-github",
+    "https://twitter.com/ton-profil"
+  ]
+}
+
   "dependencies": {
     "@emailjs/browser": "^4.4.1",
     "@hookform/resolvers": "^3.10.0",
