@@ -361,11 +361,11 @@ MIT License - Libre d'utilisation et modification
 
 ## 👤 Auteur
 
-*Elton Agossou*
-- Portfolio: [votre-lien.com]
-- LinkedIn: [votre-linkedin]
-- GitHub: [votre-github]
-- Email: elton.dev@example.com
+*N. E. Ronald Bill HOUNNOU*
+- Portfolio: [https://eltonhounnou.vercel.app/]
+- LinkedIn: [https://www.linkedin.com/in/elton27/]
+- GitHub: [https://github.com/REBCDR07]
+- Email: eltonhounnou27@gmail.com
 
 ---
 
