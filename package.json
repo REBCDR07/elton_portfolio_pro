@@ -1,5 +1,5 @@
 {
-  "name": "elton",
+  "name": "Elton Hounnou",
   "private": true,
   "version": "1.0.0",
   "type": "module",
@@ -14,7 +14,6 @@
   {
   "@context": "https://schema.org",
   "@type": "Person",
-  "name": "Elton Hounnou",
   "jobTitle": "Développeur Web Fullstack",
   "url": "https://eltonhounnou.com",
   "sameAs": [
