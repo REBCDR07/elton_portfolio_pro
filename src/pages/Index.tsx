@@ -8,6 +8,7 @@ import Education from '@/components/Education';
 import Team from '@/components/Team';
 import Contact from '@/components/Contact';
 import Footer from '@/components/Footer';
+import { Analytics } from "@vercel/analytics/react";
 
 const Index = () => {
   return (
