@@ -345,15 +345,15 @@ export default function Projects() {
       <div className="fixed inset-0 z-50 bg-slate-950 overflow-y-auto">
         <button 
           onClick={() => setSelectedProject(null)}
-          className="fixed top-4 right-4 sm:top-6 sm:right-6 z-50 p-2 sm:p-3 bg-slate-800/80 backdrop-blur-xl border border-cyan-500/30 hover:bg-slate-700/80 text-cyan-400 rounded-xl transition-all hover:scale-110 group"
+          className="fixed top-2 right-2 sm:top-4 sm:right-4 z-50 p-2 bg-slate-800/80 backdrop-blur-xl border border-cyan-500/30 hover:bg-slate-700/80 text-cyan-400 rounded-lg transition-all hover:scale-110 group"
         >
-          <X className="w-5 h-5 sm:w-6 sm:h-6 group-hover:rotate-90 transition-transform" />
+          <X className="w-4 h-4 sm:w-5 sm:h-5 group-hover:rotate-90 transition-transform" />
         </button>
 
-        <div className="container mx-auto px-3 sm:px-4 py-16 sm:py-20 max-w-7xl">
-          <div className="grid lg:grid-cols-3 gap-4 sm:gap-6 lg:gap-8">
-            <div className="lg:col-span-2 space-y-4 sm:space-y-6">
-              <div className="relative aspect-video rounded-2xl sm:rounded-3xl overflow-hidden border border-slate-700/50">
+        <div className="container mx-auto px-2 sm:px-4 py-12 sm:py-16 max-w-7xl">
+          <div className="grid lg:grid-cols-3 gap-3 sm:gap-6">
+            <div className="lg:col-span-2 space-y-3 sm:space-y-4">
+              <div className="relative aspect-video rounded-lg sm:rounded-2xl overflow-hidden border border-slate-700/50">
                 <img 
                   src={project.image} 
                   alt={project.name}
@@ -362,25 +362,25 @@ export default function Projects() {
                 <div className="absolute inset-0 bg-gradient-to-t from-slate-950 via-transparent to-transparent"></div>
               </div>
 
-              <div className="bg-slate-900/50 backdrop-blur-xl border border-slate-700/50 rounded-2xl sm:rounded-3xl p-4 sm:p-6 lg:p-8">
-                <Badge className="mb-3 sm:mb-4 bg-slate-700/50 text-slate-300 border-slate-600/50 font-bold text-xs sm:text-sm" style={{ fontFamily: 'Orbitron, monospace' }}>
+              <div className="bg-slate-900/50 backdrop-blur-xl border border-slate-700/50 rounded-lg sm:rounded-2xl p-3 sm:p-6">
+                <Badge className="mb-2 sm:mb-3 bg-slate-700/50 text-slate-300 border-slate-600/50 font-bold text-[10px] sm:text-xs" style={{ fontFamily: 'Orbitron, monospace' }}>
                   {project.category}
                 </Badge>
-                <h1 className="text-2xl sm:text-3xl lg:text-4xl font-bold text-white mb-3 sm:mb-4" style={{ fontFamily: 'Orbitron, monospace' }}>
+                <h1 className="text-xl sm:text-3xl font-bold text-white mb-2 sm:mb-3 leading-tight" style={{ fontFamily: 'Orbitron, monospace' }}>
                   {project.name}
                 </h1>
-                <p className="text-slate-300 leading-relaxed text-sm sm:text-base lg:text-lg mb-6 sm:mb-8" style={{ fontFamily: 'Rajdhani, sans-serif' }}>
+                <p className="text-slate-300 leading-relaxed text-xs sm:text-base mb-4 sm:mb-6" style={{ fontFamily: 'Rajdhani, sans-serif' }}>
                   {project.fullDescription}
                 </p>
 
                 <div>
-                  <h3 className="text-lg sm:text-xl font-bold text-white mb-3 sm:mb-4" style={{ fontFamily: 'Orbitron, monospace' }}>
+                  <h3 className="text-sm sm:text-lg font-bold text-white mb-2 sm:mb-3" style={{ fontFamily: 'Orbitron, monospace' }}>
                     // FEATURES
                   </h3>
-                  <div className="grid sm:grid-cols-2 gap-2 sm:gap-3">
+                  <div className="grid gap-1.5 sm:gap-2">
                     {project.features.map((feature, idx) => (
-                      <div key={idx} className="flex items-start gap-2 text-slate-300 text-sm sm:text-base" style={{ fontFamily: 'Rajdhani, sans-serif' }}>
-                        <div className={`w-1.5 h-1.5 rounded-full bg-gradient-to-r ${project.gradient} mt-2 flex-shrink-0`}></div>
+                      <div key={idx} className="flex items-start gap-1.5 text-slate-300 text-xs sm:text-sm" style={{ fontFamily: 'Rajdhani, sans-serif' }}>
+                        <div className={`w-1 h-1 sm:w-1.5 sm:h-1.5 rounded-full bg-gradient-to-r ${project.gradient} mt-1.5 sm:mt-2 flex-shrink-0`}></div>
                         <span>{feature}</span>
                       </div>
                     ))}
@@ -389,31 +389,31 @@ export default function Projects() {
               </div>
             </div>
 
-            <div className="space-y-4 sm:space-y-6">
-              <div className="bg-slate-900/50 backdrop-blur-xl border border-cyan-500/30 rounded-2xl sm:rounded-3xl p-4 sm:p-6">
-                <h3 className="text-base sm:text-lg font-bold text-white mb-3 sm:mb-4" style={{ fontFamily: 'Orbitron, monospace' }}>
+            <div className="space-y-3 sm:space-y-4">
+              <div className="bg-slate-900/50 backdrop-blur-xl border border-cyan-500/30 rounded-lg sm:rounded-2xl p-3 sm:p-5">
+                <h3 className="text-sm sm:text-base font-bold text-white mb-2 sm:mb-3" style={{ fontFamily: 'Orbitron, monospace' }}>
                   PROJECT_INFO
                 </h3>
-                <div className="space-y-3 sm:space-y-4">
-                  <div className="flex items-center gap-3">
-                    <Calendar className="w-4 h-4 sm:w-5 sm:h-5 text-cyan-400 flex-shrink-0" />
+                <div className="space-y-2 sm:space-y-3">
+                  <div className="flex items-center gap-2">
+                    <Calendar className="w-3.5 h-3.5 sm:w-4 sm:h-4 text-cyan-400 flex-shrink-0" />
                     <div>
-                      <div className="text-xs text-slate-500" style={{ fontFamily: 'Rajdhani, sans-serif' }}>Date</div>
-                      <div className="text-sm sm:text-base text-slate-300 font-semibold" style={{ fontFamily: 'Rajdhani, sans-serif' }}>{project.date}</div>
+                      <div className="text-[10px] sm:text-xs text-slate-500" style={{ fontFamily: 'Rajdhani, sans-serif' }}>Date</div>
+                      <div className="text-xs sm:text-sm text-slate-300 font-semibold" style={{ fontFamily: 'Rajdhani, sans-serif' }}>{project.date}</div>
                     </div>
                   </div>
-                  <div className="flex items-center gap-3">
-                    <Briefcase className="w-4 h-4 sm:w-5 sm:h-5 text-cyan-400 flex-shrink-0" />
+                  <div className="flex items-center gap-2">
+                    <Briefcase className="w-3.5 h-3.5 sm:w-4 sm:h-4 text-cyan-400 flex-shrink-0" />
                     <div>
-                      <div className="text-xs text-slate-500" style={{ fontFamily: 'Rajdhani, sans-serif' }}>Client</div>
-                      <div className="text-sm sm:text-base text-slate-300 font-semibold" style={{ fontFamily: 'Rajdhani, sans-serif' }}>{project.client}</div>
+                      <div className="text-[10px] sm:text-xs text-slate-500" style={{ fontFamily: 'Rajdhani, sans-serif' }}>Client</div>
+                      <div className="text-xs sm:text-sm text-slate-300 font-semibold" style={{ fontFamily: 'Rajdhani, sans-serif' }}>{project.client}</div>
                     </div>
                   </div>
-                  <div className="flex items-center gap-3">
-                    <StatusIcon className="w-4 h-4 sm:w-5 sm:h-5 text-cyan-400 flex-shrink-0" />
+                  <div className="flex items-center gap-2">
+                    <StatusIcon className="w-3.5 h-3.5 sm:w-4 sm:h-4 text-cyan-400 flex-shrink-0" />
                     <div>
-                      <div className="text-xs text-slate-500" style={{ fontFamily: 'Rajdhani, sans-serif' }}>Status</div>
-                      <Badge className={`${statusConfig[project.status as keyof typeof statusConfig].color} text-white border-0 mt-1 font-bold text-xs`} style={{ fontFamily: 'Orbitron, monospace' }}>
+                      <div className="text-[10px] sm:text-xs text-slate-500" style={{ fontFamily: 'Rajdhani, sans-serif' }}>Status</div>
+                      <Badge className={`${statusConfig[project.status as keyof typeof statusConfig].color} text-white border-0 mt-1 font-bold text-[10px]`} style={{ fontFamily: 'Orbitron, monospace' }}>
                         {statusConfig[project.status as keyof typeof statusConfig].label}
                       </Badge>
                     </div>
@@ -421,53 +421,53 @@ export default function Projects() {
                 </div>
               </div>
 
-              <div className="bg-slate-900/50 backdrop-blur-xl border border-slate-700/50 rounded-2xl sm:rounded-3xl p-4 sm:p-6">
-                <h3 className="text-base sm:text-lg font-bold text-white mb-3 sm:mb-4" style={{ fontFamily: 'Orbitron, monospace' }}>
+              <div className="bg-slate-900/50 backdrop-blur-xl border border-slate-700/50 rounded-lg sm:rounded-2xl p-3 sm:p-5">
+                <h3 className="text-sm sm:text-base font-bold text-white mb-2 sm:mb-3" style={{ fontFamily: 'Orbitron, monospace' }}>
                   TECH_STACK
                 </h3>
-                <div className="flex flex-wrap gap-2 sm:gap-3">
+                <div className="flex flex-wrap gap-1.5 sm:gap-2">
                   {project.technologies.map((tech, idx) => (
-                    <div key={idx} className="flex items-center gap-1.5 sm:gap-2 bg-slate-800/50 px-2 sm:px-3 py-1.5 sm:py-2 rounded-lg border border-slate-700/50">
+                    <div key={idx} className="flex items-center gap-1 sm:gap-1.5 bg-slate-800/50 px-1.5 sm:px-2 py-1 sm:py-1.5 rounded-md border border-slate-700/50">
                       <img 
                         src={techIcons[tech]} 
                         alt={tech}
-                        className="w-4 h-4 sm:w-5 sm:h-5"
+                        className="w-3 h-3 sm:w-4 sm:h-4"
                         onError={(e) => {
                           const target = e.target as HTMLImageElement;
                           target.style.display = 'none';
                         }}
                       />
-                      <span className="text-xs sm:text-sm text-slate-300 font-semibold" style={{ fontFamily: 'Rajdhani, sans-serif' }}>{tech}</span>
+                      <span className="text-[10px] sm:text-xs text-slate-300 font-semibold" style={{ fontFamily: 'Rajdhani, sans-serif' }}>{tech}</span>
                     </div>
                   ))}
                 </div>
               </div>
 
-              <div className="bg-slate-900/50 backdrop-blur-xl border border-slate-700/50 rounded-2xl sm:rounded-3xl p-4 sm:p-6">
-                <h3 className="text-base sm:text-lg font-bold text-white mb-3 sm:mb-4" style={{ fontFamily: 'Orbitron, monospace' }}>
+              <div className="bg-slate-900/50 backdrop-blur-xl border border-slate-700/50 rounded-lg sm:rounded-2xl p-3 sm:p-5">
+                <h3 className="text-sm sm:text-base font-bold text-white mb-2 sm:mb-3" style={{ fontFamily: 'Orbitron, monospace' }}>
                   LINKS
                 </h3>
-                <div className="space-y-2 sm:space-y-3">
+                <div className="space-y-1.5 sm:space-y-2">
                   {project.liveUrl && (
                     <a href={project.liveUrl} target="_blank" rel="noopener noreferrer">
-                      <button className={`w-full px-3 sm:px-4 py-2.5 sm:py-3 bg-gradient-to-r ${project.gradient} text-white font-bold rounded-xl hover:scale-105 transition-transform flex items-center justify-center gap-2 text-sm sm:text-base`} style={{ fontFamily: 'Orbitron, monospace' }}>
-                        <ExternalLink className="w-3.5 h-3.5 sm:w-4 sm:h-4" />
+                      <button className={`w-full px-3 py-2 sm:py-2.5 bg-gradient-to-r ${project.gradient} text-white font-bold rounded-lg hover:scale-105 transition-transform flex items-center justify-center gap-1.5 text-xs sm:text-sm`} style={{ fontFamily: 'Orbitron, monospace' }}>
+                        <ExternalLink className="w-3 h-3 sm:w-3.5 sm:h-3.5" />
                         LIVE_DEMO
                       </button>
                     </a>
                   )}
                   <a href={project.codeUrl} target="_blank" rel="noopener noreferrer">
-                    <button className="w-full px-3 sm:px-4 py-2.5 sm:py-3 bg-slate-800/50 border border-slate-700/50 text-slate-300 font-bold rounded-xl hover:bg-slate-700/50 transition-all flex items-center justify-center gap-2 text-sm sm:text-base" style={{ fontFamily: 'Orbitron, monospace' }}>
-                      <Github className="w-3.5 h-3.5 sm:w-4 sm:h-4" />
+                    <button className="w-full px-3 py-2 sm:py-2.5 bg-slate-800/50 border border-slate-700/50 text-slate-300 font-bold rounded-lg hover:bg-slate-700/50 transition-all flex items-center justify-center gap-1.5 text-xs sm:text-sm" style={{ fontFamily: 'Orbitron, monospace' }}>
+                      <Github className="w-3 h-3 sm:w-3.5 sm:h-3.5" />
                       SOURCE_CODE
                     </button>
                   </a>
                   <button 
                     onClick={contactForCollaboration}
-                    className="w-full px-3 sm:px-4 py-2.5 sm:py-3 bg-slate-800/50 border border-cyan-500/30 text-cyan-400 font-bold rounded-xl hover:bg-slate-700/50 transition-all flex items-center justify-center gap-2 text-sm sm:text-base"
+                    className="w-full px-3 py-2 sm:py-2.5 bg-slate-800/50 border border-cyan-500/30 text-cyan-400 font-bold rounded-lg hover:bg-slate-700/50 transition-all flex items-center justify-center gap-1.5 text-xs sm:text-sm"
                     style={{ fontFamily: 'Orbitron, monospace' }}
                   >
-                    <Users className="w-3.5 h-3.5 sm:w-4 sm:h-4" />
+                    <Users className="w-3 h-3 sm:w-3.5 sm:h-3.5" />
                     COLLABORATE
                   </button>
                 </div>
@@ -480,39 +480,39 @@ export default function Projects() {
   }
 
   return (
-    <section id="projets" className="py-16 sm:py-24 lg:py-32 relative bg-slate-950 overflow-hidden">
+    <section id="projets" className="py-12 sm:py-20 relative bg-slate-950 overflow-hidden">
       <div className="absolute inset-0">
-        <div className="absolute top-1/4 left-1/4 w-96 h-96 bg-purple-500/5 rounded-full blur-3xl animate-pulse"></div>
-        <div className="absolute bottom-1/4 right-1/4 w-96 h-96 bg-pink-500/5 rounded-full blur-3xl animate-pulse" style={{ animationDelay: '1s' }}></div>
+        <div className="absolute top-1/4 left-1/4 w-64 h-64 sm:w-96 sm:h-96 bg-purple-500/5 rounded-full blur-3xl animate-pulse"></div>
+        <div className="absolute bottom-1/4 right-1/4 w-64 h-64 sm:w-96 sm:h-96 bg-pink-500/5 rounded-full blur-3xl animate-pulse" style={{ animationDelay: '1s' }}></div>
       </div>
 
       <div className="container mx-auto px-3 sm:px-4 relative z-10">
-        <div className="text-center mb-12 sm:mb-16 lg:mb-20">
-          <div className="inline-flex items-center gap-2 bg-slate-800/50 backdrop-blur-xl border border-cyan-500/30 rounded-full px-4 sm:px-6 py-2 sm:py-3 mb-4 sm:mb-6">
-            <Terminal className="w-3.5 h-3.5 sm:w-4 sm:h-4 text-cyan-400" />
-            <span className="text-xs sm:text-sm text-cyan-400 font-medium" style={{ fontFamily: 'Orbitron, monospace' }}>
+        <div className="text-center mb-8 sm:mb-14">
+          <div className="inline-flex items-center gap-1.5 sm:gap-2 bg-slate-800/50 backdrop-blur-xl border border-cyan-500/30 rounded-full px-3 sm:px-5 py-1.5 sm:py-2.5 mb-3 sm:mb-5">
+            <Terminal className="w-3 h-3 sm:w-4 sm:h-4 text-cyan-400" />
+            <span className="text-[10px] sm:text-sm text-cyan-400 font-medium" style={{ fontFamily: 'Orbitron, monospace' }}>
               $ git log --all
             </span>
           </div>
           
-          <h2 className="text-3xl sm:text-5xl lg:text-7xl font-bold mb-4 sm:mb-6 px-4" style={{ fontFamily: 'Orbitron, monospace' }}>
+          <h2 className="text-2xl sm:text-5xl font-bold mb-3 sm:mb-5 px-3 leading-tight" style={{ fontFamily: 'Orbitron, monospace' }}>
             MES <span className="bg-gradient-to-r from-purple-400 via-pink-500 to-rose-500 bg-clip-text text-transparent">PROJETS</span>
           </h2>
           
-          <p className="text-base sm:text-xl text-slate-400 max-w-3xl mx-auto leading-relaxed px-4" style={{ fontFamily: 'Rajdhani, sans-serif' }}>
+          <p className="text-sm sm:text-lg text-slate-400 max-w-3xl mx-auto leading-relaxed px-3" style={{ fontFamily: 'Rajdhani, sans-serif' }}>
             Découvrez une sélection de projets que j'ai réalisés, alliant créativité, 
             performance technique et expérience utilisateur optimale.
           </p>
         </div>
 
-        <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6 max-w-7xl mx-auto">
+        <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-3 sm:gap-5 max-w-7xl mx-auto">
           {projects.map((project) => {
             const StatusIcon = statusConfig[project.status as keyof typeof statusConfig].icon;
             
             return (
               <div
                 key={project.id}
-                className="group relative bg-slate-900/50 backdrop-blur-xl border border-slate-700/50 rounded-2xl sm:rounded-3xl overflow-hidden hover:border-cyan-500/50 transition-all duration-300 hover:scale-[1.02] cursor-pointer"
+                className="group relative bg-slate-900/50 backdrop-blur-xl border border-slate-700/50 rounded-xl sm:rounded-2xl overflow-hidden hover:border-cyan-500/50 transition-all duration-300 hover:scale-[1.02] cursor-pointer"
                 onClick={() => setSelectedProject(project.id)}
               >
                 <div className="relative aspect-video overflow-hidden">
@@ -523,52 +523,52 @@ export default function Projects() {
                   />
                   <div className="absolute inset-0 bg-gradient-to-t from-slate-900 via-slate-900/50 to-transparent"></div>
                   
-                  <Badge className={`absolute top-3 right-3 sm:top-4 sm:right-4 ${statusConfig[project.status as keyof typeof statusConfig].color} text-white border-0 flex items-center gap-1 font-bold text-xs`} style={{ fontFamily: 'Orbitron, monospace' }}>
-                    <StatusIcon className="w-2.5 h-2.5 sm:w-3 sm:h-3" />
+                  <Badge className={`absolute top-2 right-2 sm:top-3 sm:right-3 ${statusConfig[project.status as keyof typeof statusConfig].color} text-white border-0 flex items-center gap-0.5 sm:gap-1 font-bold text-[9px] sm:text-xs px-1.5 sm:px-2 py-0.5 sm:py-1`} style={{ fontFamily: 'Orbitron, monospace' }}>
+                    <StatusIcon className="w-2 h-2 sm:w-2.5 sm:h-2.5" />
                     {statusConfig[project.status as keyof typeof statusConfig].label}
                   </Badge>
 
-                  <div className="absolute bottom-3 left-3 sm:bottom-4 sm:left-4">
-                    <Badge className="bg-slate-900/80 backdrop-blur-xl text-cyan-400 border-cyan-500/30 font-bold text-xs" style={{ fontFamily: 'Orbitron, monospace' }}>
+                  <div className="absolute bottom-2 left-2 sm:bottom-3 sm:left-3">
+                    <Badge className="bg-slate-900/80 backdrop-blur-xl text-cyan-400 border-cyan-500/30 font-bold text-[9px] sm:text-xs px-1.5 sm:px-2 py-0.5 sm:py-1" style={{ fontFamily: 'Orbitron, monospace' }}>
                       {project.category}
                     </Badge>
                   </div>
                 </div>
 
-                <div className="p-4 sm:p-6">
-                  <h3 className="text-lg sm:text-xl font-bold text-white mb-2 group-hover:text-cyan-400 transition-colors" style={{ fontFamily: 'Orbitron, monospace' }}>
+                <div className="p-3 sm:p-5">
+                  <h3 className="text-base sm:text-xl font-bold text-white mb-1.5 sm:mb-2 group-hover:text-cyan-400 transition-colors leading-tight" style={{ fontFamily: 'Orbitron, monospace' }}>
                     {project.name}
                   </h3>
                   
-                  <p className="text-slate-400 text-xs sm:text-sm mb-3 sm:mb-4 line-clamp-2" style={{ fontFamily: 'Rajdhani, sans-serif' }}>
+                  <p className="text-slate-400 text-xs sm:text-sm mb-2 sm:mb-3 line-clamp-2" style={{ fontFamily: 'Rajdhani, sans-serif' }}>
                     {project.shortDescription}
                   </p>
 
-                  <div className="flex flex-wrap gap-1.5 sm:gap-2 mb-3 sm:mb-4">
+                  <div className="flex flex-wrap gap-1 sm:gap-1.5 mb-2 sm:mb-3">
                     {project.technologies.slice(0, 3).map((tech, idx) => (
-                      <div key={idx} className="flex items-center gap-1 bg-slate-800/50 px-1.5 sm:px-2 py-0.5 sm:py-1 rounded-lg border border-slate-700/50">
+                      <div key={idx} className="flex items-center gap-0.5 sm:gap-1 bg-slate-800/50 px-1 sm:px-1.5 py-0.5 rounded-md border border-slate-700/50">
                         <img 
                           src={techIcons[tech]} 
                           alt={tech}
-                          className="w-3 h-3 sm:w-4 sm:h-4"
+                          className="w-2.5 h-2.5 sm:w-3 sm:h-3"
                           onError={(e) => {
                             const target = e.target as HTMLImageElement;
                             target.style.display = 'none';
                           }}
                         />
-                        <span className="text-xs text-slate-400 font-semibold" style={{ fontFamily: 'Rajdhani, sans-serif' }}>{tech}</span>
+                        <span className="text-[9px] sm:text-xs text-slate-400 font-semibold" style={{ fontFamily: 'Rajdhani, sans-serif' }}>{tech}</span>
                       </div>
                     ))}
                     {project.technologies.length > 3 && (
-                      <Badge variant="outline" className="text-xs border-slate-700/50 text-slate-400 font-bold">
+                      <Badge variant="outline" className="text-[9px] sm:text-xs border-slate-700/50 text-slate-400 font-bold px-1 sm:px-1.5 py-0.5">
                         +{project.technologies.length - 3}
                       </Badge>
                     )}
                   </div>
 
-                  <button className={`w-full px-3 sm:px-4 py-2 sm:py-2.5 bg-gradient-to-r ${project.gradient} text-white font-bold rounded-xl flex items-center justify-center gap-2 group-hover:shadow-lg transition-all text-xs sm:text-sm`} style={{ fontFamily: 'Orbitron, monospace' }}>
+                  <button className={`w-full px-3 py-1.5 sm:py-2 bg-gradient-to-r ${project.gradient} text-white font-bold rounded-lg flex items-center justify-center gap-1.5 group-hover:shadow-lg transition-all text-[10px] sm:text-sm`} style={{ fontFamily: 'Orbitron, monospace' }}>
                     <span>VIEW_PROJECT</span>
-                    <ExternalLink className="w-3.5 h-3.5 sm:w-4 sm:h-4" />
+                    <ExternalLink className="w-3 h-3 sm:w-3.5 sm:h-3.5" />
                   </button>
                 </div>
               </div>

@@ -67,133 +67,120 @@ export default function Services() {
   };
 
   return (
-    <section id="services" className="py-16 sm:py-24 lg:py-32 relative bg-slate-950 overflow-hidden">
-      {/* Background Elements */}
+    <section id="services" className="py-12 sm:py-16 md:py-24 lg:py-32 relative bg-slate-950 overflow-hidden">
       <div className="absolute inset-0">
-        <div className="absolute top-1/3 left-1/4 w-96 h-96 bg-cyan-500/5 rounded-full blur-3xl animate-pulse"></div>
-        <div className="absolute bottom-1/3 right-1/4 w-96 h-96 bg-purple-500/5 rounded-full blur-3xl animate-pulse" style={{ animationDelay: '1s' }}></div>
+        <div className="absolute top-1/3 left-1/4 w-48 h-48 sm:w-64 sm:h-64 md:w-96 md:h-96 bg-cyan-500/5 rounded-full blur-3xl animate-pulse"></div>
+        <div className="absolute bottom-1/3 right-1/4 w-48 h-48 sm:w-64 sm:h-64 md:w-96 md:h-96 bg-purple-500/5 rounded-full blur-3xl animate-pulse" style={{ animationDelay: '1s' }}></div>
       </div>
 
-      {/* Grid Pattern */}
-      <div className="absolute inset-0 bg-[linear-gradient(rgba(6,182,212,.03)_1px,transparent_1px),linear-gradient(90deg,rgba(6,182,212,.03)_1px,transparent_1px)] bg-[size:64px_64px]"></div>
+      <div className="absolute inset-0 bg-[linear-gradient(rgba(6,182,212,.03)_1px,transparent_1px),linear-gradient(90deg,rgba(6,182,212,.03)_1px,transparent_1px)] bg-[size:32px_32px] sm:bg-[size:48px_48px] md:bg-[size:64px_64px]"></div>
 
       <div className="container mx-auto px-3 sm:px-4 relative z-10">
-        {/* Section Header */}
-        <div className="text-center mb-12 sm:mb-16 lg:mb-20">
-          <div className="inline-flex items-center gap-2 bg-slate-800/50 backdrop-blur-xl border border-cyan-500/30 rounded-full px-4 sm:px-6 py-2 sm:py-3 mb-4 sm:mb-6">
-            <Terminal className="w-3.5 h-3.5 sm:w-4 sm:h-4 text-cyan-400" />
+        <div className="text-center mb-8 sm:mb-12 md:mb-16 lg:mb-20">
+          <div className="inline-flex items-center gap-1.5 sm:gap-2 bg-slate-800/50 backdrop-blur-xl border border-cyan-500/30 rounded-full px-3 sm:px-4 md:px-6 py-1.5 sm:py-2 md:py-3 mb-3 sm:mb-4 md:mb-6">
+            <Terminal className="w-3 h-3 sm:w-3.5 sm:h-3.5 md:w-4 md:h-4 text-cyan-400" />
             <span className="text-xs sm:text-sm text-cyan-400 font-medium" style={{ fontFamily: 'Orbitron, monospace' }}>
               $ services --list
             </span>
           </div>
           
-          <h2 className="text-3xl sm:text-5xl lg:text-7xl font-bold mb-4 sm:mb-6 px-4" style={{ fontFamily: 'Orbitron, monospace' }}>
+          <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-7xl font-bold mb-3 sm:mb-4 md:mb-6 px-3" style={{ fontFamily: 'Orbitron, monospace' }}>
             MES <span className="bg-gradient-to-r from-cyan-400 via-blue-500 to-purple-500 bg-clip-text text-transparent">SERVICES</span>
           </h2>
           
-          <p className="text-base sm:text-xl text-slate-400 max-w-3xl mx-auto leading-relaxed px-4" style={{ fontFamily: 'Rajdhani, sans-serif' }}>
+          <p className="text-sm sm:text-base md:text-lg lg:text-xl text-slate-400 max-w-3xl mx-auto leading-relaxed px-3" style={{ fontFamily: 'Rajdhani, sans-serif' }}>
             Une gamme complète de services pour transformer vos idées en solutions digitales performantes et sur mesure.
           </p>
         </div>
 
-        {/* Services Grid */}
-        <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6 max-w-7xl mx-auto">
+        <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-3 sm:gap-4 md:gap-6 max-w-7xl mx-auto">
           {services.map((service, index) => (
             <div
               key={index}
-              className="group relative bg-slate-900/50 backdrop-blur-xl border border-slate-700/50 rounded-2xl sm:rounded-3xl p-5 sm:p-6 lg:p-8 hover:border-slate-600/50 transition-all duration-500 hover:scale-[1.02] hover:shadow-2xl"
+              className="group relative bg-slate-900/50 backdrop-blur-xl border border-slate-700/50 rounded-xl sm:rounded-2xl md:rounded-3xl p-4 sm:p-5 md:p-6 lg:p-8 hover:border-slate-600/50 transition-all duration-500 hover:scale-[1.02] hover:shadow-2xl"
               style={{ animationDelay: `${index * 100}ms` }}
             >
-              {/* Gradient Overlay on Hover */}
-              <div className={`absolute inset-0 bg-gradient-to-br ${service.color} opacity-0 group-hover:opacity-5 rounded-2xl sm:rounded-3xl transition-opacity duration-500`}></div>
+              <div className={`absolute inset-0 bg-gradient-to-br ${service.color} opacity-0 group-hover:opacity-5 rounded-xl sm:rounded-2xl md:rounded-3xl transition-opacity duration-500`}></div>
               
-              {/* Icon */}
-              <div className="relative mb-4 sm:mb-6">
-                <div className={`inline-flex p-3 sm:p-4 rounded-xl sm:rounded-2xl bg-gradient-to-br ${service.color} bg-opacity-10 group-hover:scale-110 transition-transform duration-300`}>
-                  <service.icon className="w-6 h-6 sm:w-8 sm:h-8 text-white" />
+              <div className="relative mb-3 sm:mb-4 md:mb-6">
+                <div className={`inline-flex p-2.5 sm:p-3 md:p-4 rounded-lg sm:rounded-xl md:rounded-2xl bg-gradient-to-br ${service.color} bg-opacity-10 group-hover:scale-110 transition-transform duration-300`}>
+                  <service.icon className="w-5 h-5 sm:w-6 sm:h-6 md:w-8 md:h-8 text-white" />
                 </div>
               </div>
 
-              {/* Content */}
               <div className="relative">
-                <h3 className="text-xl sm:text-2xl font-bold mb-3 sm:mb-4 text-white group-hover:text-cyan-400 transition-colors" style={{ fontFamily: 'Orbitron, monospace' }}>
+                <h3 className="text-base sm:text-lg md:text-xl lg:text-2xl font-bold mb-2 sm:mb-3 md:mb-4 text-white group-hover:text-cyan-400 transition-colors" style={{ fontFamily: 'Orbitron, monospace' }}>
                   {service.title}
                 </h3>
                 
-                <p className="text-sm sm:text-base text-slate-400 mb-4 sm:mb-6 leading-relaxed" style={{ fontFamily: 'Rajdhani, sans-serif' }}>
+                <p className="text-xs sm:text-sm md:text-base text-slate-400 mb-3 sm:mb-4 md:mb-6 leading-relaxed" style={{ fontFamily: 'Rajdhani, sans-serif' }}>
                   {service.description}
                 </p>
 
-                {/* Features List */}
-                <ul className="space-y-1.5 sm:space-y-2 mb-4 sm:mb-6">
+                <ul className="space-y-1 sm:space-y-1.5 md:space-y-2 mb-3 sm:mb-4 md:mb-6">
                   {service.features.map((feature, idx) => (
-                    <li key={idx} className="flex items-center gap-2 text-xs sm:text-sm text-slate-300" style={{ fontFamily: 'Rajdhani, sans-serif' }}>
-                      <div className={`w-1.5 h-1.5 rounded-full bg-gradient-to-r ${service.color} flex-shrink-0`}></div>
+                    <li key={idx} className="flex items-center gap-1.5 sm:gap-2 text-xs sm:text-sm text-slate-300" style={{ fontFamily: 'Rajdhani, sans-serif' }}>
+                      <div className={`w-1 h-1 sm:w-1.5 sm:h-1.5 rounded-full bg-gradient-to-r ${service.color} flex-shrink-0`}></div>
                       <span>{feature}</span>
                     </li>
                   ))}
                 </ul>
 
-                {/* CTA Link */}
                 <button 
                   onClick={() => toggleService(index)}
-                  className="flex items-center gap-2 text-cyan-400 font-bold group-hover:gap-3 transition-all text-sm sm:text-base" 
+                  className="flex items-center gap-1.5 sm:gap-2 text-cyan-400 font-bold group-hover:gap-2 sm:group-hover:gap-3 transition-all text-xs sm:text-sm md:text-base" 
                   style={{ fontFamily: 'Orbitron, monospace' }}
                 >
                   {expandedService === index ? '[  RÉDUIRE  ]' : '[  EN SAVOIR +  ]'}
                   {expandedService === index ? (
-                    <ChevronUp className="w-3.5 h-3.5 sm:w-4 sm:h-4 group-hover:-translate-y-1 transition-transform" />
+                    <ChevronUp className="w-3 h-3 sm:w-3.5 sm:h-3.5 md:w-4 md:h-4 group-hover:-translate-y-1 transition-transform" />
                   ) : (
-                    <ArrowRight className="w-3.5 h-3.5 sm:w-4 sm:h-4 group-hover:translate-x-1 transition-transform" />
+                    <ArrowRight className="w-3 h-3 sm:w-3.5 sm:h-3.5 md:w-4 md:h-4 group-hover:translate-x-1 transition-transform" />
                   )}
                 </button>
 
-                {/* Expanded Content */}
                 {expandedService === index && (
-                  <div className="mt-4 sm:mt-6 pt-4 sm:pt-6 border-t border-cyan-500/20">
-                    <p className="text-sm sm:text-base text-slate-300 leading-relaxed" style={{ fontFamily: 'Rajdhani, sans-serif' }}>
+                  <div className="mt-3 sm:mt-4 md:mt-6 pt-3 sm:pt-4 md:pt-6 border-t border-cyan-500/20">
+                    <p className="text-xs sm:text-sm md:text-base text-slate-300 leading-relaxed" style={{ fontFamily: 'Rajdhani, sans-serif' }}>
                       {service.detailedDescription}
                     </p>
                   </div>
                 )}
               </div>
 
-              {/* Decorative Element */}
-              <div className={`absolute top-0 right-0 w-32 h-32 bg-gradient-to-br ${service.color} opacity-0 group-hover:opacity-10 blur-3xl rounded-full transition-opacity duration-500`}></div>
+              <div className={`absolute top-0 right-0 w-24 h-24 sm:w-32 sm:h-32 bg-gradient-to-br ${service.color} opacity-0 group-hover:opacity-10 blur-3xl rounded-full transition-opacity duration-500`}></div>
             </div>
           ))}
         </div>
 
-        {/* Bottom CTA */}
-        <div className="text-center mt-12 sm:mt-16 lg:mt-20">
-          <div className="inline-flex flex-col items-center gap-4 sm:gap-6 bg-slate-800/30 backdrop-blur-xl border border-cyan-500/30 rounded-2xl sm:rounded-3xl p-6 sm:p-8 max-w-2xl hover:border-cyan-400 transition-all mx-3 sm:mx-auto">
-            <h3 className="text-xl sm:text-2xl font-bold text-white" style={{ fontFamily: 'Orbitron, monospace' }}>
+        <div className="text-center mt-8 sm:mt-12 md:mt-16 lg:mt-20">
+          <div className="inline-flex flex-col items-center gap-3 sm:gap-4 md:gap-6 bg-slate-800/30 backdrop-blur-xl border border-cyan-500/30 rounded-xl sm:rounded-2xl md:rounded-3xl p-4 sm:p-5 md:p-6 lg:p-8 max-w-2xl hover:border-cyan-400 transition-all mx-3">
+            <h3 className="text-base sm:text-lg md:text-xl lg:text-2xl font-bold text-white" style={{ fontFamily: 'Orbitron, monospace' }}>
               UN_PROJET_EN_TÊTE ?
             </h3>
-            <p className="text-sm sm:text-base text-slate-400 px-2" style={{ fontFamily: 'Rajdhani, sans-serif' }}>
+            <p className="text-xs sm:text-sm md:text-base text-slate-400 px-2" style={{ fontFamily: 'Rajdhani, sans-serif' }}>
               Discutons ensemble de votre projet et trouvons la meilleure solution pour le concrétiser.
             </p>
             <button 
               onClick={() => document.getElementById('contact')?.scrollIntoView({ behavior: 'smooth' })}
-              className="group relative px-6 sm:px-8 py-3 sm:py-4 bg-gradient-to-r from-cyan-500 to-blue-500 text-white font-bold rounded-full overflow-hidden shadow-lg hover:shadow-cyan-500/50 transition-all duration-300 hover:scale-105 text-sm sm:text-base"
+              className="group relative px-4 sm:px-5 md:px-6 lg:px-8 py-2.5 sm:py-3 md:py-4 bg-gradient-to-r from-cyan-500 to-blue-500 text-white font-bold rounded-full overflow-hidden shadow-lg hover:shadow-cyan-500/50 transition-all duration-300 hover:scale-105 text-xs sm:text-sm md:text-base"
               style={{ fontFamily: 'Orbitron, monospace' }}
             >
               <div className="absolute inset-0 bg-gradient-to-r from-blue-500 to-purple-500 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
-              <span className="relative flex items-center gap-2">
+              <span className="relative flex items-center gap-1.5 sm:gap-2">
                 START_PROJECT
-                <ArrowRight className="w-4 h-4 sm:w-5 sm:h-5 group-hover:translate-x-1 transition-transform" />
+                <ArrowRight className="w-3.5 h-3.5 sm:w-4 sm:h-4 md:w-5 md:h-5 group-hover:translate-x-1 transition-transform" />
               </span>
             </button>
           </div>
         </div>
       </div>
 
-      {/* Floating Elements */}
       <div className="absolute inset-0 overflow-hidden pointer-events-none">
         {[...Array(15)].map((_, i) => (
           <div
             key={i}
-            className="absolute w-1 h-1 bg-cyan-400 rounded-full opacity-20"
+            className="absolute w-0.5 h-0.5 sm:w-1 sm:h-1 bg-cyan-400 rounded-full opacity-20"
             style={{
               left: `${Math.random() * 100}%`,
               top: `${Math.random() * 100}%`,

@@ -48,7 +48,7 @@ const timeline = [
     icon: Award,
     gradient: 'from-yellow-500 to-orange-500'
   },
-    {
+  {
     type: 'certification',
     title: 'Certification C++',
     institution: 'CodinGame',
@@ -113,26 +113,26 @@ const typeConfig = {
 
 export default function Education() {
   return (
-    <section id="formation" className="py-16 sm:py-24 md:py-32 relative bg-gradient-to-b from-slate-950 via-slate-900 to-slate-950 overflow-hidden">
+    <section id="formation" className="py-12 sm:py-16 md:py-24 lg:py-32 relative bg-gradient-to-b from-slate-950 via-slate-900 to-slate-950 overflow-hidden">
       <div className="absolute inset-0">
-        <div className="absolute top-1/3 left-10 sm:left-20 w-64 h-64 sm:w-96 sm:h-96 bg-blue-500/5 rounded-full blur-3xl animate-pulse"></div>
-        <div className="absolute bottom-1/3 right-10 sm:right-20 w-64 h-64 sm:w-96 sm:h-96 bg-green-500/5 rounded-full blur-3xl animate-pulse" style={{ animationDelay: '1s' }}></div>
+        <div className="absolute top-1/3 left-5 sm:left-10 md:left-20 w-48 h-48 sm:w-64 sm:h-64 md:w-96 md:h-96 bg-blue-500/5 rounded-full blur-3xl animate-pulse"></div>
+        <div className="absolute bottom-1/3 right-5 sm:right-10 md:right-20 w-48 h-48 sm:w-64 sm:h-64 md:w-96 md:h-96 bg-green-500/5 rounded-full blur-3xl animate-pulse" style={{ animationDelay: '1s' }}></div>
       </div>
 
-      <div className="container mx-auto px-4 sm:px-6 relative z-10">
-        <div className="text-center mb-12 sm:mb-16 md:mb-20">
-          <div className="inline-flex items-center gap-2 bg-slate-800/50 backdrop-blur-xl border border-slate-700/50 rounded-full px-4 sm:px-6 py-2 sm:py-3 mb-4 sm:mb-6">
+      <div className="container mx-auto px-3 sm:px-4 md:px-6 relative z-10">
+        <div className="text-center mb-8 sm:mb-12 md:mb-16 lg:mb-20">
+          <div className="inline-flex items-center gap-1.5 sm:gap-2 bg-slate-800/50 backdrop-blur-xl border border-slate-700/50 rounded-full px-3 sm:px-4 md:px-6 py-1.5 sm:py-2 md:py-3 mb-3 sm:mb-4 md:mb-6">
             <TrendingUp className="w-3 h-3 sm:w-4 sm:h-4 text-blue-400" />
             <span className="text-xs sm:text-sm text-slate-300 font-medium" style={{ fontFamily: 'Rajdhani, sans-serif' }}>
               MON_ÉVOLUTION
             </span>
           </div>
 
-          <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-7xl font-bold mb-4 sm:mb-6 px-4" style={{ fontFamily: 'Orbitron, monospace' }}>
+          <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-7xl font-bold mb-3 sm:mb-4 md:mb-6 px-3" style={{ fontFamily: 'Orbitron, monospace' }}>
             MON <span className="bg-gradient-to-r from-blue-400 via-cyan-500 to-green-500 bg-clip-text text-transparent">PARCOURS</span>
           </h2>
 
-          <p className="text-base sm:text-lg md:text-xl text-slate-400 max-w-3xl mx-auto leading-relaxed px-4" style={{ fontFamily: 'Rajdhani, sans-serif' }}>
+          <p className="text-sm sm:text-base md:text-lg lg:text-xl text-slate-400 max-w-3xl mx-auto leading-relaxed px-3" style={{ fontFamily: 'Rajdhani, sans-serif' }}>
             Découvrez mon évolution professionnelle et académique, des premiers pas 
             dans l'informatique jusqu'à mon expertise actuelle en développement web.
           </p>
@@ -140,7 +140,7 @@ export default function Education() {
 
         <div className="max-w-5xl mx-auto">
           <div className="relative">
-            <div className="absolute left-4 md:left-1/2 top-0 bottom-0 w-0.5 bg-gradient-to-b from-blue-500 via-green-500 to-yellow-500 opacity-30 transform md:-translate-x-px"></div>
+            <div className="absolute left-3 md:left-1/2 top-0 bottom-0 w-0.5 bg-gradient-to-b from-blue-500 via-green-500 to-yellow-500 opacity-30 transform md:-translate-x-px"></div>
 
             {timeline.map((item, index) => {
               const config = typeConfig[item.type as keyof typeof typeConfig];
@@ -149,43 +149,43 @@ export default function Education() {
               return (
                 <div 
                   key={index}
-                  className="relative flex items-center mb-10 sm:mb-12 md:mb-16 last:mb-0"
+                  className="relative flex items-center mb-6 sm:mb-8 md:mb-12 lg:mb-16 last:mb-0"
                 >
-                  <div className={`absolute left-3 md:left-1/2 transform md:-translate-x-1/2 z-10`}>
-                    <div className={`w-4 h-4 sm:w-5 sm:h-5 rounded-full bg-gradient-to-br ${item.gradient} shadow-lg`}>
+                  <div className={`absolute left-2.5 md:left-1/2 transform md:-translate-x-1/2 z-10`}>
+                    <div className={`w-3 h-3 sm:w-4 sm:h-4 md:w-5 md:h-5 rounded-full bg-gradient-to-br ${item.gradient} shadow-lg`}>
                       <div className="absolute inset-0 rounded-full animate-ping opacity-20 bg-gradient-to-br from-white to-transparent"></div>
                     </div>
                   </div>
 
-                  <div className={`w-full md:w-5/12 ${isEven ? 'md:mr-auto md:pr-12' : 'md:ml-auto md:pl-12'} pl-10 md:pl-0`}>
-                    <div className={`group relative bg-slate-900/50 backdrop-blur-xl border border-slate-700/50 p-4 sm:p-5 md:p-6 rounded-xl sm:rounded-2xl hover:border-slate-600/50 transition-all duration-300 hover:scale-[1.02] ${isEven ? 'md:text-right' : ''}`}>
-                      <div className={`absolute inset-0 bg-gradient-to-br ${item.gradient} opacity-0 group-hover:opacity-5 rounded-xl sm:rounded-2xl transition-opacity`}></div>
+                  <div className={`w-full md:w-5/12 ${isEven ? 'md:mr-auto md:pr-12' : 'md:ml-auto md:pl-12'} pl-8 md:pl-0`}>
+                    <div className={`group relative bg-slate-900/50 backdrop-blur-xl border border-slate-700/50 p-3 sm:p-4 md:p-5 lg:p-6 rounded-lg sm:rounded-xl md:rounded-2xl hover:border-slate-600/50 transition-all duration-300 hover:scale-[1.02] ${isEven ? 'md:text-right' : ''}`}>
+                      <div className={`absolute inset-0 bg-gradient-to-br ${item.gradient} opacity-0 group-hover:opacity-5 rounded-lg sm:rounded-xl md:rounded-2xl transition-opacity`}></div>
 
                       <div className="relative">
-                        <div className={`inline-flex items-center gap-2 ${config.bgColor} border ${config.borderColor} px-2 sm:px-3 py-1 rounded-full mb-2 sm:mb-3`}>
-                          <item.icon className={`w-3 h-3 sm:w-4 sm:h-4 ${config.textColor}`} />
+                        <div className={`inline-flex items-center gap-1 sm:gap-1.5 md:gap-2 ${config.bgColor} border ${config.borderColor} px-2 sm:px-2.5 md:px-3 py-0.5 sm:py-1 rounded-full mb-1.5 sm:mb-2 md:mb-3`}>
+                          <item.icon className={`w-2.5 h-2.5 sm:w-3 sm:h-3 md:w-4 md:h-4 ${config.textColor}`} />
                           <span className={`text-xs font-medium ${config.textColor}`} style={{ fontFamily: 'Rajdhani, sans-serif' }}>
                             {config.label}
                           </span>
                         </div>
 
-                        <h3 className="text-base sm:text-lg md:text-xl font-bold text-white mb-2" style={{ fontFamily: 'Orbitron, monospace' }}>
+                        <h3 className="text-sm sm:text-base md:text-lg lg:text-xl font-bold text-white mb-1.5 sm:mb-2" style={{ fontFamily: 'Orbitron, monospace' }}>
                           {item.title}
                         </h3>
 
-                        <div className={`flex items-start gap-2 mb-2 ${isEven ? 'md:justify-end' : 'justify-start'}`}>
+                        <div className={`flex items-start gap-1.5 sm:gap-2 mb-1.5 sm:mb-2 ${isEven ? 'md:justify-end' : 'justify-start'}`}>
                           <span className="font-semibold text-xs sm:text-sm text-slate-300" style={{ fontFamily: 'Rajdhani, sans-serif' }}>
                             {item.institution}
                           </span>
                         </div>
 
-                        <div className={`flex flex-col sm:flex-row sm:items-center gap-2 sm:gap-4 mb-2 sm:mb-3 text-xs sm:text-sm ${isEven ? 'md:justify-end' : 'justify-start'}`}>
+                        <div className={`flex flex-col sm:flex-row sm:items-center gap-1.5 sm:gap-2 md:gap-4 mb-1.5 sm:mb-2 md:mb-3 text-xs sm:text-sm ${isEven ? 'md:justify-end' : 'justify-start'}`}>
                           <div className="flex items-center gap-1 text-slate-400">
-                            <Calendar className="w-3 h-3 sm:w-4 sm:h-4 flex-shrink-0" />
+                            <Calendar className="w-2.5 h-2.5 sm:w-3 sm:h-3 md:w-4 md:h-4 flex-shrink-0" />
                             <span style={{ fontFamily: 'Rajdhani, sans-serif' }}>{item.year}</span>
                           </div>
                           <div className="flex items-center gap-1 text-slate-400">
-                            <MapPin className="w-3 h-3 sm:w-4 sm:h-4 flex-shrink-0" />
+                            <MapPin className="w-2.5 h-2.5 sm:w-3 sm:h-3 md:w-4 md:h-4 flex-shrink-0" />
                             <span style={{ fontFamily: 'Rajdhani, sans-serif' }}>{item.location}</span>
                           </div>
                         </div>
@@ -202,9 +202,9 @@ export default function Education() {
           </div>
         </div>
 
-        <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 sm:gap-6 max-w-4xl mx-auto mt-12 sm:mt-16 md:mt-20">
-          <div className="bg-slate-900/50 backdrop-blur-xl border border-slate-700/50 p-4 sm:p-6 rounded-xl sm:rounded-2xl text-center hover:scale-105 transition-transform">
-            <div className="text-3xl sm:text-4xl font-bold bg-gradient-to-r from-blue-400 to-cyan-500 bg-clip-text text-transparent mb-2" style={{ fontFamily: 'Orbitron, monospace' }}>
+        <div className="grid grid-cols-1 sm:grid-cols-3 gap-3 sm:gap-4 md:gap-6 max-w-4xl mx-auto mt-8 sm:mt-12 md:mt-16 lg:mt-20">
+          <div className="bg-slate-900/50 backdrop-blur-xl border border-slate-700/50 p-3 sm:p-4 md:p-6 rounded-lg sm:rounded-xl md:rounded-2xl text-center hover:scale-105 transition-transform">
+            <div className="text-2xl sm:text-3xl md:text-4xl font-bold bg-gradient-to-r from-blue-400 to-cyan-500 bg-clip-text text-transparent mb-1.5 sm:mb-2" style={{ fontFamily: 'Orbitron, monospace' }}>
               2+
             </div>
             <div className="text-xs sm:text-sm text-slate-400" style={{ fontFamily: 'Rajdhani, sans-serif' }}>
@@ -212,8 +212,8 @@ export default function Education() {
             </div>
           </div>
 
-          <div className="bg-slate-900/50 backdrop-blur-xl border border-slate-700/50 p-4 sm:p-6 rounded-xl sm:rounded-2xl text-center hover:scale-105 transition-transform">
-            <div className="text-3xl sm:text-4xl font-bold bg-gradient-to-r from-green-400 to-emerald-500 bg-clip-text text-transparent mb-2" style={{ fontFamily: 'Orbitron, monospace' }}>
+          <div className="bg-slate-900/50 backdrop-blur-xl border border-slate-700/50 p-3 sm:p-4 md:p-6 rounded-lg sm:rounded-xl md:rounded-2xl text-center hover:scale-105 transition-transform">
+            <div className="text-2xl sm:text-3xl md:text-4xl font-bold bg-gradient-to-r from-green-400 to-emerald-500 bg-clip-text text-transparent mb-1.5 sm:mb-2" style={{ fontFamily: 'Orbitron, monospace' }}>
               3
             </div>
             <div className="text-xs sm:text-sm text-slate-400" style={{ fontFamily: 'Rajdhani, sans-serif' }}>
@@ -221,8 +221,8 @@ export default function Education() {
             </div>
           </div>
 
-          <div className="bg-slate-900/50 backdrop-blur-xl border border-slate-700/50 p-4 sm:p-6 rounded-xl sm:rounded-2xl text-center hover:scale-105 transition-transform">
-            <div className="text-3xl sm:text-4xl font-bold bg-gradient-to-r from-yellow-400 to-orange-500 bg-clip-text text-transparent mb-2" style={{ fontFamily: 'Orbitron, monospace' }}>
+          <div className="bg-slate-900/50 backdrop-blur-xl border border-slate-700/50 p-3 sm:p-4 md:p-6 rounded-lg sm:rounded-xl md:rounded-2xl text-center hover:scale-105 transition-transform">
+            <div className="text-2xl sm:text-3xl md:text-4xl font-bold bg-gradient-to-r from-yellow-400 to-orange-500 bg-clip-text text-transparent mb-1.5 sm:mb-2" style={{ fontFamily: 'Orbitron, monospace' }}>
               4
             </div>
             <div className="text-xs sm:text-sm text-slate-400" style={{ fontFamily: 'Rajdhani, sans-serif' }}>
