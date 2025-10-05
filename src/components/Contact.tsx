@@ -119,7 +119,7 @@ export default function Contact() {
         <div className="grid lg:grid-cols-2 gap-4 sm:gap-6 md:gap-8 lg:gap-12 max-w-6xl mx-auto">
           <div className="bg-slate-900/50 backdrop-blur-xl border border-slate-700/50 rounded-xl sm:rounded-2xl md:rounded-3xl p-3 sm:p-4 md:p-6 lg:p-8">
             <h3 className="text-base sm:text-lg md:text-xl lg:text-2xl font-bold text-white mb-3 sm:mb-4 md:mb-6" style={{ fontFamily: 'Orbitron, monospace' }}>
-              ENVOYEZ_MOI_UN_MESSAGE
+              ENVOYEZ_UN_MESSAGE
             </h3>
 
             <div className="space-y-3 sm:space-y-4 md:space-y-6">
