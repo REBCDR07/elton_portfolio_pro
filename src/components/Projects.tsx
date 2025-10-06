@@ -41,19 +41,19 @@ const techIcons: { [key: string]: string } = {
 
 const statusConfig = {
   completed: { 
-    label: 'TERMINÉ', 
+    label: 'Terminé', 
     color: 'bg-green-500',
     icon: CheckCircle,
     borderColor: 'border-green-500/30'
   },
   'in-progress': { 
-    label: 'EN_COURS', 
+    label: 'En_cours', 
     color: 'bg-yellow-500',
     icon: Clock,
     borderColor: 'border-yellow-500/30'
   },
   collaboration: { 
-    label: 'COLLAB', 
+    label: 'Recherche_de_collaboration', 
     color: 'bg-orange-500',
     icon: Handshake,
     borderColor: 'border-orange-500/30'
@@ -63,8 +63,8 @@ const statusConfig = {
 const projects = [
   {
     id: 12,
-    name: 'ELTON HOUNNOU',
-    category: 'VITRINE',
+    name: 'Portfolio Professionnel',
+    category: 'Vitrine',
     shortDescription: 'Portfolio Professionnel',
     image: projetImage3,
     status: 'completed',
@@ -91,8 +91,8 @@ const projects = [
   },
   {
     id: 1,
-    name: 'AZERTYPE',
-    category: 'APPLICATION_WEB',
+    name: 'AzerType',
+    category: 'Application_Web',
     shortDescription: 'Application web pour améliorer la dactylographie.',
     image: projetImage1,
     status: 'completed',
@@ -112,7 +112,7 @@ const projects = [
   },
   {
     id: 2,
-    name: 'EDUCONNECT',
+    name: 'EduConnect',
     category: 'APPLICATION_WEB',
     shortDescription: 'Plateforme web complète pour la digitalisation des inscriptions scolaires et universitaires.',
     image: projetImage2,
@@ -129,7 +129,7 @@ const projects = [
       'Interface 100% responsive avec menu mobile',
       'Mode sombre et clair pour le confort visuel'
     ],
-    fullDescription: "EDUCONNECT est une plateforme web moderne qui simplifie et centralise l'intégralité du processus d'inscription scolaire. Conçue avec une approche frontend-first, cette application propose deux parcours utilisateurs distincts. Les étudiants peuvent découvrir des écoles, postuler via un formulaire complet et suivre le statut de leurs candidatures. Les directeurs bénéficient d'un tableau de bord puissant pour créer et gérer le profil de leurs établissements (y compris le téléversement de photos), consulter les dossiers des candidats, et accepter ou rejeter les demandes. Le projet est entièrement fonctionnel avec un backend simulé via localStorage, démontrant une architecture de composants solide, une gestion d'état globale et une interface utilisateur réactive.",
+    fullDescription: "EduConnect est une plateforme web moderne qui simplifie et centralise l'intégralité du processus d'inscription scolaire. Conçue avec une approche frontend-first, cette application propose deux parcours utilisateurs distincts. Les étudiants peuvent découvrir des écoles, postuler via un formulaire complet et suivre le statut de leurs candidatures. Les directeurs bénéficient d'un tableau de bord puissant pour créer et gérer le profil de leurs établissements (y compris le téléversement de photos), consulter les dossiers des candidats, et accepter ou rejeter les demandes. Le projet est entièrement fonctionnel avec un backend simulé via localStorage, démontrant une architecture de composants solide, une gestion d'état globale et une interface utilisateur réactive.",
     client: 'Projet Personnel / Portfolio',
     date: 'Août 2025',
     liveUrl: 'https://edu-connect-plateform.vercel.app/', 
@@ -138,8 +138,8 @@ const projects = [
   },
   {
     id: 7,
-    name: 'THECODESHARE : TCS',
-    category: 'FULLSTACK_WEB_APPLICATION',
+    name: 'The Code Share',
+    category: 'Full-Stack Application',
     shortDescription: 'Application web conçue et développée pour permettre aux développeurs web de partager, collaborer et apprendre ensemble.',
     image: projetImage10,
     status: 'completed',
@@ -168,8 +168,8 @@ const projects = [
   },
   {
     id: 3,
-    name: 'FITCLUB',
-    category: 'VITRINE',
+    name: 'FitClub',
+    category: 'Vitrine',
     shortDescription: 'Site vitrine pour salle de gym.',
     image: projetImage4,
     status: 'completed',
@@ -190,7 +190,7 @@ const projects = [
   },
   {
     id: 4,
-    name: 'GESTLE',
+    name: 'Ges',
     category: 'APPLICATION_WEB',
     shortDescription: 'Application web moderne et intuitive conçue pour simplifier la gestion de la facturation électrique locale.',
     image: projetImage5,

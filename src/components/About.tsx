@@ -93,7 +93,7 @@ export default function About() {
                 <div className="flex items-center gap-1.5 sm:gap-2">
                   <div className="w-1.5 h-1.5 sm:w-2 sm:h-2 md:w-3 md:h-3 bg-green-400 rounded-full animate-pulse"></div>
                   <span className="text-xs sm:text-sm font-bold text-white" style={{ fontFamily: 'Rajdhani, sans-serif' }}>
-                    DISPONIBLE
+                    Disponible
                   </span>
                 </div>
               </div>
@@ -102,7 +102,7 @@ export default function About() {
 
           <div className="bg-slate-900/50 backdrop-blur-xl border border-slate-700/50 rounded-lg sm:rounded-xl px-3 sm:px-4 md:px-6 py-2 sm:py-3 md:py-4 max-w-full mx-3 overflow-x-auto">
             <code className="text-cyan-400 text-xs sm:text-sm md:text-base whitespace-nowrap" style={{ fontFamily: 'Orbitron, monospace' }}>
-              const elton = {'{'} skills: ['React', 'TypeScript', 'JavaScript'], status: '🚀 pull up' {'}'} ;
+              const elton = {'{'} skills: ['React', 'TypeScript', 'JavaScript'],{'}'} ;
             </code>
           </div>
         </div>
@@ -127,7 +127,7 @@ export default function About() {
 
             <div className="bg-slate-800/30 backdrop-blur-xl border border-slate-700/50 rounded-xl sm:rounded-2xl p-4 sm:p-6 md:p-8 space-y-2 sm:space-y-3 md:space-y-4">
               <h3 className="text-base sm:text-lg md:text-xl font-bold text-white mb-3 sm:mb-4 md:mb-6" style={{ fontFamily: 'Orbitron, monospace' }}>
-                CONTACT_INFO
+                Contact
               </h3>
               
               <div className="flex items-center gap-2 sm:gap-3 md:gap-4 p-2 sm:p-3 rounded-lg sm:rounded-xl hover:bg-slate-700/30 transition-colors group">
@@ -175,7 +175,7 @@ export default function About() {
               <div className="absolute inset-0 bg-gradient-to-r from-blue-500 to-purple-500 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
               <span className="relative flex items-center justify-center gap-1.5 sm:gap-2 text-xs sm:text-sm md:text-base" style={{ fontFamily: 'Orbitron, monospace' }}>
                 <Download className="w-3.5 h-3.5 sm:w-4 sm:h-4 md:w-5 md:h-5" />
-                TÉLÉCHARGER_CV.pdf
+                Télécharger_cv.pdf
               </span>
             </a>
           </div>
@@ -183,7 +183,7 @@ export default function About() {
           <div className="space-y-3 sm:space-y-4 md:space-y-6">
             <div className="bg-slate-800/30 backdrop-blur-xl border border-slate-700/50 rounded-xl sm:rounded-2xl p-4 sm:p-6 md:p-8">
               <h3 className="text-lg sm:text-xl md:text-2xl font-bold mb-3 sm:mb-4 md:mb-6 text-white" style={{ fontFamily: 'Orbitron, monospace' }}>
-                // MON_HISTOIRE
+                // Moi
               </h3>
               
               <div className="space-y-2 sm:space-y-3 md:space-y-4 text-slate-300 leading-relaxed text-xs sm:text-sm md:text-base lg:text-lg" style={{ fontFamily: 'Rajdhani, sans-serif' }}>
@@ -193,7 +193,7 @@ export default function About() {
                 </p>
                 <p>
                   <span className="text-cyan-400 font-mono">{'>'}</span> Depuis plus de <span className="text-purple-400 font-bold">2 ans</span>, chaque ligne de code que j'écris reflète ma volonté de créer des solutions élégantes et fonctionnelles. Je m'épanouis dans l'apprentissage continu des nouvelles technologies et dans la résolution de défis techniques complexes, toujours avec l'objectif de dépasser les attentes.. Mon secret ? 
-                  Du code propre, des bugs squashés et beaucoup (BEAUCOUP) de café ☕
+                  Du code propre, des bugs squashés et beaucoup de café ☕
                 </p>
                 <p>
                   <span className="text-cyan-400 font-mono">{'>'}</span> J'adore créer des interfaces qui font dire "Wow !" 
@@ -208,7 +208,7 @@ export default function About() {
 
             <div className="bg-slate-800/30 backdrop-blur-xl border border-slate-700/50 rounded-xl sm:rounded-2xl p-4 sm:p-6 md:p-8">
               <h3 className="text-base sm:text-lg md:text-xl font-bold mb-3 sm:mb-4 md:mb-6 text-white" style={{ fontFamily: 'Orbitron, monospace' }}>
-                // SOCIAL_LINKS
+                // Réseaux
               </h3>
               
               <div className="grid grid-cols-3 gap-1.5 sm:gap-2 md:gap-3">

@@ -124,12 +124,12 @@ export default function Education() {
           <div className="inline-flex items-center gap-1.5 sm:gap-2 bg-slate-800/50 backdrop-blur-xl border border-slate-700/50 rounded-full px-3 sm:px-4 md:px-6 py-1.5 sm:py-2 md:py-3 mb-3 sm:mb-4 md:mb-6">
             <TrendingUp className="w-3 h-3 sm:w-4 sm:h-4 text-blue-400" />
             <span className="text-xs sm:text-sm text-slate-300 font-medium" style={{ fontFamily: 'Rajdhani, sans-serif' }}>
-              MON_ÉVOLUTION
+              Mon_évolution
             </span>
           </div>
 
           <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-7xl font-bold mb-3 sm:mb-4 md:mb-6 px-3" style={{ fontFamily: 'Orbitron, monospace' }}>
-            MON <span className="bg-gradient-to-r from-blue-400 via-cyan-500 to-green-500 bg-clip-text text-transparent">PARCOURS</span>
+            Mon <span className="bg-gradient-to-r from-blue-400 via-cyan-500 to-green-500 bg-clip-text text-transparent">Parcours</span>
           </h2>
 
           <p className="text-sm sm:text-base md:text-lg lg:text-xl text-slate-400 max-w-3xl mx-auto leading-relaxed px-3" style={{ fontFamily: 'Rajdhani, sans-serif' }}>
@@ -208,7 +208,7 @@ export default function Education() {
               2+
             </div>
             <div className="text-xs sm:text-sm text-slate-400" style={{ fontFamily: 'Rajdhani, sans-serif' }}>
-              ANNÉES_D'EXPÉRIENCE
+              Années d'expérience
             </div>
           </div>
 
@@ -217,7 +217,7 @@ export default function Education() {
               3
             </div>
             <div className="text-xs sm:text-sm text-slate-400" style={{ fontFamily: 'Rajdhani, sans-serif' }}>
-              DIPLÔMES_OBTENUS
+              Diplômes Obtenus
             </div>
           </div>
 
@@ -226,7 +226,7 @@ export default function Education() {
               4
             </div>
             <div className="text-xs sm:text-sm text-slate-400" style={{ fontFamily: 'Rajdhani, sans-serif' }}>
-              CERTIFICATION_AWS
+              Certifications Acquises
             </div>
           </div>
         </div>

@@ -16,11 +16,23 @@ const heroStats = [
 ];
 
 const roles = [
-  "FRONTEND_DEVELOPPEUR",
-  "AI_FULLSTACK_JUNIOR",
-  "UI/UX_DESIGNER", 
-  "BUG_DESTROYER",
-  "COFFEE_ADDICT"
+  "Frontend_Dev",
+  "AI_Fullstack_Dev",
+  "UI/UX_Designer", 
+  "Bug_destroyer",
+  "Coffee_lover",
+  "Tech_enthusiast",  
+  "Problem_solver",
+  "Creative_mind",
+  "Team_player",          
+  "Continuous_learner",
+  "Code_perfectionist",
+  "Innovative_thinker",
+  "Detail_oriented",
+  "Passionate_coder",
+  "User_focused",
+  "Agile_developer",
+  "Collaborative_spirit"
 ];
 
 const codeSnippets = [
@@ -113,7 +125,7 @@ export default function Hero() {
 
             <h6 className="text-2xl sm:text-3xl md:text-5xl lg:text-7xl xl:text-9xl font-black mb-3 sm:mb-4 md:mb-6 relative px-2" style={{ fontFamily: 'Orbitron, monospace' }}>
               <span className="bg-gradient-to-r from-cyan-400 via-blue-500 to-purple-500 bg-clip-text text-transparent leading-tight block">
-                Elton Ronald Bill Hounnou 
+                N. E. Ronald Bill Hounnou 
               </span>
             </h6>
 
@@ -151,7 +163,7 @@ export default function Hero() {
                 <div className="absolute inset-0 bg-gradient-to-r from-blue-500 to-purple-500 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
                 <span className="relative flex items-center justify-center gap-1.5 sm:gap-2">
                   <Mail className="w-3.5 h-3.5 sm:w-4 sm:h-4 md:w-5 md:h-5" />
-                  CONTACTER_MOI
+                  Contacter_moi
                 </span>
               </button>
 
@@ -162,7 +174,7 @@ export default function Hero() {
               >
                 <span className="flex items-center justify-center gap-1.5 sm:gap-2">
                   <Eye className="w-3.5 h-3.5 sm:w-4 sm:h-4 md:w-5 md:h-5 group-hover:text-cyan-300 transition-colors" />
-                  VOIR_MES_PROJETS
+                  Vois_mes_projets
                 </span>
               </button>
             </div>
@@ -199,7 +211,7 @@ export default function Hero() {
                 <div className="w-1.5 h-1.5 sm:w-2 sm:h-2 md:w-3 md:h-3 rounded-full bg-green-500"></div>
               </div>
               <span className="text-xs sm:text-sm text-slate-500" style={{ fontFamily: 'Rajdhani, sans-serif' }}>
-                <strong className="text-sm sm:text-base md:text-xl text-slate-400">mon _terminal_</strong>
+                <strong className="text-sm sm:text-base md:text-xl text-slate-400">terminal</strong>
               </span>
             </div>
             <code className="text-cyan-400 font-mono flex items-center gap-1.5 sm:gap-2 text-xs sm:text-sm md:text-base overflow-x-auto" style={{ fontFamily: 'Orbitron, monospace' }}>
@@ -217,7 +229,7 @@ export default function Hero() {
                 <div className="w-1.5 h-1.5 sm:w-2 sm:h-2 md:w-3 md:h-3 rounded-full bg-green-500"></div>
               </div>
               <span className="text-xs sm:text-sm text-slate-500" style={{ fontFamily: 'Rajdhani, sans-serif' }}>
-                <strong className="text-sm sm:text-base md:text-xl text-slate-400">mon _terminal_</strong>
+                <strong className="text-sm sm:text-base md:text-xl text-slate-400">terminal</strong>
               </span>
             </div>
             <code className="text-cyan-400 font-mono flex items-center gap-1.5 sm:gap-2 text-xs sm:text-sm md:text-base overflow-x-auto" style={{ fontFamily: 'Orbitron, monospace' }}>

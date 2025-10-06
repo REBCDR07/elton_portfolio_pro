@@ -8,13 +8,13 @@ fontLink.href = 'https://fonts.googleapis.com/css2?family=Rajdhani:wght@400;500;
 fontLink.rel = 'stylesheet';
 if (!document.querySelector(`link[href="${fontLink.href}"]`)) {
   document.head.appendChild(fontLink);
-}
+} 
 
 const teamMembers = [
   {
     id: 1,
     name: 'Igor ADANDE',
-    role: 'FULL_STACK_DEV & UI/UX',
+    role: 'Full_Stack_Dev & UI/UX',
     bio: "Spécialiste des applications web robustes, il transforme des concepts complexes en interfaces fluides et performantes.",
     image: team1Image,
     cvUrl: '/assets/cv/cv-team1.pdf',
@@ -29,7 +29,7 @@ const teamMembers = [
   {
     id: 2,
     name: 'Ben Ephraïm AGBANNON',
-    role: 'FULL_STACK_DEV & MOBILE',
+    role: 'Full_Stack_Dev & Mobile',
     bio: "Architecte de solutions back-end et mobiles, passionné par la création d'expériences utilisateur exceptionnelles et intuitives.",
     image: team2Image,
     cvUrl: '/assets/cv/cv-team2.pdf',
@@ -66,7 +66,7 @@ export default function Team() {
           </div>
 
           <h2 className="text-2xl sm:text-5xl font-bold mb-3 sm:mb-5 px-3 leading-tight" style={{ fontFamily: 'Orbitron, monospace' }}>
-            NOTRE <span className="bg-gradient-to-r from-cyan-400 via-blue-500 to-purple-500 bg-clip-text text-transparent">ÉQUIPE</span>
+            L' <span className="bg-gradient-to-r from-cyan-400 via-blue-500 to-purple-500 bg-clip-text text-transparent">Équipe</span>
           </h2>
 
           <p className="text-sm sm:text-lg text-slate-400 max-w-3xl mx-auto leading-relaxed px-3" style={{ fontFamily: 'Rajdhani, sans-serif' }}>
@@ -107,7 +107,7 @@ export default function Team() {
                   <div className="bg-slate-900/90 backdrop-blur-xl border border-slate-700/50 rounded-full px-2 sm:px-2.5 py-0.5 sm:py-1 flex items-center gap-1 sm:gap-1.5">
                     <div className="w-1.5 h-1.5 sm:w-2 sm:h-2 bg-green-400 rounded-full animate-pulse"></div>
                     <span className="text-[9px] sm:text-xs text-white font-bold" style={{ fontFamily: 'Orbitron, monospace' }}>
-                      ACTIVE
+                      Actif
                     </span>
                   </div>
                 </div>
@@ -151,13 +151,13 @@ export default function Team() {
                   <a href={member.portfolioUrl} target="_blank" rel="noopener noreferrer" className={`block w-full px-3 sm:px-4 py-2 sm:py-2.5 bg-gradient-to-r ${member.gradient} text-white font-bold rounded-lg hover:shadow-lg transition-all text-center text-xs sm:text-sm`} style={{ fontFamily: 'Orbitron, monospace' }}>
                     <span className="flex items-center justify-center gap-1.5 sm:gap-2">
                       <ExternalLink className="w-3 h-3 sm:w-3.5 sm:h-3.5" />
-                      PORTFOLIO
+                      Portfolio
                     </span>
                   </a>
                   <a href={member.cvUrl} download className="block w-full px-3 sm:px-4 py-2 sm:py-2.5 bg-slate-800/50 border border-slate-700/50 text-slate-300 font-bold rounded-lg hover:bg-slate-700/50 hover:border-cyan-500/50 transition-all text-center text-xs sm:text-sm" style={{ fontFamily: 'Orbitron, monospace' }}>
                     <span className="flex items-center justify-center gap-1.5 sm:gap-2">
                       <Download className="w-3 h-3 sm:w-3.5 sm:h-3.5" />
-                      DOWNLOAD CV
+                      Download CV
                     </span>
                   </a>
                 </div>
@@ -171,7 +171,7 @@ export default function Team() {
           <div className="inline-flex flex-col items-center gap-3 sm:gap-5 bg-slate-800/30 backdrop-blur-xl border border-cyan-500/30 rounded-xl sm:rounded-2xl p-4 sm:p-7 max-w-2xl hover:border-cyan-400 transition-all mx-3">
             <Users className="w-8 h-8 sm:w-10 sm:h-10 text-cyan-400" />
             <h3 className="text-lg sm:text-2xl font-bold text-white leading-tight" style={{ fontFamily: 'Orbitron, monospace' }}>
-              REJOIGNEZ L'ÉQUIPE
+              Rejoignez L'Équipe
             </h3>
             <p className="text-slate-400 text-xs sm:text-base leading-relaxed" style={{ fontFamily: 'Rajdhani, sans-serif' }}>
               Vous êtes développeur passionné ? Nous sommes toujours à la recherche de talents pour renforcer notre équipe.
@@ -182,7 +182,7 @@ export default function Team() {
               style={{ fontFamily: 'Orbitron, monospace' }}
             >
               <div className="absolute inset-0 bg-gradient-to-r from-blue-500 to-purple-500 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
-              <span className="relative">NOUS CONTACTER</span>
+              <span className="relative">Nous Contacter</span>
             </button>
           </div>
         </div>

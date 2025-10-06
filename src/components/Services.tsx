@@ -85,7 +85,7 @@ export default function Services() {
           </div>
           
           <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-7xl font-bold mb-3 sm:mb-4 md:mb-6 px-3" style={{ fontFamily: 'Orbitron, monospace' }}>
-            MES <span className="bg-gradient-to-r from-cyan-400 via-blue-500 to-purple-500 bg-clip-text text-transparent">SERVICES</span>
+            Mes <span className="bg-gradient-to-r from-cyan-400 via-blue-500 to-purple-500 bg-clip-text text-transparent">Services</span>
           </h2>
           
           <p className="text-sm sm:text-base md:text-lg lg:text-xl text-slate-400 max-w-3xl mx-auto leading-relaxed px-3" style={{ fontFamily: 'Rajdhani, sans-serif' }}>
@@ -98,7 +98,7 @@ export default function Services() {
             <div
               key={index}
               className="group relative bg-slate-900/50 backdrop-blur-xl border border-slate-700/50 rounded-xl sm:rounded-2xl md:rounded-3xl p-4 sm:p-5 md:p-6 lg:p-8 hover:border-slate-600/50 transition-all duration-500 hover:scale-[1.02] hover:shadow-2xl"
-              style={{ animationDelay: `${index * 100}ms` }}
+              style={{ animationDelay: `${index * 10}ms` }}
             >
               <div className={`absolute inset-0 bg-gradient-to-br ${service.color} opacity-0 group-hover:opacity-5 rounded-xl sm:rounded-2xl md:rounded-3xl transition-opacity duration-500`}></div>
               
@@ -131,7 +131,7 @@ export default function Services() {
                   className="flex items-center gap-1.5 sm:gap-2 text-cyan-400 font-bold group-hover:gap-2 sm:group-hover:gap-3 transition-all text-xs sm:text-sm md:text-base" 
                   style={{ fontFamily: 'Orbitron, monospace' }}
                 >
-                  {expandedService === index ? '[  RÉDUIRE  ]' : '[  EN SAVOIR +  ]'}
+                  {expandedService === index ? '[  Réduire  ]' : '[  En Savoir +  ]'}
                   {expandedService === index ? (
                     <ChevronUp className="w-3 h-3 sm:w-3.5 sm:h-3.5 md:w-4 md:h-4 group-hover:-translate-y-1 transition-transform" />
                   ) : (
@@ -156,7 +156,7 @@ export default function Services() {
         <div className="text-center mt-8 sm:mt-12 md:mt-16 lg:mt-20">
           <div className="inline-flex flex-col items-center gap-3 sm:gap-4 md:gap-6 bg-slate-800/30 backdrop-blur-xl border border-cyan-500/30 rounded-xl sm:rounded-2xl md:rounded-3xl p-4 sm:p-5 md:p-6 lg:p-8 max-w-2xl hover:border-cyan-400 transition-all mx-3">
             <h3 className="text-base sm:text-lg md:text-xl lg:text-2xl font-bold text-white" style={{ fontFamily: 'Orbitron, monospace' }}>
-              UN_PROJET_EN_TÊTE ?
+              Vous_avez_un_projet ?
             </h3>
             <p className="text-xs sm:text-sm md:text-base text-slate-400 px-2" style={{ fontFamily: 'Rajdhani, sans-serif' }}>
               Discutons ensemble de votre projet et trouvons la meilleure solution pour le concrétiser.
@@ -168,7 +168,7 @@ export default function Services() {
             >
               <div className="absolute inset-0 bg-gradient-to-r from-blue-500 to-purple-500 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
               <span className="relative flex items-center gap-1.5 sm:gap-2">
-                START_PROJECT
+                Start_Conversation
                 <ArrowRight className="w-3.5 h-3.5 sm:w-4 sm:h-4 md:w-5 md:h-5 group-hover:translate-x-1 transition-transform" />
               </span>
             </button>

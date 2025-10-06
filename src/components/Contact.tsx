@@ -102,12 +102,12 @@ export default function Contact() {
           <div className="inline-flex items-center gap-1.5 sm:gap-2 bg-slate-800/50 backdrop-blur-xl border border-slate-700/50 rounded-full px-3 sm:px-4 md:px-6 py-1.5 sm:py-2 md:py-3 mb-3 sm:mb-4 md:mb-6">
             <MessageSquare className="w-3 h-3 sm:w-4 sm:h-4 text-cyan-400" />
             <span className="text-xs sm:text-sm text-slate-300 font-medium" style={{ fontFamily: 'Rajdhani, sans-serif' }}>
-              RESTONS_EN_CONTACT
+              Restons_en_contact
             </span>
           </div>
 
           <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-7xl font-bold mb-3 sm:mb-4 md:mb-6 px-3" style={{ fontFamily: 'Orbitron, monospace' }}>
-            ME <span className="bg-gradient-to-r from-cyan-400 via-blue-500 to-purple-500 bg-clip-text text-transparent">CONTACTER</span>
+            Me <span className="bg-gradient-to-r from-cyan-400 via-blue-500 to-purple-500 bg-clip-text text-transparent">Contacter</span>
           </h2>
 
           <p className="text-sm sm:text-base md:text-lg lg:text-xl text-slate-400 max-w-3xl mx-auto leading-relaxed px-3" style={{ fontFamily: 'Rajdhani, sans-serif' }}>
@@ -119,14 +119,14 @@ export default function Contact() {
         <div className="grid lg:grid-cols-2 gap-4 sm:gap-6 md:gap-8 lg:gap-12 max-w-6xl mx-auto">
           <div className="bg-slate-900/50 backdrop-blur-xl border border-slate-700/50 rounded-xl sm:rounded-2xl md:rounded-3xl p-3 sm:p-4 md:p-6 lg:p-8">
             <h3 className="text-base sm:text-lg md:text-xl lg:text-2xl font-bold text-white mb-3 sm:mb-4 md:mb-6" style={{ fontFamily: 'Orbitron, monospace' }}>
-              ENVOYEZ_UN_MESSAGE
+              Un_message ?
             </h3>
 
             <div className="space-y-3 sm:space-y-4 md:space-y-6">
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 sm:gap-4 md:gap-6">
                 <div className="space-y-1.5 sm:space-y-2">
                   <Label htmlFor="name" className="text-xs sm:text-sm font-medium text-slate-300" style={{ fontFamily: 'Rajdhani, sans-serif' }}>
-                    NOM_COMPLET *
+                    Nom_complet *
                   </Label>
                   <div className="relative">
                     <User className="absolute left-2 sm:left-3 top-1/2 transform -translate-y-1/2 w-3.5 h-3.5 sm:w-4 sm:h-4 md:w-5 md:h-5 text-slate-500" />
@@ -144,7 +144,7 @@ export default function Contact() {
                 
                 <div className="space-y-1.5 sm:space-y-2">
                   <Label htmlFor="email" className="text-xs sm:text-sm font-medium text-slate-300" style={{ fontFamily: 'Rajdhani, sans-serif' }}>
-                    EMAIL *
+                    Email *
                   </Label>
                   <div className="relative">
                     <Mail className="absolute left-2 sm:left-3 top-1/2 transform -translate-y-1/2 w-3.5 h-3.5 sm:w-4 sm:h-4 md:w-5 md:h-5 text-slate-500" />
@@ -163,7 +163,7 @@ export default function Contact() {
 
               <div className="space-y-1.5 sm:space-y-2">
                 <Label htmlFor="subject" className="text-xs sm:text-sm font-medium text-slate-300" style={{ fontFamily: 'Rajdhani, sans-serif' }}>
-                  SUJET *
+                  Sujet *
                 </Label>
                 <Input
                   id="subject"
@@ -178,7 +178,7 @@ export default function Contact() {
 
               <div className="space-y-1.5 sm:space-y-2">
                 <Label htmlFor="message" className="text-xs sm:text-sm font-medium text-slate-300" style={{ fontFamily: 'Rajdhani, sans-serif' }}>
-                  MESSAGE *
+                  Message *
                 </Label>
                 <Textarea
                   id="message"
@@ -201,22 +201,22 @@ export default function Contact() {
                   {isLoading ? (
                     <>
                       <div className="w-3.5 h-3.5 sm:w-4 sm:h-4 md:w-5 md:h-5 border-2 border-white border-t-transparent rounded-full animate-spin"></div>
-                      <span>ENVOI...</span>
+                      <span>Envoi...</span>
                     </>
                   ) : status === 'success' ? (
                     <>
                       <CheckCircle className="w-3.5 h-3.5 sm:w-4 sm:h-4 md:w-5 md:h-5" />
-                      <span>ENVOYÉ !</span>
+                      <span>Envoyé !</span>
                     </>
                   ) : status === 'error' ? (
                     <>
                       <AlertCircle className="w-3.5 h-3.5 sm:w-4 sm:h-4 md:w-5 md:h-5" />
-                      <span>ERREUR</span>
+                      <span>Erreur</span>
                     </>
                   ) : (
                     <>
                       <Send className="w-3.5 h-3.5 sm:w-4 sm:h-4 md:w-5 md:h-5" />
-                      <span>ENVOYER</span>
+                      <span>Envoyer</span>
                     </>
                   )}
                 </span>
@@ -227,7 +227,7 @@ export default function Contact() {
           <div className="space-y-3 sm:space-y-4 md:space-y-6">
             <div className="bg-slate-900/50 backdrop-blur-xl border border-slate-700/50 rounded-xl sm:rounded-2xl md:rounded-3xl p-3 sm:p-4 md:p-6 lg:p-8">
               <h3 className="text-base sm:text-lg md:text-xl lg:text-2xl font-bold text-white mb-3 sm:mb-4 md:mb-6" style={{ fontFamily: 'Orbitron, monospace' }}>
-                INFORMATIONS_DE_CONTACT
+                Informations
               </h3>
               
               <div className="space-y-2 sm:space-y-3 md:space-y-4">
@@ -254,7 +254,7 @@ export default function Contact() {
 
             <div className="bg-slate-900/50 backdrop-blur-xl border border-slate-700/50 rounded-xl sm:rounded-2xl md:rounded-3xl p-3 sm:p-4 md:p-6 lg:p-8">
               <h3 className="text-base sm:text-lg md:text-xl lg:text-2xl font-bold text-white mb-3 sm:mb-4 md:mb-6" style={{ fontFamily: 'Orbitron, monospace' }}>
-                SUIVEZ_MOI
+                Suivez_moi
               </h3>
               
               <div className="space-y-1.5 sm:space-y-2 md:space-y-3">
@@ -284,7 +284,7 @@ export default function Contact() {
 
             <div className="bg-gradient-to-br from-cyan-500/10 to-blue-500/10 border border-cyan-500/20 rounded-xl sm:rounded-2xl md:rounded-3xl p-3 sm:p-4 md:p-6">
               <p className="text-cyan-400 leading-relaxed text-xs sm:text-sm md:text-base" style={{ fontFamily: 'Rajdhani, sans-serif' }}>
-                <span className="font-bold">RÉPONSE_GARANTIE_SOUS_24H</span><br />
+                <span className="font-bold">Réponse Sous 24H</span><br />
                 Que ce soit pour un projet professionnel, une collaboration 
                 ou simplement pour échanger, je suis toujours ouvert à de nouvelles opportunités.
               </p>

@@ -75,7 +75,7 @@ export default function Footer() {
 
           <div>
             <h4 className="text-sm sm:text-base md:text-lg font-semibold text-white mb-3 sm:mb-4 md:mb-6" style={{ fontFamily: 'Orbitron, monospace' }}>
-              NAVIGATION
+              Navigation
             </h4>
             <ul className="space-y-1.5 sm:space-y-2 md:space-y-3">
               {quickLinks.map((link) => (
@@ -95,7 +95,7 @@ export default function Footer() {
 
           <div>
             <h4 className="text-sm sm:text-base md:text-lg font-semibold text-white mb-3 sm:mb-4 md:mb-6" style={{ fontFamily: 'Orbitron, monospace' }}>
-              SERVICES
+              Services
             </h4>
             <ul className="space-y-1.5 sm:space-y-2 md:space-y-3 text-slate-400 text-xs sm:text-sm md:text-base" style={{ fontFamily: 'Rajdhani, sans-serif' }}>
               <li className="hover:text-cyan-400 transition-colors cursor-pointer">Développement Web</li>
@@ -108,7 +108,7 @@ export default function Footer() {
 
           <div>
             <h4 className="text-sm sm:text-base md:text-lg font-semibold text-white mb-3 sm:mb-4 md:mb-6" style={{ fontFamily: 'Orbitron, monospace' }}>
-              CONTACT
+              Contact
             </h4>
             <ul className="space-y-2 sm:space-y-3 md:space-y-4">
               {contactInfo.map((info, index) => (
@@ -138,11 +138,11 @@ export default function Footer() {
         <div className="border-t border-slate-800/50 py-4 sm:py-5 md:py-6 lg:py-8">
           <div className="flex flex-col md:flex-row justify-between items-center gap-3 sm:gap-4">
             <div className="flex flex-wrap items-center justify-center gap-1 sm:gap-1.5 md:gap-2 text-slate-400 text-xs sm:text-sm" style={{ fontFamily: 'Rajdhani, sans-serif' }}>
-              <span>CRÉÉ_AVEC</span>
+              <span>Créé_avec</span>
               <Heart className="h-2.5 w-2.5 sm:h-3 sm:w-3 md:h-4 md:w-4 text-red-500 fill-current animate-pulse" />
-              <span>PAR_ELTON</span>
+              <span>Par_Elton</span>
               <span className="mx-1 sm:mx-1.5 md:mx-2">•</span>
-              <span>© 2025 TOUS_DROITS_RÉSERVÉS</span>
+              <span>© 2025 Tout droits réservés</span>
             </div>
 
             <button

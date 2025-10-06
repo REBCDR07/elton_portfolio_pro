@@ -35,8 +35,8 @@ const technicalSkills = {
     { name: 'MySQL', level: 'intermediate', icon: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mysql/mysql-original.svg' },
   ],
   'Frameworks Frontend': [
-    { name: 'React', icon: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg' },
-    { name: 'TailwindCSS', icon: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/tailwindcss/tailwindcss-original.svg' },
+    { name: 'React', level: 'intermediate',  icon: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg' },
+    { name: 'TailwindCSS', level: 'intermediate', icon: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/tailwindcss/tailwindcss-original.svg' },
     { name: 'Vite', icon: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/vitejs/vitejs-original.svg' }
   ],
   'DevOps': [
@@ -45,8 +45,8 @@ const technicalSkills = {
     { name: 'Netlify', level: 'intermediate', icon: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/netlify/netlify-original.svg' },
   ],
   'UI/UX Design': [
-    { name: 'Figma', icon: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/figma/figma-original.svg' },
-    { name: 'Adobe XD', icon: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/xd/xd-plain.svg' },
+    { name: 'Figma', level: 'beginner', icon: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/figma/figma-original.svg' },
+    
     { name: 'Design Systems', icon: null },
     { name: 'Responsive Design', icon: null }
   ]
@@ -128,7 +128,7 @@ export default function Skills() {
           </div>
 
           <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-7xl font-bold mb-3 sm:mb-4 md:mb-6 px-3" style={{ fontFamily: 'Orbitron, monospace' }}>
-            MES <span className="bg-gradient-to-r from-purple-400 via-blue-500 to-cyan-500 bg-clip-text text-transparent">COMPÉTENCES</span>
+            Mes <span className="bg-gradient-to-r from-purple-400 via-blue-500 to-cyan-500 bg-clip-text text-transparent">Compétences</span>
           </h2>
 
           <p className="text-sm sm:text-base md:text-lg lg:text-xl text-slate-400 max-w-3xl mx-auto leading-relaxed px-3" style={{ fontFamily: 'Rajdhani, sans-serif' }}>
@@ -137,7 +137,7 @@ export default function Skills() {
         </div>
 
         <div className="mb-8 sm:mb-12 md:mb-16 lg:mb-20">
-          <h3 className="text-lg sm:text-xl md:text-2xl lg:text-3xl font-bold mb-6 sm:mb-8 md:mb-10 text-center text-white" style={{ fontFamily: 'Orbitron, monospace' }}>AI_TOOLS</h3>
+          <h3 className="text-lg sm:text-xl md:text-2xl lg:text-3xl font-bold mb-6 sm:mb-8 md:mb-10 text-center text-white" style={{ fontFamily: 'Orbitron, monospace' }}>AI_Tools</h3>
           <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 gap-2.5 sm:gap-3 md:gap-4 lg:gap-6 max-w-6xl mx-auto">
             {aiTools.map((tool) => (
               <div key={tool.name} className="group relative bg-slate-900/50 backdrop-blur-xl border border-slate-700/50 p-3 sm:p-4 md:p-6 rounded-xl sm:rounded-2xl hover:scale-105 hover:border-cyan-500/50 transition-all duration-300">
@@ -154,7 +154,7 @@ export default function Skills() {
         </div>
 
         <div className="mb-8 sm:mb-12 md:mb-16 lg:mb-20">
-          <h3 className="text-lg sm:text-xl md:text-2xl lg:text-3xl font-bold mb-6 sm:mb-8 md:mb-10 text-center text-white" style={{ fontFamily: 'Orbitron, monospace' }}>TECH_SKILLS</h3>
+          <h3 className="text-lg sm:text-xl md:text-2xl lg:text-3xl font-bold mb-6 sm:mb-8 md:mb-10 text-center text-white" style={{ fontFamily: 'Orbitron, monospace' }}>Tech_Skills</h3>
           <div className="grid lg:grid-cols-2 gap-4 sm:gap-5 md:gap-6 max-w-7xl mx-auto">
             {Object.entries(technicalSkills).map(([category, skills]) => {
               const Icon = categoryIcons[category];
@@ -199,7 +199,7 @@ export default function Skills() {
         </div>
 
         <div>
-          <h3 className="text-lg sm:text-xl md:text-2xl lg:text-3xl font-bold mb-6 sm:mb-8 md:mb-10 text-center text-white" style={{ fontFamily: 'Orbitron, monospace' }}>SOFT_SKILLS</h3>
+          <h3 className="text-lg sm:text-xl md:text-2xl lg:text-3xl font-bold mb-6 sm:mb-8 md:mb-10 text-center text-white" style={{ fontFamily: 'Orbitron, monospace' }}>Soft_Skills</h3>
           <div className="grid grid-cols-2 md:grid-cols-4 gap-3 sm:gap-4 md:gap-6 max-w-6xl mx-auto">
             {softSkills.map((skill) => (
               <div key={skill.name} className="group relative bg-slate-900/50 backdrop-blur-xl border border-slate-700/50 p-4 sm:p-5 md:p-6 lg:p-8 rounded-xl sm:rounded-2xl hover:scale-105 hover:border-cyan-500/50 transition-all duration-300 text-center">
