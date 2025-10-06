@@ -125,7 +125,7 @@ export default function Hero() {
 
             <h6 className="text-2xl sm:text-3xl md:text-5xl lg:text-7xl xl:text-9xl font-black mb-3 sm:mb-4 md:mb-6 relative px-2" style={{ fontFamily: 'Orbitron, monospace' }}>
               <span className="bg-gradient-to-r from-cyan-400 via-blue-500 to-purple-500 bg-clip-text text-transparent leading-tight block">
-                N. E. Ronald Bill Hounnou 
+                Elton Hounnou 
               </span>
             </h6>
 
