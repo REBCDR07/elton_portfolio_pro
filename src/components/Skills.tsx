@@ -17,19 +17,19 @@ import {
 
 
 const technicalSkills = {
-  'Langages de programmation': [
+  'Langages': [
     { name: 'JavaScript', level: 'intermediate', icon: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg' },
     { name: 'TypeScript', level: 'beginner', icon: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/typescript/typescript-original.svg' },
     { name: 'Python', level: 'intermediate', icon: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg' },
     { name: 'C++', level: 'beginner', icon: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/cplusplus/cplusplus-plain.svg'},
     { name: 'PHP', level: 'beginner', icon: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/php/php-original.svg' }
   ],
-  'Base de données': [
+  'Bases': [
     { name: 'MongoDB', level: 'beginner', icon: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mongodb/mongodb-original.svg' },
     { name: 'Supabase', level: 'intermediate', icon: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/supabase/supabase-original.svg' },
     { name: 'MySQL', level: 'intermediate', icon: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mysql/mysql-original.svg' },
   ],
-  'Frameworks Frontend': [
+  'Frameworks': [
     { name: 'React', level: 'intermediate',  icon: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg' },
     { name: 'TailwindCSS', level: 'intermediate', icon: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/tailwindcss/tailwindcss-original.svg' },
     { name: 'Vite', icon: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/vitejs/vitejs-original.svg' }
@@ -79,9 +79,9 @@ const levelConfig = {
 };
 
 const categoryIcons: { [key: string]: typeof Code } = {
-  'Langages de programmation': Code,
-  'Base de données': Database,
-  'Frameworks Frontend': Wrench,
+  'Langages': Code,
+  'Bases': Database,
+  'Frameworks': Wrench,
   'DevOps': Wrench,
   'UI/UX Design': Palette
 };
@@ -156,7 +156,7 @@ export default function Skills() {
               const isExpanded = expandedCategories.includes(category);
               return (
                 <div key={category} className="bg-slate-900/50 backdrop-blur-xl border border-slate-700/50 rounded-xl sm:rounded-2xl overflow-hidden hover:border-cyan-500/50 transition-all duration-300">
-                  <button onClick={() => toggleCategory(category)} className="w-full p-3 sm:p-4 md:p-6 flex justify-between text-left hover:bg-slate-800/50 transition-colors">
+                  <button onClick={() => toggleCategory(category)} className="w-full p-3 sm:p-4 md:p-6 flex justify-between text-left hover:bg-slate-800/50 transition-colors" aria-label="catégorie">
                     <div className="flex items-center gap-2.5 sm:gap-3 md:gap-4">
                       <div className="p-2 sm:p-2.5 md:p-3 bg-cyan-500/10 rounded-lg sm:rounded-xl">
                         <Icon className="h-4 w-4 sm:h-5 sm:w-5 md:h-6 md:w-6 text-cyan-400" />

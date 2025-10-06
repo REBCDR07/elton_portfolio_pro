@@ -66,6 +66,7 @@ export default function Navbar() {
               <button
                 key={item.name}
                 onClick={() => scrollToSection(item.href)}
+                aria-label="Naviguer vers la section"
                 className={`px-2.5 xl:px-6 py-1.5 xl:py-2 text-xs xl:text-sm font-medium rounded-full transition-all duration-300 whitespace-nowrap ${
                   activeSection === item.href.substring(1)
                     ? 'bg-gradient-to-r from-cyan-500/20 to-blue-500/20 text-cyan-400 border border-cyan-500/30'
@@ -91,6 +92,7 @@ export default function Navbar() {
                 variant="ghost"
                 size="sm"
                 onClick={() => setIsOpen(!isOpen)}
+                aria-label="Ouvrir le menu de navigation"
                 className="text-white hover:bg-slate-800/50 h-8 w-8 p-0"
               >
                 {isOpen ? (
@@ -107,6 +109,7 @@ export default function Navbar() {
                   <button
                     key={item.name}
                     onClick={() => scrollToSection(item.href)}
+                    aria-label="Naviguer vers la section"
                     className={`text-center px-2.5 py-1.5 rounded-full text-xs font-medium transition-all duration-300 ${
                       activeSection === item.href.substring(1)
                         ? 'bg-gradient-to-r from-cyan-500/20 to-blue-500/20 text-cyan-400 border border-cyan-500/30'
@@ -134,6 +137,7 @@ export default function Navbar() {
                 variant="ghost"
                 size="sm"
                 onClick={() => setIsOpen(!isOpen)}
+                aria-label="Ouvrir le menu de navigation"
                 className="text-white hover:bg-slate-800/50 h-8 w-8 p-0"
               >
                 {isOpen ? (
@@ -156,6 +160,7 @@ export default function Navbar() {
                 <button
                   key={item.name}
                   onClick={() => scrollToSection(item.href)}
+                  aria-label="Naviguer vers la section"
                   className={`w-full text-left px-5 py-3.5 rounded-2xl text-base font-semibold transition-all duration-300 transform hover:scale-105 ${
                     activeSection === item.href.substring(1)
                       ? 'bg-gradient-to-r from-cyan-500/30 to-blue-500/30 text-cyan-400 border-2 border-cyan-500/50 shadow-lg shadow-cyan-500/20'

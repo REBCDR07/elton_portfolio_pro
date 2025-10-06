@@ -80,7 +80,7 @@ const projects = [
     fullDescription: "Portfolio personnel moderne avec un design cyberpunk/tech, développé avec React, TypeScript et TailwindCSS. Interface interactive avec animations fluides, glassmorphisme et effets visuels avancés. ",
     client: 'Projet Personnel',
     date: 'Août 2025',
-    liveUrl: '', 
+    liveUrl: 'https://eltonhounnou.vercel.app/', 
     codeUrl: 'https://github.com/REBCDR07/elton_portfolio_pro', 
     gradient: 'from-blue-500 to-green-500'
   },
@@ -340,6 +340,7 @@ export default function Projects() {
       <div className="fixed inset-0 z-50 bg-slate-950 overflow-y-auto">
         <button 
           onClick={() => setSelectedProject(null)}
+          aria-label="Close Project Details"
           className="fixed top-2 right-2 sm:top-4 sm:right-4 z-50 p-2 bg-slate-800/80 backdrop-blur-xl border border-cyan-500/30 hover:bg-slate-700/80 text-cyan-400 rounded-lg transition-all hover:scale-110 group"
         >
           <X className="w-4 h-4 sm:w-5 sm:h-5 group-hover:rotate-90 transition-transform" />
@@ -451,14 +452,14 @@ export default function Projects() {
                 <div className="space-y-1.5 sm:space-y-2">
                   {project.liveUrl && (
                     <a href={project.liveUrl} target="_blank" rel="noopener noreferrer">
-                      <button className={`w-full px-3 py-2 sm:py-2.5 bg-gradient-to-r ${project.gradient} text-white font-bold rounded-lg hover:scale-105 transition-transform flex items-center justify-center gap-1.5 text-xs sm:text-sm`} style={{ fontFamily: 'Orbitron, monospace' }}>
+                      <button className={`w-full px-3 py-2 sm:py-2.5 bg-gradient-to-r ${project.gradient} text-white font-bold rounded-lg hover:scale-105 transition-transform flex items-center justify-center gap-1.5 text-xs sm:text-sm`} style={{ fontFamily: 'Orbitron, monospace' }} aria-label="live view">
                         <ExternalLink className="w-3 h-3 sm:w-3.5 sm:h-3.5" />
                         Live_View
                       </button>
                     </a>
                   )}
                   <a href={project.codeUrl} target="_blank" rel="noopener noreferrer">
-                    <button className="w-full px-3 py-2 sm:py-2.5 bg-slate-800/50 border border-slate-700/50 text-slate-300 font-bold rounded-lg hover:bg-slate-700/50 transition-all flex items-center justify-center gap-1.5 text-xs sm:text-sm" style={{ fontFamily: 'Orbitron, monospace' }}>
+                    <button className="w-full px-3 py-2 sm:py-2.5 bg-slate-800/50 border border-slate-700/50 text-slate-300 font-bold rounded-lg hover:bg-slate-700/50 transition-all flex items-center justify-center gap-1.5 text-xs sm:text-sm" style={{ fontFamily: 'Orbitron, monospace' }} aria-label="source code">
                       <Github className="w-3 h-3 sm:w-3.5 sm:h-3.5" />
                       Source_Code
                     </button>
@@ -466,7 +467,7 @@ export default function Projects() {
                   <button 
                     onClick={contactForCollaboration}
                     className="w-full px-3 py-2 sm:py-2.5 bg-slate-800/50 border border-cyan-500/30 text-cyan-400 font-bold rounded-lg hover:bg-slate-700/50 transition-all flex items-center justify-center gap-1.5 text-xs sm:text-sm"
-                    style={{ fontFamily: 'Orbitron, monospace' }}
+                    style={{ fontFamily: 'Orbitron, monospace' }} aria-label="Collaborate"
                   >
                     <Users className="w-3 h-3 sm:w-3.5 sm:h-3.5" />
                     Collaborate
@@ -572,7 +573,7 @@ export default function Projects() {
                     )}
                   </div>
 
-                  <button className={`w-full px-3 py-1.5 sm:py-2 bg-gradient-to-r ${project.gradient} text-white font-bold rounded-lg flex items-center justify-center gap-1.5 group-hover:shadow-lg transition-all text-[10px] sm:text-sm`} style={{ fontFamily: 'Orbitron, monospace' }}>
+                  <button className={`w-full px-3 py-1.5 sm:py-2 bg-gradient-to-r ${project.gradient} text-white font-bold rounded-lg flex items-center justify-center gap-1.5 group-hover:shadow-lg transition-all text-[10px] sm:text-sm`} style={{ fontFamily: 'Orbitron, monospace' }} aria-label="View project">
                     <span>View_project</span>
                     <ExternalLink className="w-3 h-3 sm:w-3.5 sm:h-3.5" />
                   </button>

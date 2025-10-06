@@ -124,6 +124,7 @@ export default function Services() {
 
                 <button 
                   onClick={() => toggleService(index)}
+                  aria-label="services"
                   className="flex items-center gap-1.5 sm:gap-2 text-cyan-400 font-bold group-hover:gap-2 sm:group-hover:gap-3 transition-all text-xs sm:text-sm md:text-base" 
                   style={{ fontFamily: 'Orbitron, monospace' }}
                 >
@@ -152,19 +153,20 @@ export default function Services() {
         <div className="text-center mt-8 sm:mt-12 md:mt-16 lg:mt-20">
           <div className="inline-flex flex-col items-center gap-3 sm:gap-4 md:gap-6 bg-slate-800/30 backdrop-blur-xl border border-cyan-500/30 rounded-xl sm:rounded-2xl md:rounded-3xl p-4 sm:p-5 md:p-6 lg:p-8 max-w-2xl hover:border-cyan-400 transition-all mx-3">
             <h3 className="text-base sm:text-lg md:text-xl lg:text-2xl font-bold text-white" style={{ fontFamily: 'Orbitron, monospace' }}>
-              Vous_avez_un_projet ?
+              Un_projet ?
             </h3>
             <p className="text-xs sm:text-sm md:text-base text-slate-400 px-2" style={{ fontFamily: 'Rajdhani, sans-serif' }}>
               Discutons ensemble de votre projet et trouvons la meilleure solution pour le concrétiser.
             </p>
             <button 
               onClick={() => document.getElementById('contact')?.scrollIntoView({ behavior: 'smooth' })}
+              aria-label="devis"
               className="group relative px-4 sm:px-5 md:px-6 lg:px-8 py-2.5 sm:py-3 md:py-4 bg-gradient-to-r from-cyan-500 to-blue-500 text-white font-bold rounded-full overflow-hidden shadow-lg hover:shadow-cyan-500/50 transition-all duration-300 hover:scale-105 text-xs sm:text-sm md:text-base"
               style={{ fontFamily: 'Orbitron, monospace' }}
             >
               <div className="absolute inset-0 bg-gradient-to-r from-blue-500 to-purple-500 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
               <span className="relative flex items-center gap-1.5 sm:gap-2">
-                Start_Conversation
+                Start
                 <ArrowRight className="w-3.5 h-3.5 sm:w-4 sm:h-4 md:w-5 md:h-5 group-hover:translate-x-1 transition-transform" />
               </span>
             </button>

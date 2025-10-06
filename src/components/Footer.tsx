@@ -77,6 +77,7 @@ export default function Footer() {
                 <li key={link.name}>
                   <button
                     onClick={() => scrollToSection(link.href)}
+                    aria-label="Naviguer vers la section"
                     className="text-slate-400 hover:text-cyan-400 transition-colors flex items-center group text-xs sm:text-sm md:text-base"
                     style={{ fontFamily: 'Rajdhani, sans-serif' }}
                   >

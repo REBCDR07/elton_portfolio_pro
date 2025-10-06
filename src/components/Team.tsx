@@ -167,13 +167,14 @@ export default function Team() {
           <div className="inline-flex flex-col items-center gap-3 sm:gap-5 bg-slate-800/30 backdrop-blur-xl border border-cyan-500/30 rounded-xl sm:rounded-2xl p-4 sm:p-7 max-w-2xl hover:border-cyan-400 transition-all mx-3">
             <Users className="w-8 h-8 sm:w-10 sm:h-10 text-cyan-400" />
             <h3 className="text-lg sm:text-2xl font-bold text-white leading-tight" style={{ fontFamily: 'Orbitron, monospace' }}>
-              Rejoignez L'Équipe
+              Rejoignez Nous
             </h3>
             <p className="text-slate-400 text-xs sm:text-base leading-relaxed" style={{ fontFamily: 'Rajdhani, sans-serif' }}>
               Vous êtes développeur passionné ? Nous sommes toujours à la recherche de talents pour renforcer notre équipe.
             </p>
             <button
               onClick={() => document.getElementById('contact')?.scrollIntoView({ behavior: 'smooth' })}
+              aria-label="Nous contacter"
               className="group relative px-5 sm:px-7 py-2.5 sm:py-3.5 bg-gradient-to-r from-cyan-500 to-blue-500 text-white font-bold rounded-full overflow-hidden shadow-lg hover:shadow-cyan-500/50 transition-all duration-300 hover:scale-105 text-xs sm:text-base"
               style={{ fontFamily: 'Orbitron, monospace' }}
             >

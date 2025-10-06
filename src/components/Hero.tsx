@@ -120,7 +120,7 @@ export default function Hero() {
 
             <h6 className="text-2xl sm:text-3xl md:text-5xl lg:text-7xl xl:text-9xl font-black mb-3 sm:mb-4 md:mb-6 relative px-2" style={{ fontFamily: 'Orbitron, monospace' }}>
               <span className="bg-gradient-to-r from-cyan-400 via-blue-500 to-purple-500 bg-clip-text text-transparent leading-tight block">
-                Elton Hounnou 
+                N. E. Ronald Bill Hounnou 
               </span>
             </h6>
 
@@ -152,6 +152,7 @@ export default function Hero() {
             <div className="flex flex-col sm:flex-row gap-2 sm:gap-3 md:gap-4 justify-center mb-8 sm:mb-12 md:mb-20 px-3">
               <button
                 onClick={scrollToContact}
+                aria-label="Contacter moi"
                 className="group relative px-4 sm:px-6 md:px-8 py-2.5 sm:py-3 md:py-4 bg-gradient-to-r from-cyan-500 to-blue-500 text-white font-bold rounded-lg sm:rounded-xl overflow-hidden shadow-lg hover:shadow-cyan-500/50 transition-all duration-300 hover:scale-105 text-xs sm:text-sm md:text-base"
                 style={{ fontFamily: 'Orbitron, monospace' }}
               >
@@ -164,6 +165,7 @@ export default function Hero() {
 
               <button
                 onClick={scrollToProjets}
+                aria-label="Voir mes projets"
                 className="group px-4 sm:px-6 md:px-8 py-2.5 sm:py-3 md:py-4 bg-slate-900/50 backdrop-blur-xl border border-cyan-500/30 text-cyan-400 font-bold rounded-lg sm:rounded-xl hover:bg-slate-800/50 hover:border-cyan-400 transition-all duration-300 hover:scale-105 shadow-lg text-xs sm:text-sm md:text-base"
                 style={{ fontFamily: 'Orbitron, monospace' }}
               >
@@ -237,6 +239,7 @@ export default function Hero() {
           <div className="animate-bounce">
             <button
               onClick={scrollToAbout}
+              aria-label="En savoir plus"
               className="group p-1.5 sm:p-2 md:p-3 rounded-full bg-slate-900/50 backdrop-blur-xl border border-cyan-500/30 hover:bg-slate-800/50 hover:border-cyan-400 transition-all duration-300 hover:shadow-lg hover:shadow-cyan-500/20"
             >
               <ChevronDown className="h-4 w-4 sm:h-5 sm:w-5 md:h-6 md:w-6 text-cyan-400 group-hover:scale-110 transition-transform" />

@@ -189,6 +189,7 @@ export default function Contact() {
               <Button 
                 onClick={handleSubmit}
                 disabled={isLoading}
+                aria-label="Envoyer le message"
                 className="w-full group relative px-4 sm:px-6 md:px-8 py-3 sm:py-4 md:py-5 lg:py-6 bg-gradient-to-r from-cyan-500 to-blue-500 text-white font-semibold rounded-lg sm:rounded-xl overflow-hidden shadow-lg hover:shadow-cyan-500/50 transition-all duration-300 hover:scale-[1.02] text-xs sm:text-sm md:text-base"
               >
                 <div className="absolute inset-0 bg-gradient-to-r from-blue-500 to-purple-500 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>

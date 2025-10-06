@@ -1,7 +1,7 @@
 import { useState, useEffect } from 'react';
 import { Mail, MapPin, Phone, GraduationCap, Linkedin, Github, Facebook, Download, Briefcase, Code, Coffee, Zap } from 'lucide-react';
 
-import profileImage from '@/assets/profile.jpg';
+import profileImage from '@/assets/profile.webp';
 import cvFile from '@/assets/cv.pdf';
 
 
