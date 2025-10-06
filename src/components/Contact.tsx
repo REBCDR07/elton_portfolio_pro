@@ -201,8 +201,13 @@ export default function Contact() {
                     </>
                   ) : status === 'success' ? (
                     <>
+                      <AlertCircle className="w-3.5 h-3.5 sm:w-4 sm:h-4 md:w-5 md:h-5" />
+                      <span>Envoyé !</span>
+                    </>
+                  ) : status === 'error' ? (
+                    <>
                       <CheckCircle className="w-3.5 h-3.5 sm:w-4 sm:h-4 md:w-5 md:h-5" />
-                      <span>Envoyé</span>
+                      <span>Envoyé !</span>
                     </>
                   ) : (
                     <>
