@@ -14,12 +14,7 @@ import projetImage9 from '@/assets/mds.jpg';
 import projetImage10 from '@/assets/nga.jpg';
 import projetImage11 from '@/assets/tcs.jpg';
 
-const fontLink = document.createElement('link');
-fontLink.href = 'https://fonts.googleapis.com/css2?family=Rajdhani:wght@400;500;600;700&family=Orbitron:wght@400;500;600;700;900&display=swap';
-fontLink.rel = 'stylesheet';
-if (!document.querySelector(`link[href="${fontLink.href}"]`)) {
-  document.head.appendChild(fontLink);
-}
+
 
 const techIcons: { [key: string]: string } = {
   'React': 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg',
@@ -190,8 +185,8 @@ const projects = [
   },
   {
     id: 4,
-    name: 'Ges',
-    category: 'APPLICATION_WEB',
+    name: 'Gestion d\'Électricité Locale (GESTLE)',
+    category: 'Application_Web',
     shortDescription: 'Application web moderne et intuitive conçue pour simplifier la gestion de la facturation électrique locale.',
     image: projetImage5,
     status: 'completed',
@@ -216,8 +211,8 @@ const projects = [
   },
   {
     id: 5,
-    name: 'JNFOOD',
-    category: 'APPLICATION_WEB',
+    name: 'Jean Nicolas Food (JNFOOD)',
+    category: 'Site_Vitrine',
     shortDescription: 'Application web pour entreprise locale de patisserie & de nourriture.',
     image: projetImage6,
     status: 'completed',
@@ -238,8 +233,8 @@ const projects = [
   },
   {
     id: 6,
-    name: 'JOFAMS',
-    category: 'VITRINE',
+    name: 'Portfolio Littéraire JOFAMS',
+    category: 'Vitrine',
     shortDescription: 'Portfolio élégant et responsive conçu pour mettre en valeur les compétences littéraires d\'une écrivaine professionnelle. ',
     image: projetImage7,
     status: 'completed',
@@ -259,8 +254,8 @@ const projects = [
   },
   {
     id: 7,
-    name: 'NETFLIX GAME AMATOR : NGA',
-    category: 'WEBGAME',
+    name: 'Netflix Game Amator (NGA)',
+    category: 'Web_Game',
     shortDescription: 'Application interactive de quiz immersive dédiée aux passionnés de l\'univers Netflix.',
     image: projetImage10,
     status: 'completed',
@@ -272,7 +267,7 @@ const projects = [
       'Design responsive pour une expérience optimale sur tous les appareils',
       'Timer de 30 secs pour chaque question',
     ],
-    fullDescription: 'NETFLIX GAME AMATOR (NGA) est une application web interactive que j\'ai développée pour les passionnés de l\'univers Netflix. Le jeu propose un quiz thématique où les utilisateurs peuvent tester leurs connaissances sur les séries et films disponibles sur la plateforme. J\'ai utilisé HTML5, CSS3 et JavaScript pour créer une interface utilisateur immersive et engageante, avec des animations et des effets sonores pour renforcer l\'expérience de jeu. Le système de score  permet aux joueurs de suivre leurs performances. Le design est entièrement responsive, garantissant une expérience optimale sur tous les types d\'appareils, des smartphones aux ordinateurs de bureau.', 
+    fullDescription: 'Netflix Game Amator (NGA) est une application web interactive que j\'ai développée pour les passionnés de l\'univers Netflix. Le jeu propose un quiz thématique où les utilisateurs peuvent tester leurs connaissances sur les séries et films disponibles sur la plateforme. J\'ai utilisé HTML5, CSS3 et JavaScript pour créer une interface utilisateur immersive et engageante, avec des animations et des effets sonores pour renforcer l\'expérience de jeu. Le système de score  permet aux joueurs de suivre leurs performances. Le design est entièrement responsive, garantissant une expérience optimale sur tous les types d\'appareils, des smartphones aux ordinateurs de bureau.', 
     client: 'Projet Personnel',
     date: 'Avril 2025',
     liveUrl: 'https://netflix-amator-game.vercel.app/',
@@ -281,8 +276,8 @@ const projects = [
   },
   {
     id: 11,
-    name: 'KAYSON MUSICS',
-    category: 'MUSIQUE_APP',
+    name: 'Kayson Musics (KYS)',
+    category: 'Music Player',
     shortDescription: 'Lecteur de musique',
     image: projetImage8,
     status: 'completed',
@@ -307,8 +302,8 @@ const projects = [
   },
   {
     id: 9,
-    name: 'MY DIARY SECURE : MDS',
-    category: 'APPLICATION_WEB',
+    name: 'My Secure Diary (MDS)',
+    category: 'Application_Web',
     shortDescription: 'My Secure Diary - la réinvention du journal personnel sécurisé !',
     image: projetImage9,
     status: 'collaboration',
@@ -357,6 +352,9 @@ export default function Projects() {
                 <img 
                   src={project.image} 
                   alt={project.name}
+                  loading="lazy"
+                  width="384"
+                  height="384"
                   className="w-full h-full object-cover"
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-slate-950 via-transparent to-transparent"></div>
@@ -375,7 +373,7 @@ export default function Projects() {
 
                 <div>
                   <h3 className="text-sm sm:text-lg font-bold text-white mb-2 sm:mb-3" style={{ fontFamily: 'Orbitron, monospace' }}>
-                    // FEATURES
+                    // Features
                   </h3>
                   <div className="grid gap-1.5 sm:gap-2">
                     {project.features.map((feature, idx) => (
@@ -392,7 +390,7 @@ export default function Projects() {
             <div className="space-y-3 sm:space-y-4">
               <div className="bg-slate-900/50 backdrop-blur-xl border border-cyan-500/30 rounded-lg sm:rounded-2xl p-3 sm:p-5">
                 <h3 className="text-sm sm:text-base font-bold text-white mb-2 sm:mb-3" style={{ fontFamily: 'Orbitron, monospace' }}>
-                  PROJECT_INFO
+                  Projet_Details
                 </h3>
                 <div className="space-y-2 sm:space-y-3">
                   <div className="flex items-center gap-2">
@@ -423,7 +421,7 @@ export default function Projects() {
 
               <div className="bg-slate-900/50 backdrop-blur-xl border border-slate-700/50 rounded-lg sm:rounded-2xl p-3 sm:p-5">
                 <h3 className="text-sm sm:text-base font-bold text-white mb-2 sm:mb-3" style={{ fontFamily: 'Orbitron, monospace' }}>
-                  TECH_STACK
+                  Tech_stack
                 </h3>
                 <div className="flex flex-wrap gap-1.5 sm:gap-2">
                   {project.technologies.map((tech, idx) => (
@@ -431,6 +429,9 @@ export default function Projects() {
                       <img 
                         src={techIcons[tech]} 
                         alt={tech}
+                        loading="lazy"
+                        width="384"
+                        height="384"
                         className="w-3 h-3 sm:w-4 sm:h-4"
                         onError={(e) => {
                           const target = e.target as HTMLImageElement;
@@ -445,21 +446,21 @@ export default function Projects() {
 
               <div className="bg-slate-900/50 backdrop-blur-xl border border-slate-700/50 rounded-lg sm:rounded-2xl p-3 sm:p-5">
                 <h3 className="text-sm sm:text-base font-bold text-white mb-2 sm:mb-3" style={{ fontFamily: 'Orbitron, monospace' }}>
-                  LINKS
+                  Links
                 </h3>
                 <div className="space-y-1.5 sm:space-y-2">
                   {project.liveUrl && (
                     <a href={project.liveUrl} target="_blank" rel="noopener noreferrer">
                       <button className={`w-full px-3 py-2 sm:py-2.5 bg-gradient-to-r ${project.gradient} text-white font-bold rounded-lg hover:scale-105 transition-transform flex items-center justify-center gap-1.5 text-xs sm:text-sm`} style={{ fontFamily: 'Orbitron, monospace' }}>
                         <ExternalLink className="w-3 h-3 sm:w-3.5 sm:h-3.5" />
-                        LIVE_DEMO
+                        Live_View
                       </button>
                     </a>
                   )}
                   <a href={project.codeUrl} target="_blank" rel="noopener noreferrer">
                     <button className="w-full px-3 py-2 sm:py-2.5 bg-slate-800/50 border border-slate-700/50 text-slate-300 font-bold rounded-lg hover:bg-slate-700/50 transition-all flex items-center justify-center gap-1.5 text-xs sm:text-sm" style={{ fontFamily: 'Orbitron, monospace' }}>
                       <Github className="w-3 h-3 sm:w-3.5 sm:h-3.5" />
-                      SOURCE_CODE
+                      Source_Code
                     </button>
                   </a>
                   <button 
@@ -468,7 +469,7 @@ export default function Projects() {
                     style={{ fontFamily: 'Orbitron, monospace' }}
                   >
                     <Users className="w-3 h-3 sm:w-3.5 sm:h-3.5" />
-                    COLLABORATE
+                    Collaborate
                   </button>
                 </div>
               </div>
@@ -496,7 +497,7 @@ export default function Projects() {
           </div>
           
           <h2 className="text-2xl sm:text-5xl font-bold mb-3 sm:mb-5 px-3 leading-tight" style={{ fontFamily: 'Orbitron, monospace' }}>
-            MES <span className="bg-gradient-to-r from-purple-400 via-pink-500 to-rose-500 bg-clip-text text-transparent">PROJETS</span>
+            Mes <span className="bg-gradient-to-r from-purple-400 via-pink-500 to-rose-500 bg-clip-text text-transparent">Projets</span>
           </h2>
           
           <p className="text-sm sm:text-lg text-slate-400 max-w-3xl mx-auto leading-relaxed px-3" style={{ fontFamily: 'Rajdhani, sans-serif' }}>
@@ -519,6 +520,9 @@ export default function Projects() {
                   <img 
                     src={project.image}
                     alt={project.name}
+                    loading="lazy"
+                    width="384"
+                    height="384"
                     className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
                   />
                   <div className="absolute inset-0 bg-gradient-to-t from-slate-900 via-slate-900/50 to-transparent"></div>
@@ -550,6 +554,8 @@ export default function Projects() {
                         <img 
                           src={techIcons[tech]} 
                           alt={tech}
+                          loading="lazy"
+                          width="384"
                           className="w-2.5 h-2.5 sm:w-3 sm:h-3"
                           onError={(e) => {
                             const target = e.target as HTMLImageElement;
@@ -567,7 +573,7 @@ export default function Projects() {
                   </div>
 
                   <button className={`w-full px-3 py-1.5 sm:py-2 bg-gradient-to-r ${project.gradient} text-white font-bold rounded-lg flex items-center justify-center gap-1.5 group-hover:shadow-lg transition-all text-[10px] sm:text-sm`} style={{ fontFamily: 'Orbitron, monospace' }}>
-                    <span>VIEW_PROJECT</span>
+                    <span>View_project</span>
                     <ExternalLink className="w-3 h-3 sm:w-3.5 sm:h-3.5" />
                   </button>
                 </div>

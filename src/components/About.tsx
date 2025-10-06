@@ -4,12 +4,6 @@ import { Mail, MapPin, Phone, GraduationCap, Linkedin, Github, Facebook, Downloa
 import profileImage from '@/assets/profile.jpg';
 import cvFile from '@/assets/cv.pdf';
 
-const fontLink = document.createElement('link');
-fontLink.href = 'https://fonts.googleapis.com/css2?family=Rajdhani:wght@400;500;600;700&family=Orbitron:wght@400;500;600;700;900&display=swap';
-fontLink.rel = 'stylesheet';
-if (!document.querySelector(`link[href="${fontLink.href}"]`)) {
-  document.head.appendChild(fontLink);
-}
 
 const funFacts = [
   { icon: Code, text: 'Code la nuit' },
@@ -85,6 +79,9 @@ export default function About() {
                 <img 
                   src={profileImage} 
                   alt="Elton HOUNNOU - Développeur Web" 
+                  loading="lazy"
+                  width="384"     
+                  height="384"
                   className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
                 />
               </div>

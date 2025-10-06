@@ -1,12 +1,7 @@
 import { useState, useEffect } from 'react';
 import { ChevronDown, Mail, Eye, Sparkles, Code, Rocket, Terminal } from 'lucide-react';
 
-const fontLink = document.createElement('link');
-fontLink.href = 'https://fonts.googleapis.com/css2?family=Rajdhani:wght@400;500;600;700&family=Orbitron:wght@400;500;600;700;900&display=swap';
-fontLink.rel = 'stylesheet';
-if (!document.querySelector(`link[href="${fontLink.href}"]`)) {
-  document.head.appendChild(fontLink);
-}
+
 
 const heroStats = [
   { number: '2+', label: 'Ans d\'expérience', icon: Sparkles },

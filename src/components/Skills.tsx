@@ -14,12 +14,7 @@ import {
   Terminal,
 } from 'lucide-react';
 
-const fontLink = document.createElement('link');
-fontLink.href = 'https://fonts.googleapis.com/css2?family=Rajdhani:wght@400;500;600;700&family=Orbitron:wght@400;500;600;700;900&display=swap';
-fontLink.rel = 'stylesheet';
-if (!document.querySelector(`link[href="${fontLink.href}"]`)) {
-  document.head.appendChild(fontLink);
-}
+
 
 const technicalSkills = {
   'Langages de programmation': [

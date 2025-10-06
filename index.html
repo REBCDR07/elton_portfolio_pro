@@ -1,117 +1,410 @@
 <!doctype html>
 <html lang="fr">
-  <head>
-    <!-- Google Analytics -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-VESG27RTDK"></script>
-    <script>
-      window.dataLayer = window.dataLayer || [];
-      function gtag(){dataLayer.push(arguments);}
-      gtag('js', new Date());
-      gtag('config', 'G-VESG27RTDK');
-    </script>
+<head>
+  <!-- ========================================
+       ENCODAGE & CONFIGURATION DE BASE
+       ======================================== -->
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests" />
+  <meta name="referrer" content="strict-origin-when-cross-origin" />
 
-    <!-- Encodage & Responsive -->
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <!-- ========================================
+       SEO PRINCIPAL
+       ======================================== -->
+  <title>Elton Hounnou - Développeur Frontend React & TypeScript | Portfolio 2025</title>
+  <meta name="description" content="Portfolio de Elton Hounnou, développeur Frontend spécialisé en React, TypeScript et solutions web modernes à Abomey-Calavi, Bénin. Découvrez 11+ projets web innovants : applications, sites vitrines et jeux interactifs." />
+  <link rel="canonical" href="https://eltonhounnou.vercel.app/" />
+  
+  <!-- Meta Keywords (optimisé) -->
+  <meta name="keywords" content="Elton Hounnou, développeur React Bénin, développeur TypeScript, développeur frontend Abomey-Calavi, portfolio développeur, création site web Bénin, développeur freelance Afrique, React JavaScript, UI/UX designer, développeur web moderne, applications web sur mesure" />
+  
+  <!-- Directives Robots -->
+  <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1" />
+  <meta name="googlebot" content="index, follow" />
+  <meta name="bingbot" content="index, follow" />
+  <meta name="revisit-after" content="7 days" />
+  <meta name="rating" content="General" />
+  <meta name="distribution" content="global" />
+  <meta name="language" content="French" />
+  <meta name="author" content="Elton Hounnou" />
+  <meta name="creator" content="Elton Hounnou" />
+  <meta name="publisher" content="Elton Hounnou" />
 
-    <!-- Vérifications moteurs de recherche -->
-    <meta name="google-site-verification" content="3lGfiv_-XUqrN7E2FwCZ4ikNpa-4gjGrIL-oAbrkPPU" />
-    <meta name="msvalidate.01" content="97CBCC7F38CD319288A8F9CD74476321" />
+  <!-- Geo-localisation (Bénin) -->
+  <meta name="geo.region" content="BJ-AQ" />
+  <meta name="geo.placename" content="Abomey-Calavi" />
+  <meta name="geo.position" content="6.4489;2.3558" />
+  <meta name="ICBM" content="6.4489, 2.3558" />
 
-    <!-- SEO Basique -->
-    <title>Elton Hounnou | Développeur Frontend React & Web Moderne | Portfolio</title>
-    <meta name="description" content="Portfolio de Elton Hounnou, développeur Frontend spécialisé en React, TypeScript et solutions web modernes. Découvrez mes projets et contactez-moi." />
-    <meta name="author" content="Elton Hounnou" />
-    <meta name="keywords" content="Elton Hounnou, développeur frontend, développeur React, développeur web Bénin, portfolio développeur, React TypeScript, développement web moderne, création site web, freelance développeur" />
-    <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1" />
-    <link rel="canonical" href="https://eltonhounnou.com/" />
+  <!-- ========================================
+       OPEN GRAPH / FACEBOOK
+       ======================================== -->
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://eltonhounnou.vercel.app/" />
+  <meta property="og:site_name" content="Portfolio Elton Hounnou" />
+  <meta property="og:title" content="Elton Hounnou | Développeur Frontend React & TypeScript" />
+  <meta property="og:description" content="Développeur Frontend passionné créant des expériences web modernes avec React et TypeScript. Portfolio de 11+ projets innovants au Bénin." />
+  <meta property="og:image" content="https://eltonhounnou.vercel.app/assets/og-image.jpg" />
+  <meta property="og:image:secure_url" content="https://eltonhounnou.vercel.app/assets/og-image.jpg" />
+  <meta property="og:image:type" content="image/jpeg" />
+  <meta property="og:image:width" content="1200" />
+  <meta property="og:image:height" content="630" />
+  <meta property="og:image:alt" content="Portfolio d'Elton Hounnou - Développeur React & TypeScript" />
+  <meta property="og:locale" content="fr_FR" />
+  <meta property="og:locale:alternate" content="en_US" />
+  <meta property="og:updated_time" content="2025-10-05T20:00:00+01:00" />
+  <meta property="article:author" content="https://www.linkedin.com/in/elton27/" />
+  <meta property="article:modified_time" content="2025-10-05T20:00:00+01:00" />
 
-    <!-- Open Graph / Facebook -->
-    <meta property="og:type" content="website" />
-    <meta property="og:url" content="https://eltonhounnou.com/" />
-    <meta property="og:title" content="Elton Hounnou | Développeur Frontend React" />
-    <meta property="og:description" content="Développeur Frontend passionné créant des expériences web exceptionnelles avec React et TypeScript." />
-    <meta property="og:image" content="https://eltonhounnou.com/assets/og-image.jpg" />
-    <meta property="og:image:width" content="1200" />
-    <meta property="og:image:height" content="630" />
-    <meta property="og:locale" content="fr_FR" />
-    <meta property="og:site_name" content="Portfolio Elton Hounnou" />
+  <!-- ========================================
+       TWITTER CARD
+       ======================================== -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:site" content="@tonpseudo" />
+  <meta name="twitter:creator" content="@tonpseudo" />
+  <meta name="twitter:url" content="https://eltonhounnou.vercel.app/" />
+  <meta name="twitter:title" content="Elton Hounnou | Développeur Frontend React & TypeScript" />
+  <meta name="twitter:description" content="Développeur Frontend passionné créant des expériences web modernes avec React et TypeScript. Portfolio de 11+ projets innovants." />
+  <meta name="twitter:image" content="https://eltonhounnou.vercel.app/assets/twitter-card.jpg" />
+  <meta name="twitter:image:alt" content="Portfolio d'Elton Hounnou - Développeur React" />
 
-    <!-- Twitter Card -->
-    <meta name="twitter:card" content="summary_large_image" />
-    <meta name="twitter:url" content="https://eltonhounnou.com/" />
-    <meta name="twitter:title" content="Elton Hounnou | Développeur Frontend React" />
-    <meta name="twitter:description" content="Développeur Frontend passionné créant des expériences web exceptionnelles avec React et TypeScript." />
-    <meta name="twitter:image" content="https://eltonhounnou.com/assets/twitter-card.jpg" />
-    <meta name="twitter:creator" content="@tonpseudo" />
+  <!-- ========================================
+       AUTRES RÉSEAUX SOCIAUX
+       ======================================== -->
+  <!-- Pinterest -->
+  <meta name="pinterest-rich-pin" content="true" />
+  <meta name="pinterest" content="nopin" description="Merci de ne pas épingler ce contenu" />
 
-    <!-- Structured Data / Schema.org -->
-    <script type="application/ld+json">
-    {
-      "@context": "https://schema.org",
-      "@type": "Person",
-      "name": "Elton Hounnou",
-      "jobTitle": "Développeur Frontend",
-      "url": "https://eltonhounnou.vercel.app/",
-      "image": "https://eltonhounnou.vercel.app//assets/profile.jpg",
-      "sameAs": [
-        "https://www.linkedin.com/in/elton27/",
-        "https://github.com/REBCDR07",
-        "https://www.linkedin.com/in/elton27/"
-      ],
+  <!-- LinkedIn -->
+  <meta property="og:see_also" content="https://www.linkedin.com/in/elton27/" />
+
+  <!-- ========================================
+       VÉRIFICATIONS MOTEURS DE RECHERCHE
+       ======================================== -->
+  <meta name="google-site-verification" content="3lGfiv_-XUqrN7E2FwCZ4ikNpa-4gjGrIL-oAbrkPPU" />
+  <meta name="msvalidate.01" content="97CBCC7F38CD319288A8F9CD74476321" />
+  <meta name="yandex-verification" content="" />
+  <meta name="alexaVerifyID" content="" />
+
+  <!-- ========================================
+       FAVICONS & THÈME
+       ======================================== -->
+  <link rel="icon" type="image/x-icon" href="/favicon.ico" />
+  <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
+  <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
+  <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
+  <link rel="manifest" href="/site.webmanifest" />
+  <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#000000" />
+  <meta name="theme-color" content="#000000" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+  <meta name="apple-mobile-web-app-title" content="Elton Hounnou" />
+  <meta name="msapplication-TileColor" content="#000000" />
+  <meta name="msapplication-config" content="/browserconfig.xml" />
+
+  <!-- ========================================
+       PRECONNECT & PERFORMANCE
+       ======================================== -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link rel="preconnect" href="https://cdn.jsdelivr.net" />
+  <link rel="preconnect" href="https://www.googletagmanager.com" />
+  <link rel="dns-prefetch" href="https://fonts.googleapis.com" />
+  <link rel="dns-prefetch" href="https://www.google-analytics.com" />
+
+  <!-- Police Google Fonts (optimisée) -->
+  <link
+    rel="preload"
+    as="style"
+    href="https://fonts.googleapis.com/css2?family=Rajdhani:wght@400;500;600;700&family=Orbitron:wght@400;500;600;700;900&display=swap"
+  />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Rajdhani:wght@400;500;600;700&family=Orbitron:wght@400;500;600;700;900&display=swap"
+    rel="stylesheet"
+    media="print"
+    onload="this.media='all'"
+  />
+  <noscript>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Rajdhani:wght@400;500;600;700&family=Orbitron:wght@400;500;600;700;900&display=swap"
+      rel="stylesheet"
+    />
+  </noscript>
+
+  <!-- ========================================
+       STRUCTURED DATA / SCHEMA.ORG
+       ======================================== -->
+  
+  <!-- Schema: Person -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Person",
+    "name": "Elton Hounnou",
+    "alternateName": "Elton HOUNNOU",
+    "jobTitle": "Développeur Frontend",
+    "description": "Développeur Frontend spécialisé en React, TypeScript et solutions web modernes",
+    "url": "https://eltonhounnou.vercel.app/",
+    "image": "https://eltonhounnou.vercel.app/assets/profile.jpg",
+    "email": "contact@eltonhounnou.vercel.app",
+    "telephone": "+229 01 40 66 33 49 | 01 55 87 58 94",
+    "address": {
+      "@type": "PostalAddress",
+      "addressLocality": "Abomey-Calavi",
+      "addressRegion": "Atlantique",
+      "addressCountry": "BJ"
+    },
+    "sameAs": [
+      "https://www.linkedin.com/in/elton27/",
+      "https://github.com/REBCDR07"
+    ],
+    "knowsAbout": [
+      "React",
+      "TypeScript",
+      "JavaScript",
+      "Frontend Development",
+      "Web Design",
+      "UI/UX",
+      "Tailwind CSS"
+    ],
+    "knowsLanguage": ["fr-FR", "en-US"],
+    "workLocation": {
+      "@type": "Place",
       "address": {
         "@type": "PostalAddress",
         "addressLocality": "Abomey-Calavi",
         "addressRegion": "Atlantique",
         "addressCountry": "BJ"
-      },
-      "knowsAbout": ["React", "TypeScript", "JavaScript", "Frontend Development", "Web Development"],
-      "description": "Développeur Frontend spécialisé en React et solutions web modernes"
-    }
-    </script>
-
-    <script type="application/ld+json">
-    {
-      "@context": "https://schema.org",
-      "@type": "WebSite",
-      "name": "Portfolio Elton Hounnou",
-      "url": "https://eltonhounnou.vercel.app/",
-      "description": "Portfolio professionnel de Elton Hounnou, développeur Frontend",
-      "author": {
-        "@type": "Person",
-        "name": "Elton Hounnou"
       }
     }
-    </script>
+  }
+  </script>
 
-    <!-- Favicons -->
-    <link rel="icon" type="image/x-icon" href="/favicon.ico" />
-    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
-    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
-    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
-    <link rel="manifest" href="/site.webmanifest" />
+  <!-- Schema: WebSite -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Elton",
+    "name": "Portfolio Elton Hounnou",
+    "alternateName": "Elton Hounnou Dev",
+    "url": "https://eltonhounnou.vercel.app/",
+    "description": "Portfolio professionnel de Elton Hounnou, développeur Frontend React et TypeScript",
+    "inLanguage": "fr-FR",
+    "publisher": {
+      "@type": "Person",
+      "name": "Elton Hounnou"
+    },
+    "potentialAction": {
+      "@type": "SearchAction",
+      "target": "https://eltonhounnou.vercel.app/?s={search_term_string}",
+      "query-input": "required name=search_term_string"
+    }
+  }
+  </script>
 
-    <!-- Theme Color -->
-    <meta name="theme-color" content="#000000" />
+  <!-- Schema: Breadcrumbs -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      {
+        "@type": "ListItem",
+        "position": 1,
+        "name": "Accueil",
+        "item": "https://eltonhounnou.vercel.app/"
+      },
+      {
+        "@type": "ListItem",
+        "position": 2,
+        "name": "Projets",
+        "item": "https://eltonhounnou.vercel.app/#projects"
+      },
+      {
+        "@type": "ListItem",
+        "position": 3,
+        "name": "Contact",
+        "item": "https://eltonhounnou.vercel.app/#contact"
+      }
+    ]
+  }
+  </script>
 
-    <!-- Preconnect pour optimisation -->
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  </head>
+  <!-- Schema: ItemList (Portfolio Projects) -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "ItemList",
+    "name": "Portfolio de Elton Hounnou",
+    "description": "Collection de projets web réalisés par Elton Hounnou (sites vitrines, applications, jeux interactifs).",
+    "url": "https://eltonhounnou.vercel.app",
+    "numberOfItems": 11,
+    "itemListElement": [
+      {
+        "@type": "CreativeWork",
+        "position": 1,
+        "name": "Portfolio Professionnel",
+        "image": "https://eltonhounnou.vercel.app/assets/projetImage3.jpg",
+        "description": "Portfolio personnel moderne avec un design cyberpunk/tech et animations interactives.",
+        "url": "https://eltonhounnou.vercel.app",
+        "codeRepository": "https://github.com/REBCDR07/elton_portfolio_pro"
+      },
+      {
+        "@type": "CreativeWork",
+        "position": 2,
+        "name": "AzerType",
+        "image": "https://eltonhounnou.vercel.app/assets/projetImage1.jpg",
+        "description": "Application web de dactylographie ludique et interactive.",
+        "url": "https://azertypee.netlify.app",
+        "codeRepository": "https://github.com/REBCDR07/AzerType"
+      },
+      {
+        "@type": "CreativeWork",
+        "position": 3,
+        "name": "EduConnect",
+        "image": "https://eltonhounnou.vercel.app/assets/projetImage2.jpg",
+        "description": "Plateforme web de digitalisation des inscriptions scolaires et universitaires.",
+        "url": "https://edu-connect-plateform.vercel.app/",
+        "codeRepository": "https://github.com/REBCDR07/EduConnect-Plateform"
+      },
+      {
+        "@type": "CreativeWork",
+        "position": 4,
+        "name": "The Code Share",
+        "image": "https://eltonhounnou.vercel.app/assets/projetImage10.jpg",
+        "description": "Application pour partager, collaborer et découvrir du code.",
+        "url": "https://eltonhounnou.vercel.app",
+        "codeRepository": "https://github.com/REBCDR07/TheCodeShare"
+      },
+      {
+        "@type": "CreativeWork",
+        "position": 5,
+        "name": "FitClub",
+        "image": "https://eltonhounnou.vercel.app/assets/projetImage4.jpg",
+        "description": "Site vitrine moderne pour une salle de gym locale.",
+        "url": "https://fitness-club-by-eltonhounnou.netlify.app/",
+        "codeRepository": "https://github.com/REBCDR07/salle_de_fitness"
+      },
+      {
+        "@type": "CreativeWork",
+        "position": 6,
+        "name": "GESTLE - Gestion d'Électricité Locale",
+        "image": "https://eltonhounnou.vercel.app/assets/projetImage5.jpg",
+        "description": "Application web pour simplifier la facturation électrique locale.",
+        "url": "https://gestle.netlify.app/",
+        "codeRepository": "https://github.com/REBCDR07/gestion_d_electricite_locale"
+      },
+      {
+        "@type": "CreativeWork",
+        "position": 7,
+        "name": "Jean Nicolas Food (JNFOOD)",
+        "image": "https://eltonhounnou.vercel.app/assets/projetImage6.jpg",
+        "description": "Site vitrine + mini e-commerce pour une entreprise de pâtisserie.",
+        "url": "https://verojnf.vercel.app/",
+        "codeRepository": "https://github.com/REBCDR07/vero_jnf"
+      },
+      {
+        "@type": "CreativeWork",
+        "position": 8,
+        "name": "Portfolio Littéraire JOFAMS",
+        "image": "https://eltonhounnou.vercel.app/assets/projetImage7.jpg",
+        "description": "Portfolio élégant pour une écrivaine professionnelle.",
+        "url": "https://juanita-amoussou.vercel.app/",
+        "codeRepository": "https://github.com/REBCDR07/Juanita_Amoussou"
+      },
+      {
+        "@type": "CreativeWork",
+        "position": 9,
+        "name": "Netflix Game Amator (NGA)",
+        "image": "https://eltonhounnou.vercel.app/assets/projetImage10.jpg",
+        "description": "Jeu web quiz interactif sur l'univers Netflix.",
+        "url": "https://netflix-amator-game.vercel.app/",
+        "codeRepository": "https://github.com/Elton27-Coder/NETFLIX-AMATOR-GAME"
+      },
+      {
+        "@type": "CreativeWork",
+        "position": 10,
+        "name": "Kayson Musics (KYS)",
+        "image": "https://eltonhounnou.vercel.app/assets/projetImage8.jpg",
+        "description": "Lecteur de musique web avec design glassmorphism et effets animés.",
+        "url": "https://qdl.netlify.app/",
+        "codeRepository": "https://github.com/REBCDR07/kayson_qdl"
+      },
+      {
+        "@type": "CreativeWork",
+        "position": 11,
+        "name": "My Secure Diary (MDS)",
+        "image": "https://eltonhounnou.vercel.app/assets/projetImage9.jpg",
+        "description": "Application de journal personnel sécurisé et privé.",
+        "url": "https://eltonhounnou.vercel.app",
+        "codeRepository": "https://github.com/REBCDR07/elton_portfolio_pro"
+      }
+    ]
+  }
+  </script>
 
-  <body>
-    <!-- Contenu de secours SEO si JS désactivé -->
-    <noscript>
-      <div style="padding: 20px; font-family: Arial, sans-serif;">
-        <h1>Elton Hounnou - Développeur Frontend & IA</h1>
-        <p>Développeur Frontend passionné spécialisé en React et solutions web modernes.</p>
-        <p>Ce site nécessite JavaScript pour fonctionner correctement.</p>
-      </div>
-    </noscript>
+  <!-- ========================================
+       GOOGLE ANALYTICS (Chargement différé)
+       ======================================== -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-VESG27RTDK"></script>
+  <script>
+    window.addEventListener("load", function () {
+      setTimeout(function () {
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag("js", new Date());
+        gtag("config", "G-VESG27RTDK", {
+          'anonymize_ip': true,
+          'cookie_flags': 'SameSite=None;Secure'
+        });
+      }, 3000);
+    });
+  </script>
+</head>
 
-    <div id="root"></div>
-    <script type="module" src="/src/main.tsx"></script>
+<body>
+  <!-- ========================================
+       CONTENU DE SECOURS (NoScript)
+       ======================================== -->
+  <noscript>
+    <div style="padding: 40px 20px; font-family: Arial, sans-serif; max-width: 800px; margin: 0 auto; line-height: 1.6;">
+      <h1>Elton Hounnou - Développeur Frontend React & TypeScript</h1>
+      <p>Bienvenue sur mon portfolio professionnel ! Je suis développeur Frontend passionné, spécialisé en React, TypeScript et solutions web modernes.</p>
+      
+      <h2>🚀 Mes Projets</h2>
+      <ul>
+        <li><strong>AzerType</strong> - Application de dactylographie interactive</li>
+        <li><strong>EduConnect</strong> - Plateforme de digitalisation scolaire</li>
+        <li><strong>FitClub</strong> - Site vitrine pour salle de gym</li>
+        <li><strong>GESTLE</strong> - Gestion d'électricité locale</li>
+        <li>Et 7 autres projets innovants...</li>
+      </ul>
+      
+      <h2>💼 Compétences</h2>
+      <p>React • TypeScript • JavaScript • Tailwind CSS • UI/UX Design</p>
+      
+      <h2>📍 Localisation</h2>
+      <p>Abomey-Calavi, Atlantique, Bénin</p>
+      
+      <hr style="margin: 30px 0; border: none; border-top: 1px solid #ccc;" />
+      
+      <p style="color: #d32f2f; font-weight: bold;">⚠️ Ce site nécessite JavaScript pour fonctionner correctement.</p>
+      <p>Veuillez activer JavaScript dans votre navigateur pour profiter de toutes les fonctionnalités interactives de ce portfolio.</p>
+      
+      <h3>📧 Me contacter</h3>
+      <p>
+        LinkedIn: <a href="https://www.linkedin.com/in/elton27/" target="_blank" rel="noopener">linkedin.com/in/elton27</a><br>
+        GitHub: <a href="https://github.com/REBCDR07" target="_blank" rel="noopener">github.com/REBCDR07</a>
+      </p>
+    </div>
+  </noscript>
 
-    
-  </body>
+  <!-- ========================================
+       APPLICATION REACT
+       ======================================== -->
+  <div id="root"></div>
+  <script type="module" src="/src/main.tsx"></script>
+</body>
 </html>

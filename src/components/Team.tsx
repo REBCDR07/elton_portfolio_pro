@@ -2,13 +2,6 @@ import { Download, ExternalLink, Linkedin, Github, Facebook, Terminal, Users } f
 import team1Image from '@/assets/team1.jpg';
 import team2Image from '@/assets/team2.jpg';
 
-// Import Google Fonts
-const fontLink = document.createElement('link');
-fontLink.href = 'https://fonts.googleapis.com/css2?family=Rajdhani:wght@400;500;600;700&family=Orbitron:wght@400;500;600;700;900&display=swap';
-fontLink.rel = 'stylesheet';
-if (!document.querySelector(`link[href="${fontLink.href}"]`)) {
-  document.head.appendChild(fontLink);
-} 
 
 const teamMembers = [
   {
@@ -91,6 +84,9 @@ export default function Team() {
                     <img
                       src={member.image}
                       alt={member.name}
+                      loading="lazy"
+                      width="384"
+                      height="384"
                       className="w-full h-full object-cover rounded-lg sm:rounded-xl"
                     />
                   ) : (

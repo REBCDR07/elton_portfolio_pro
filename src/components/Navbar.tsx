@@ -2,12 +2,7 @@ import { useState, useEffect } from 'react';
 import { Menu, X, Terminal } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 
-const fontLink = document.createElement('link');
-fontLink.href = 'https://fonts.googleapis.com/css2?family=Rajdhani:wght@400;500;600;700&family=Orbitron:wght@400;500;600;700;900&display=swap';
-fontLink.rel = 'stylesheet';
-if (!document.querySelector(`link[href="${fontLink.href}"]`)) {
-  document.head.appendChild(fontLink);
-}
+
 
 const navigationItems = [
   { name: 'Accueil', href: '#accueil' },

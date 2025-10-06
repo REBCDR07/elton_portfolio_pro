@@ -7,16 +7,28 @@ import { Analytics } from "@vercel/analytics/react";
 import Index from "./pages/Index";
 import NotFound from "./pages/NotFound";
 
+import { HelmetProvider } from "react-helmet-async";
+import SEO from "@/components/SEO";
+
+
+import { lazy, Suspense } from 'react';
+
+const Projects = lazy(() => import('./components/Projects'));
+const Skills = lazy(() => import('./components/Skills'));
+const Team = lazy(() => import('./components/Team'));
+
+
 
 
 const queryClient = new QueryClient();
 
 const App = () => (
   <QueryClientProvider client={queryClient}>
+    <HelmetProvider>
     <TooltipProvider>
       <Toaster />
       <Sonner />
-      
+      <SEO />
       <BrowserRouter>
         <Routes>
           <Route path="/" element={<Index />} />
@@ -26,6 +38,7 @@ const App = () => (
       </BrowserRouter>
       <Analytics />
     </TooltipProvider>
+    </HelmetProvider>
   </QueryClientProvider>
 );
 
