@@ -31,8 +31,8 @@ const App = () => (
         <SEO />
         <BrowserRouter>
           <div>
-            <h1>Mon Portfolio</h1>
-            <Suspense fallback={<div>Chargement des composants...</div>}>
+            
+            <Suspense fallback={<div> </div>}>
               <Projects />
               <Skills />
               <Team />

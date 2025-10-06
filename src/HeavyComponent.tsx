@@ -1,5 +1,5 @@
 const HeavyComponent = () => {
-  return <div>Composant lourd simulé</div>;
+  return <div> </div>;
 };
 
 export default HeavyComponent;
