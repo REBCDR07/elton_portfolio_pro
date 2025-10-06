@@ -199,15 +199,15 @@ export default function Contact() {
                       <div className="w-3.5 h-3.5 sm:w-4 sm:h-4 md:w-5 md:h-5 border-2 border-white border-t-transparent rounded-full animate-spin"></div>
                       <span>Envoi...</span>
                     </>
-                  ) : status === 'success' ? (
-                    <>
-                      <CheckCircle className="w-3.5 h-3.5 sm:w-4 sm:h-4 md:w-5 md:h-5" />
-                      <span>Envoyé !</span>
-                    </>
                   ) : status === 'error' ? (
                     <>
                       <AlertCircle className="w-3.5 h-3.5 sm:w-4 sm:h-4 md:w-5 md:h-5" />
                       <span>Erreur</span>
+                    </>
+                  ) : status === 'success' ? (
+                    <>
+                      <CheckCircle className="w-3.5 h-3.5 sm:w-4 sm:h-4 md:w-5 md:h-5" />
+                      <span>Envoyé</span>
                     </>
                   ) : (
                     <>
