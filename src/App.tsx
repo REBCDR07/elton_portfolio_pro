@@ -12,13 +12,13 @@ import NotFound from "./pages/NotFound";
 
 import { lazy, Suspense } from "react";
 
-// Lazy loading des composants
+// Lazy loading 
 const Projects = lazy(() => import("./components/Projects"));
 const Skills = lazy(() => import("./components/Skills"));
 const Team = lazy(() => import("./components/Team"));
 
-// Composant "HeavyComponent" simulé pour éviter l'erreur
-const HeavyComponent = () => <div>Composant lourd simulé</div>;
+
+const HeavyComponent = () => <div></div>;
 
 const queryClient = new QueryClient();
 
@@ -30,15 +30,15 @@ const App = () => (
         <Sonner />
         <SEO />
         <BrowserRouter>
-          <div>
+          
             
-            <Suspense fallback={<div> </div>}>
+            <Suspense>
               <Projects />
               <Skills />
               <Team />
               <HeavyComponent />
             </Suspense>
-          </div>
+          
           <Routes>
             <Route path="/" element={<Index />} />
             <Route path="*" element={<NotFound />} />

@@ -6,12 +6,19 @@ import { Button } from '@/components/ui/button';
 
 const navigationItems = [
   { name: 'Accueil', href: '#accueil' },
+
   { name: 'À propos', href: '#apropos' },
+
   { name: 'Services', href: '#services' },
+
   { name: 'Projets', href: '#projets' },
+
   { name: 'Skills', href: '#skills' },
+
   { name: 'Formation', href: '#formation' },
+
   { name: 'Équipe', href: '#equipe' },
+  
   { name: 'Contact', href: '#contact' },
 ];
 
