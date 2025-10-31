@@ -13,9 +13,6 @@ import projetImage8 from '@/assets/kys.jpg';
 import projetImage9 from '@/assets/mds.jpg';
 import projetImage10 from '@/assets/nga.jpg';
 import projetImage11 from '@/assets/tcs.jpg';
-import projetImage12 from '@/assets/logo-esm.webp';
-import projetImage13 from '@/assets/morse.jpg';
-import { features } from 'process';
 
 
 
@@ -35,11 +32,6 @@ const techIcons: { [key: string]: string } = {
   'React Router': 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/reactrouter/reactrouter-original.svg',
   'Firebase': 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/firebase/firebase-plain.svg',
   'JavaScript Plain': 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-plain.svg',
-  'Framer Motion': 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/framermotion/framermotion-original.svg',
-  'ThreeJs': 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/threejs/threejs-original.svg',
-  'OpenAI': 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/openai/openai-original.svg',
-  'React Three Fiber': 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg',
-  'PostCSS' : 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/postcss/postcss-original.svg',
 };
 
 const statusConfig = {
@@ -65,44 +57,7 @@ const statusConfig = {
 
 const projects = [
   {
-    id: 1,
-    name: 'ESM-BÉNIN - École Supérieure de Management ,,,,,,,,,',
-    category: 'Site Web',
-    shortDescription: 'Site web institutionnel moderne de l\'École Supérieure de Management du Bénin',
-    image: projetImage12,
-    status: 'completed',
-    technologies: ['React', 'Tailwind CSS', 'TypeScript', 'React Router', 'Framer Motion', 'ThreeJs', 'OpenAI', 'React Three Fiber', 'PostCSS', 'Vite'],
-    features: [
-      'Présentation institutionnelle complète',
-      'Design responsive et moderne',
-      'Assistant virtuel IA intégré',
-      'Animations et effets 3D immersifs',
-      'Mode sombre/clair',
-      'Performance optimisée',
-    ],
-    features1: [
-      'Accueil : Hero animé, statistiques, actualités',
-      'Université : Histoire, vision, campus',
-      'Filières : Programmes BTS, Licence, Master',
-      'Vie étudiante : Associations, événements, témoignages',
-      'Recherche : Publications, projets académiques',
-      'Contact : Formulaire, localisation, informations',
-      'Card3D : Cartes avec effet de parallaxe 3D',
-      'CounterStat : Compteurs animés pour les statistiques',
-      'ExpandOnHoverGallery : Galerie avec expansion au survol',
-      'ChatAssistant : Assistant IA conversationnel',
-      'WavyHeroSection : Section hero avec animations fluides',
-      'TypewriterText : Effet machine à écrire',
-    ],
-    fullDescription: 'Site web institutionnel de l\'École Supérieure de Management du Bénin (ESM-BÉNIN), une institution d\'enseignement supérieur de référence formant les leaders et managers de demain. Le site présente les filières, programmes, actualités et offre un assistant virtuel intelligent pour répondre aux questions des étudiants.',
-    client: 'L\'Ecole Supérieure de Management du Bénin',
-    date: '12 Octobre 2025 à 24 Octobre 2025',
-    liveUrl: 'https://esm-benin.vercel.app/', 
-    codeUrl: 'https://github.com/REBCDR07/esm-benin', 
-    gradient: 'from-blue-500 to-green-500'
-  },
-  {
-    id: 2,
+    id: 12,
     name: 'Portfolio Professionnel',
     category: 'Vitrine',
     shortDescription: 'Portfolio Professionnel',
@@ -130,9 +85,9 @@ const projects = [
     gradient: 'from-blue-500 to-green-500'
   },
   {
-    id: 3,
+    id: 1,
     name: 'AzerType',
-    category: 'Web Game App',
+    category: 'Application_Web',
     shortDescription: 'Application web pour améliorer la dactylographie.',
     image: projetImage1,
     status: 'completed',
@@ -151,9 +106,9 @@ const projects = [
     gradient: 'from-cyan-500 to-blue-500'
   },
   {
-    id: 4,
+    id: 2,
     name: 'EduConnect',
-    category: 'Fullstack Web App',
+    category: 'APPLICATION_WEB',
     shortDescription: 'Plateforme web complète pour la digitalisation des inscriptions scolaires et universitaires.',
     image: projetImage2,
     status: 'collaboration',
@@ -177,12 +132,12 @@ const projects = [
     gradient: 'from-blue-500 to-green-500'
   },
   {
-    id: 5,
+    id: 7,
     name: 'The Code Share',
-    category: 'Full-Stack App',
+    category: 'Full-Stack Application',
     shortDescription: 'Application web conçue et développée pour permettre aux développeurs web de partager, collaborer et apprendre ensemble.',
     image: projetImage10,
-    status: 'collaboration',
+    status: 'completed',
     technologies: ['PHP', 'MySQL', 'Bootstrap', 'JavaScript'],
     features: [
       'Partage de code en temps réel avec mise en forme syntaxique',
@@ -207,7 +162,7 @@ const projects = [
     gradient: 'from-cyan-500 to-blue-500'
   },
   {
-    id: 6,
+    id: 3,
     name: 'FitClub',
     category: 'Vitrine',
     shortDescription: 'Site vitrine pour salle de gym.',
@@ -229,7 +184,7 @@ const projects = [
     gradient: 'from-orange-500 to-yellow-500'
   },
   {
-    id: 7,
+    id: 4,
     name: 'Gestion d\'Électricité Locale (GESTLE)',
     category: 'Application_Web',
     shortDescription: 'Application web moderne et intuitive conçue pour simplifier la gestion de la facturation électrique locale.',
@@ -255,7 +210,7 @@ const projects = [
     gradient: 'from-orange-500 to-yellow-500'
   },
   {
-    id: 8,
+    id: 5,
     name: 'Jean Nicolas Food (JNFOOD)',
     category: 'Site_Vitrine',
     shortDescription: 'Application web pour entreprise locale de patisserie & de nourriture.',
@@ -277,7 +232,7 @@ const projects = [
     gradient: 'from-cyan-500 to-blue-500'
   },
   {
-    id: 9,
+    id: 6,
     name: 'Portfolio Littéraire JOFAMS',
     category: 'Vitrine',
     shortDescription: 'Portfolio élégant et responsive conçu pour mettre en valeur les compétences littéraires d\'une écrivaine professionnelle. ',
@@ -298,7 +253,7 @@ const projects = [
     gradient: 'from-cyan-500 to-blue-500'
   },
   {
-    id: 10,
+    id: 7,
     name: 'Netflix Game Amator (NGA)',
     category: 'Web_Game',
     shortDescription: 'Application interactive de quiz immersive dédiée aux passionnés de l\'univers Netflix.',
@@ -346,7 +301,7 @@ const projects = [
     gradient: 'from-blue-500 to-green-500'
   },
   {
-    id: 12,
+    id: 9,
     name: 'My Secure Diary (MDS)',
     category: 'Application_Web',
     shortDescription: 'My Secure Diary - la réinvention du journal personnel sécurisé !',
@@ -360,28 +315,7 @@ const projects = [
       'Design minimaliste et moderne, avec des tons chaleureux pour une interface sereine.',
       'et plus  ...',
     ],
-    fullDescription: "My Secure Diary est une application web moderne qui réinvente le journal personnel en le rendant totalement privé et sécurisé. Conçue pour protéger les pensées les plus intimes, elle combine un chiffrement robuste, un stockage cloud sécurisé et une authentification biométrique ou par code pour garantir une confidentialité à 100%. Les utilisateurs peuvent créer et éditer des notes organisées par dates, tags et typologies, puis retrouver facilement leurs écrits grâce à un moteur de recherche avec filtres avancés.L\'expérience est hautement personnalisable, avec la possibilité de choisir la police d\'écriture et d\'activer un mode sombre apaisant. Inspirée de Standard Notes mais pensée pour les jeunes adultes et professionnels soucieux de leur vie privée, My Secure Diary offre un design minimaliste aux tons chaleureux, favorisant la sérénité et le bien-être quotidien. Le projet illustre une architecture frontend-first solide, une gestion d\'état optimale et une interface réactive, démontrant ma capacité à allier sécurité, ergonomie et esthétique moderne.",
-    client: 'Projet Personnel',
-    date: 'Août 2025',
-    liveUrl: null, 
-    gradient: 'from-blue-500 to-green-500'
-  },
-  {
-    id: 13,
-    name: 'Morse Traduct',
-    category: 'Application_Web',
-    shortDescription: 'Morse Traduct : Traduction de code morse en texte brut permettant de déchiffrer et de décoder plus facilement un code morse, vice versa.',
-    image: projetImage13,
-    status: 'termine',
-    technologies: ['React', 'Vite', 'Tailwind CSS', 'JavaScript Plain', 'Supabase'],
-    features: [
-      'Créez et éditez des notes organisées par dates, tags et typologies.',
-      'Recherchez rapidement avec filtres avancés.',
-      'Personnalisez votre expérience : choix de police et activation du mode sombre pour une ambiance apaisante.',
-      'Design minimaliste et moderne, avec des tons chaleureux pour une interface sereine.',
-      'et plus  ...',
-    ],
-    fullDescription: "My Secure Diary est une application web moderne qui réinvente le journal personnel en le rendant totalement privé et sécurisé. Conçue pour protéger les pensées les plus intimes, elle combine un chiffrement robuste, un stockage cloud sécurisé et une authentification biométrique ou par code pour garantir une confidentialité à 100%. Les utilisateurs peuvent créer et éditer des notes organisées par dates, tags et typologies, puis retrouver facilement leurs écrits grâce à un moteur de recherche avec filtres avancés.L\'expérience est hautement personnalisable, avec la possibilité de choisir la police d\'écriture et d\'activer un mode sombre apaisant. Inspirée de Standard Notes mais pensée pour les jeunes adultes et professionnels soucieux de leur vie privée, My Secure Diary offre un design minimaliste aux tons chaleureux, favorisant la sérénité et le bien-être quotidien. Le projet illustre une architecture frontend-first solide, une gestion d\'état optimale et une interface réactive, démontrant ma capacité à allier sécurité, ergonomie et esthétique moderne.",
+    fullDescription: "My Secure Diary est une application web moderne qui réinvente le journal personnel en le rendant totalement privé et sécurisé. Conçue pour protéger les pensées les plus intimes, elle combine un chiffrement robuste, un stockage cloud sécurisé et une authentification biométrique ou par code pour garantir une confidentialité à 100%. Les utilisateurs peuvent créer et éditer des notes organisées par dates, tags et typologies, puis retrouver facilement leurs écrits grâce à un moteur de recherche avec filtres avancés. L\'expérience est hautement personnalisable, avec la possibilité de choisir la police d\'écriture et d\'activer un mode sombre apaisant. Inspirée de Standard Notes mais pensée pour les jeunes adultes et professionnels soucieux de leur vie privée, My Secure Diary offre un design minimaliste aux tons chaleureux, favorisant la sérénité et le bien-être quotidien. Le projet illustre une architecture frontend-first solide, une gestion d\'état optimale et une interface réactive, démontrant ma capacité à allier sécurité, ergonomie et esthétique moderne.",
     client: 'Projet Personnel',
     date: 'Août 2025',
     liveUrl: null, 
@@ -440,25 +374,10 @@ export default function Projects() {
 
                 <div>
                   <h3 className="text-sm sm:text-lg font-bold text-white mb-2 sm:mb-3" style={{ fontFamily: 'Orbitron, monospace' }}>
-                    // Fonctionnalités
+                    // Features
                   </h3>
                   <div className="grid gap-1.5 sm:gap-2">
                     {project.features.map((feature, idx) => (
-                      <div key={idx} className="flex items-start gap-1.5 text-slate-300 text-xs sm:text-sm" style={{ fontFamily: 'Rajdhani, sans-serif' }}>
-                        <div className={`w-1 h-1 sm:w-1.5 sm:h-1.5 rounded-full bg-gradient-to-r ${project.gradient} mt-1.5 sm:mt-2 flex-shrink-0`}></div>
-                        <span>{feature}</span>
-                      </div>
-                    ))}
-                  </div>
-                </div> 
-                <br />
-
-                <div>
-                  <h3 className="text-sm sm:text-lg font-bold text-white mb-2 sm:mb-3" style={{ fontFamily: 'Orbitron, monospace' }}>
-                    // Points Clés
-                  </h3>
-                  <div className="grid gap-1.5 sm:gap-2">
-                    {project.features1.map((feature, idx) => (
                       <div key={idx} className="flex items-start gap-1.5 text-slate-300 text-xs sm:text-sm" style={{ fontFamily: 'Rajdhani, sans-serif' }}>
                         <div className={`w-1 h-1 sm:w-1.5 sm:h-1.5 rounded-full bg-gradient-to-r ${project.gradient} mt-1.5 sm:mt-2 flex-shrink-0`}></div>
                         <span>{feature}</span>
@@ -538,7 +457,7 @@ export default function Projects() {
                         Live_View
                       </button>
                     </a>
-                  )} <br />
+                  )}
                   <a href={project.codeUrl} target="_blank" rel="noopener noreferrer">
                     <button className="w-full px-3 py-2 sm:py-2.5 bg-slate-800/50 border border-slate-700/50 text-slate-300 font-bold rounded-lg hover:bg-slate-700/50 transition-all flex items-center justify-center gap-1.5 text-xs sm:text-sm" style={{ fontFamily: 'Orbitron, monospace' }} aria-label="source code">
                       <Github className="w-3 h-3 sm:w-3.5 sm:h-3.5" />

@@ -19,42 +19,32 @@ import {
 const technicalSkills = {
   'Langages': [
     { name: 'JavaScript', level: 'intermediate', icon: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg' },
-    { name: 'TypeScript', level: 'intermediate', icon: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/typescript/typescript-original.svg' },
+    { name: 'TypeScript', level: 'beginner', icon: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/typescript/typescript-original.svg' },
     { name: 'Python', level: 'intermediate', icon: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg' },
     { name: 'C++', level: 'beginner', icon: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/cplusplus/cplusplus-plain.svg'},
     { name: 'PHP', level: 'beginner', icon: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/php/php-original.svg' }
   ],
   'Bases': [
     { name: 'MongoDB', level: 'beginner', icon: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mongodb/mongodb-original.svg' },
-    { name: 'Supabase', level: 'advanced', icon: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/supabase/supabase-original.svg' },
+    { name: 'Supabase', level: 'intermediate', icon: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/supabase/supabase-original.svg' },
     { name: 'MySQL', level: 'intermediate', icon: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mysql/mysql-original.svg' },
   ],
   'Frameworks': [
     { name: 'React', level: 'intermediate',  icon: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg' },
     { name: 'TailwindCSS', level: 'intermediate', icon: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/tailwindcss/tailwindcss-original.svg' },
-    { name: 'Vite', level: 'intermediate', icon: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/vitejs/vitejs-original.svg' }
+    { name: 'Vite', icon: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/vitejs/vitejs-original.svg' }
   ],
   'DevOps': [
-    { name: 'Git', level: 'advanced', icon: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/git/git-original.svg' },
-    { name: 'GitHub', level: 'advanced', icon: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/github/github-original.svg' },
-    { name: 'Vercel', level: 'intermediate', icon: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/vercel/vercel-original.svg' },
+    { name: 'Git/GitHub', level: 'advanced', icon: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/git/git-original.svg' },
+    { name: 'AWS/Vercel', level: 'intermediate', icon: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/amazonwebservices/amazonwebservices-original-wordmark.svg' },
     { name: 'Netlify', level: 'intermediate', icon: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/netlify/netlify-original.svg' },
   ],
   'UI/UX Design': [
     { name: 'Figma', level: 'beginner', icon: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/figma/figma-original.svg' },
-   
-    { name: 'Design Systems', level: 'advanced', icon: null },
-    { name: 'Responsive Design', level: 'advanced', icon: null }
-  ],
-  'Outils': [
-    { name: 'Framer Motion', level: 'intermediate', icon: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/framermotion/framermotion-original.svg' },
-    { name: 'ThreeJs', level: 'intermediate', icon: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/threejs/threejs-original.svg' },
-    { name: 'OpenAI', level: 'intermediate', icon: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/openai/openai-original.svg' },
-    { name: 'React Three Fiber', level: 'beginner', icon: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg' },
-    { name: 'ESLint', level: 'intermediate', icon: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/eslint/eslint-original.svg' },
-    { name: 'PostCSS', level: 'advanced', icon:'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/postcss/postcss-original.svg' },
-  ],
- 
+    
+    { name: 'Design Systems', icon: null },
+    { name: 'Responsive Design', icon: null }
+  ]
 };
 
 const aiTools = [
@@ -93,8 +83,7 @@ const categoryIcons: { [key: string]: typeof Code } = {
   'Bases': Database,
   'Frameworks': Wrench,
   'DevOps': Wrench,
-  'UI/UX Design': Palette,
-  'Outils': Palette
+  'UI/UX Design': Palette
 };
 
 export default function Skills() {
