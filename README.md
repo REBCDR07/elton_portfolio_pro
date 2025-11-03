@@ -71,6 +71,7 @@ ELTON/
 ### UI Components
 - *shadcn/ui* - Composants UI réutilisables
 - *Lucide React* - Bibliothèque d'icônes modernes
+- *Framer Motion* - Bibliothèque d'animations
 
 ### Intégrations
 - *Web3Forms* - Service d'envoi d'emails (gratuit)
