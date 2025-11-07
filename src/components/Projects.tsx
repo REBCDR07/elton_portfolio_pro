@@ -6,49 +6,51 @@ import {
 } from 'lucide-react';
 import { Badge } from '@/components/ui/badge';
 
-// Imports originaux
-import portfolio from '@/assets/portfolio.png';
-import portfolio1 from '@/assets/portfolio1.png';
-import portfolio2 from '@/assets/portfolio2.png';
-import portfolio3 from '@/assets/portfolio3.png';
+import portfolio1 from '@/assets/portfolio1.webp';
+import portfolio2 from '@/assets/portfolio2.webp';
+import portfolio3 from '@/assets/portfolio3.webp';
 
-import azertype1 from '@/assets/azertype1.png';
-import azertype2 from '@/assets/azertype2.png';
-import azertype3 from '@/assets/azertype3.png';
+import azertype1 from '@/assets/azertype1.webp';
+import azertype2 from '@/assets/azertype2.webp';
+import azertype3 from '@/assets/azertype3.webp';
 
-import educonnect1 from '@/assets/educonnect1.png';
-import educonnect2 from '@/assets/educonnect2.png';
-import educonnect3 from '@/assets/educonnect3.png';
+import educonnect1 from '@/assets/educonnect1.webp';
+import educonnect2 from '@/assets/educonnect2.webp';
+import educonnect3 from '@/assets/educonnect3.webp';
 
 // Imports pour les nouveaux projets (à remplacer par vos images réelles)
-import esmbenin1 from '@/assets/esmbenin1.jpeg';
-import esmbenin2 from '@/assets/esmbenin2.jpeg';
-import esmbenin3 from '@/assets/esmbenin3.jpeg';
-import esmbenin4 from '@/assets/esmbenin4.jpeg';
+import esmbenin1 from '@/assets/esmbenin1.webp';
+import esmbenin2 from '@/assets/esmbenin2.webp';
+import esmbenin3 from '@/assets/esmbenin3.webp';
+import esmbenin4 from '@/assets/esmbenin4.webp';
 
-import morse1 from '@/assets/morse1.png';
-import morse2 from '@/assets/morse2.png';
-import morse3 from '@/assets/morse3.png';
+import morse1 from '@/assets/morse1.webp';
+import morse2 from '@/assets/morse2.webp';
+import morse3 from '@/assets/morse3.webp';
 
-import securepass1 from '@/assets/securepass1.png';
-import securepass2 from '@/assets/securepass2.png';
-import securepass3 from '@/assets/securepass3.png';
+import securepass1 from '@/assets/securepass1.webp';
+import securepass2 from '@/assets/securepass2.webp';
+import securepass3 from '@/assets/securepass3.webp';
 
-import humour1 from '@/assets/humour1.png';
-import humour2 from '@/assets/humour2.png';
-import humour3 from '@/assets/humour3.png';
+import humour1 from '@/assets/humour1.webp';
+import humour2 from '@/assets/humour2.webp';
+import humour3 from '@/assets/humour3.webp';
 
-import biohub1 from '@/assets/biohub1.png';
-import biohub2 from '@/assets/biohub2.png';
-import biohub3 from '@/assets/biohub3.png';
+import biohub1 from '@/assets/biohub1.webp';
+import biohub2 from '@/assets/biohub2.webp';
+import biohub3 from '@/assets/biohub3.webp';
 
-import musicplayer1 from '@/assets/musicplayer1.png';
-import musicplayer2 from '@/assets/musicplayer2.png';
-import musicplayer3 from '@/assets/musicplayer3.png';
+import musicplayer1 from '@/assets/musicplayer1.webp';
+import musicplayer2 from '@/assets/musicplayer2.webp';
+import musicplayer3 from '@/assets/musicplayer3.webp';
 
-import electric1 from '@/assets/electric1.png';
-import electric2 from '@/assets/electric2.png';
-import electric3 from '@/assets/electric3.png';
+import electric1 from '@/assets/electric1.webp';
+import electric2 from '@/assets/electric2.webp';
+import electric3 from '@/assets/electric3.webp';
+
+import beninvoice1 from '@/assets/bvoice1.webp';
+import beninvoice2 from '@/assets/bvoice2.webp';
+import beninvoice3 from '@/assets/bvoice3.webp';
 
 
 // CONSTANTES: ICÔNES, STATUTS, ET DONNÉES DE PROJETS
@@ -68,6 +70,15 @@ const techIcons: { [key: string]: string } = {
   'React Router': 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/reactrouter/reactrouter-original.svg',
   'Firebase': 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/firebase/firebase-plain.svg',
   'JavaScript Plain': 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-plain.svg',
+  'Vercel': 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/vercel/vercel-original.svg',
+  'MongoDB': 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mongodb/mongodb-original.svg',
+  'Framer Motion': 'https://framerusercontent.com/images/3aQX5dnH5Yqgsn98QXKF2ZXxIE.png',
+  'Three.js': 'https://threejs.org/files/favicon.ico',
+  'React Native': 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg',
+  'React Three Fiber': 'https://github.com/pmndrs/xr/blob/main/docs/getting-started/logo.svg?raw=true',
+  'Shadcn UI': 'https://shadcn.com/favicon.ico',
+  'OpenAI API': 'https://1000logos.net/wp-content/uploads/2025/02/OpenAI-Logo.png',
+  'Radix U': 'https://www.radix-ui.com/favicon.png',
 };
 
 const statusConfig = {
@@ -82,7 +93,7 @@ const projects = [
     name: 'Portfolio',
     category: 'Vitrine',
     shortDescription: 'Portfolio Professionnel',
-    images: [portfolio, portfolio1, portfolio2, portfolio3],
+    images: [portfolio1, portfolio2, portfolio3],
     status: 'completed',
     technologies: ['TypeScript', 'React', 'Tailwind CSS', 'Vite'],
     features: ['Design cyberpunk/tech avec effets de glassmorphisme', 'Effet typewriter qui s\'écrit en temps réel', 'Terminal interactif qui affiche du vrai code'],
@@ -115,7 +126,7 @@ const projects = [
     category: 'Application Web',
     shortDescription: 'Plateforme de digitalisation des inscriptions scolaires.',
     images: [educonnect1, educonnect2, educonnect3],
-    status: 'collaboration',
+    status: 'in-progress',
     technologies: ['React', 'Vite', 'Tailwind CSS', 'Firebase'],
     features: ['Authentification sécurisée', 'Système de Rôles (Étudiant & Directeur)', 'Tableaux de bord personnalisés'],
     fullDescription: "EduConnect est une plateforme web moderne qui simplifie et centralise l'intégralité du processus d'inscription scolaire. Les étudiants peuvent découvrir des écoles, postuler et suivre leurs candidatures, tandis que les directeurs gèrent leurs établissements.",
@@ -132,13 +143,13 @@ const projects = [
     shortDescription: 'Site web moderne de l\'École Supérieure de Management du Bénin.',
     images: [esmbenin1, esmbenin2, esmbenin3, esmbenin4],
     status: 'completed',
-    technologies: ['React', 'TypeScript', 'Tailwind CSS', 'Supabase'],
+    technologies: ['React', 'TypeScript', 'Tailwind CSS', 'Supabase', 'React Three Fiber', 'Vercel', 'Framer Motion', 'Shadcn UI', 'Radix UI', 'React Router', 'OpenAI API', 'Three.js'],
     features: ['Présentation institutionnelle complète', 'Assistant virtuel IA intégré', 'Animations et effets 3D immersifs', 'Mode sombre/clair'],
     fullDescription: 'Site web institutionnel de l\'École Supérieure de Management du Bénin (ESM-BÉNIN), formant les leaders de demain. Le site présente les filières, programmes, et offre un assistant virtuel intelligent.',
     client: 'ESM-BÉNIN',
     date: 'Septembre 2025',
-    liveUrl: 'https://esm-benin-university.vercel.app/',
-    codeUrl: 'https://github.com/REBCDR07/esm-benin-university',
+    liveUrl: 'https://esm-beninbj.vercel.app/',
+    codeUrl: 'https://github.com/REBCDR07/esmbenin',
     gradient: 'from-purple-500 to-indigo-500'
   },
   {
@@ -169,7 +180,7 @@ const projects = [
     fullDescription: 'Secure Passwords est une application web complète permettant de générer, stocker et gérer ses mots de passe de manière sécurisée, avec une interface moderne et une architecture full-stack robuste.',
     client: 'Projet Personnel',
     date: 'Novembre 2025',
-    liveUrl: 'https://secure-pass-generate.vercel.app/',
+    liveUrl: 'https://secure-passewords.vercel.app/',
     codeUrl: 'https://github.com/REBCDR07/secure-passwords',
     gradient: 'from-yellow-500 to-blue-800'
   },
@@ -186,7 +197,7 @@ const projects = [
     client: 'Projet Personnel',
     date: 'Juin 2025',
     liveUrl: 'https://rions.vercel.app/',
-    codeUrl: 'https://github.com/REBCDR07/humour-space.git',
+    codeUrl: 'https://github.com/REBCDR07/humour-space',
     gradient: 'from-blue-400 to-indigo-600'
   },
   {
@@ -217,8 +228,8 @@ const projects = [
     fullDescription: 'Un lecteur de musique web élégant et responsive avec une interface glassmorphism moderne et une mise en page optimisée pour garantir la visibilité de tous les contrôles sur tous les écrans.',
     client: 'Projet Personnel',
     date: 'Avril 2025',
-    liveUrl: 'https://lecteur-de-musique.vercel.app/',
-    codeUrl: 'https://github.com/REBCDR07/lecteur-de-musique',
+    liveUrl: 'https://qdl.netlify.app/',
+    codeUrl: 'https://github.com/REBCDR07/kayson_qdl',
     gradient: 'from-pink-500 to-purple-600'
   },
   {
@@ -233,9 +244,25 @@ const projects = [
     fullDescription: 'Application web intuitive pour simplifier la gestion de la facturation électrique locale, avec une interface futuriste, des calculs instantanés et une intégration pour le partage des factures.',
     client: 'Projet Personnel',
     date: 'Mars 2025',
-    liveUrl: 'https://gestion-electricite-locale.netlify.app/',
-    codeUrl: 'https://github.com/REBCDR07/gestion_d_electricite_locale.git',
+    liveUrl: 'https://gestle.netlify.app/',
+    codeUrl: 'https://github.com/REBCDR07/gestion_d_electricite_locale',
     gradient: 'from-teal-400 to-blue-600'
+  },
+  {
+    id: 11,
+    name: 'Benin Voice : Votre Voix Compte',
+    categorie: 'Sociale',
+    shortDescription: 'Application web et mobile pour soumettre des reclamations citoyennes, des signalements et des suggestions aux autorités locales. Faciliter la communication entre les citoyens et les gouvernements locaux pour améliorer les services publics et la gouvernance. Offre de suivi transparent des soumissions et de notifications en temps réel. Permet aux autorités de partager des projets ou reformes pour recueillir des avis.',
+    images: [beninvoice1, beninvoice2, beninvoice3],
+    status: 'in-progress',
+    technologies: ['React', 'TypeScript', 'Tailwind CSS', 'MongoDB', 'Vercel', 'Framer Motion', 'Three.js', 'React Native'],
+    features: ['Soumission de réclamations, signalements et suggestions', 'Suivi transparent des soumissions', 'Notifications en temps réel', 'Partage de projets et réformes par les autorités'],
+    fullDescription: 'Benin Voice est une application web et mobile visant à renforcer la communication entre les citoyens et les autorités locales au Bénin. Elle permet aux citoyens de soumettre des réclamations, signalements et suggestions, tout en offrant un suivi transparent et des notifications en temps réel. Les autorités peuvent également partager des projets ou réformes pour recueillir des avis.',
+    client: 'J\'ai travaillé sur ce projet côté frontend avec une équipe dédiée',
+    date: 'En cours de développement',
+    liveUrl: '',
+    codeUrl: '',
+    gradient: 'from-red-500 to-yellow-500'
   },
 ];
 

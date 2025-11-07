@@ -4,10 +4,10 @@ import {
   Download, ExternalLink, Linkedin, Github, Facebook, Terminal, Users, 
   Check, Loader, X, ChevronRight 
 } from 'lucide-react';
-import team1Image from '@/assets/team1.jpg';
-import team2Image from '@/assets/team2.jpg';
+import team1Image from '@/assets/team1.webp';
+import team2Image from '@/assets/team2.webp';
 
-// CONSTANTES: DONNÉES, STATUTS, ET ÉTATS
+
 const teamMembers = [
   { id: 1, name: 'Igor ADANDE', role: 'Full_Stack_Dev & UI/UX', bio: "Spécialiste des applications web robustes, il transforme des concepts complexes en interfaces fluides et performantes.", image: team1Image, cvUrl: '/assets/cv/cv-team1.pdf', portfolioUrl: 'https://www.igoradande.tech/', socials: { linkedin: 'https://www.linkedin.com/in/igor-adande-dev/', github: 'https://github.com/adandeigor', facebook: 'https://web.facebook.com/ThePirateDev' }, gradient: 'from-cyan-500 to-blue-500' },
   { id: 2, name: 'Ben Ephraïm AGBANNON', role: 'Full_Stack_Dev & Mobile', bio: "Architecte de solutions back-end et mobiles, passionné par la création d'expériences utilisateur exceptionnelles et intuitives.", image: team2Image, cvUrl: '/assets/cv/cv-team2.pdf', portfolioUrl: 'https://portfolio-liart-psi-68.vercel.app/', socials: { linkedin: 'https://www.linkedin.com/in/ben-ephraim-agbannon-948819311/', github: 'https://github.com/Tedel12', facebook: null }, gradient: 'from-purple-500 to-pink-500' }
@@ -17,7 +17,7 @@ const TERMINAL_STATES = {
   IDLE: 'idle', TYPING_INSTALL: 'typing_install', INSTALLING: 'installing', TYPING_DEV: 'typing_dev', COMPILING: 'compiling', TYPING_START: 'typing_start', SHOWING_MEMBER: 'showing_member',
 };
 
-// COMPOSANT SÉPARÉ POUR LES DÉTAILS D'UN MEMBRE (AVEC TOUS LES LIENS)
+
 const TeamMemberDetailView = ({ member, onNext, isLastMember, onClose }: { member: any, onNext: () => void, isLastMember: boolean, onClose: () => void }) => {
   return (
     <motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ duration: 0.5, delay: 0.2 }} className="flex flex-col h-full">
@@ -50,7 +50,7 @@ const TeamMemberDetailView = ({ member, onNext, isLastMember, onClose }: { membe
   );
 };
 
-// COMPOSANT PRINCIPAL
+
 export default function Team() {
   const [activeMemberIndex, setActiveMemberIndex] = useState<number | null>(null);
   const [terminalState, setTerminalState] = useState(TERMINAL_STATES.IDLE);
