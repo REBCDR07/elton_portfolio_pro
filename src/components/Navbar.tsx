@@ -31,6 +31,25 @@ export default function Navbar({ isDark, toggleTheme }: { isDark: boolean; toggl
     setLanguage(language === 'fr' ? 'en' : 'fr');
   };
 
+  const handleLinkClick = (e: React.MouseEvent<HTMLAnchorElement>, href: string) => {
+    e.preventDefault();
+    setIsMobileMenuOpen(false);
+    
+    const element = document.querySelector(href);
+    if (element) {
+      const offset = 80; // Navbar height
+      const bodyRect = document.body.getBoundingClientRect().top;
+      const elementRect = element.getBoundingClientRect().top;
+      const elementPosition = elementRect - bodyRect;
+      const offsetPosition = elementPosition - offset;
+
+      window.scrollTo({
+        top: offsetPosition,
+        behavior: 'smooth'
+      });
+    }
+  };
+
   return (
     <nav
       className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
@@ -56,6 +75,7 @@ export default function Navbar({ isDark, toggleTheme }: { isDark: boolean; toggl
               <a
                 key={link.name}
                 href={link.href}
+                onClick={(e) => handleLinkClick(e, link.href)}
                 className="text-sm font-medium text-slate-600 dark:text-slate-300 hover:text-cyan-600 dark:hover:text-cyan-400 transition-colors relative group"
                 style={{ fontFamily: 'Rajdhani, sans-serif' }}
               >
@@ -123,7 +143,7 @@ export default function Navbar({ isDark, toggleTheme }: { isDark: boolean; toggl
                 <a
                   key={link.name}
                   href={link.href}
-                  onClick={() => setIsMobileMenuOpen(false)}
+                  onClick={(e) => handleLinkClick(e, link.href)}
                   className="text-lg font-medium text-slate-700 dark:text-slate-300 hover:text-cyan-600 dark:hover:text-cyan-400 transition-colors"
                   style={{ fontFamily: 'Orbitron, monospace' }}
                 >

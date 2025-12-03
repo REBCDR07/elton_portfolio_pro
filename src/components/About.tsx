@@ -78,7 +78,7 @@ export default function About() {
   const contactInfo = [
     { icon: Mail, text: 'eltonhounnou27@gmail.com' },
     { icon: MapPin, text: 'Abomey-Calavi, Bénin' },
-    { icon: Phone, text: '+229 55 87 58 94' },
+    { icon: Phone, text: '+229 01 40 66 33 49 | +229 01 55 87 58 94' },
     { icon: GraduationCap, text: language === 'fr' ? 'Licence en Systèmes Informatiques et Logiciels (en cours)' : 'Bachelor in Computer Systems and Software (Ongoing)' },
   ];
 

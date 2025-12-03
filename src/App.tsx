@@ -9,6 +9,7 @@ import { Analytics } from "@vercel/analytics/react";
 import { HelmetProvider } from "react-helmet-async";
 import SEO from "@/components/SEO";
 
+
 // Composants de la structure du portfolio
 import Navbar from './components/Navbar';
 import Hero from './components/Hero';
