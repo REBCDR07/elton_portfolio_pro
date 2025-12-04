@@ -33,7 +33,7 @@ const teamMembers = [
     },
     image: team2Image, 
     cvUrl: '/assets/cv/cv-team2.pdf', 
-    portfolioUrl: 'https://portfolio-liart-psi-68.vercel.app/', 
+    portfolioUrl: 'https://portfolio-v2-alpha-virid.vercel.app/', 
     socials: { linkedin: 'https://www.linkedin.com/in/ben-ephraim-agbannon-948819311/', github: 'https://github.com/Tedel12', facebook: null }, 
     gradient: 'from-purple-500 to-pink-500' 
   }
