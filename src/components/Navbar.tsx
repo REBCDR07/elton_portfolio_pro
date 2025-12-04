@@ -1,4 +1,4 @@
-import { useState, useEffect } from 'react';
+import React, { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { Menu, X, Code, Sun, Moon, Globe } from 'lucide-react';
 import { useLanguage } from './LanguageContext';
@@ -27,62 +27,27 @@ export default function Navbar({ isDark, toggleTheme }: { isDark: boolean; toggl
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
-  // Close mobile menu when clicking outside
-  useEffect(() => {
-    const handleClickOutside = (event: MouseEvent) => {
-      const target = event.target as HTMLElement;
-      if (isMobileMenuOpen && !target.closest('nav')) {
-        setIsMobileMenuOpen(false);
-      }
-    };
-
-    if (isMobileMenuOpen) {
-      document.addEventListener('click', handleClickOutside);
-    }
-
-    return () => {
-      document.removeEventListener('click', handleClickOutside);
-    };
-  }, [isMobileMenuOpen]);
-
-  // Prevent body scroll when mobile menu is open
-  useEffect(() => {
-    if (isMobileMenuOpen) {
-      document.body.style.overflow = 'hidden';
-    } else {
-      document.body.style.overflow = 'unset';
-    }
-    return () => {
-      document.body.style.overflow = 'unset';
-    };
-  }, [isMobileMenuOpen]);
-
   const toggleLanguage = () => {
     setLanguage(language === 'fr' ? 'en' : 'fr');
   };
 
   const handleLinkClick = (e: React.MouseEvent<HTMLAnchorElement>, href: string) => {
     e.preventDefault();
-    
-    // Close mobile menu first
-    if (isMobileMenuOpen) {
-      setIsMobileMenuOpen(false);
-    }
-    
-    // Small delay to allow menu animation to complete on mobile
-    setTimeout(() => {
-      const element = document.querySelector(href);
-      if (element) {
-        const offset = 80; // Navbar height
-        const elementPosition = element.getBoundingClientRect().top + window.pageYOffset;
-        const offsetPosition = elementPosition - offset;
+    setIsMobileMenuOpen(false);
 
-        window.scrollTo({
-          top: offsetPosition,
-          behavior: 'smooth'
-        });
-      }
-    }, isMobileMenuOpen ? 300 : 0);
+    const targetId = href.replace('#', '');
+    const element = document.getElementById(targetId);
+    
+    if (element) {
+      const headerOffset = 80;
+      const elementPosition = element.getBoundingClientRect().top;
+      const offsetPosition = elementPosition + window.scrollY - headerOffset;
+
+      window.scrollTo({
+        top: offsetPosition,
+        behavior: 'smooth'
+      });
+    }
   };
 
   return (
@@ -95,12 +60,12 @@ export default function Navbar({ isDark, toggleTheme }: { isDark: boolean; toggl
     >
       <div className="container mx-auto px-4">
         <div className="flex items-center justify-between h-20">
-          <a href="#" className="flex items-center gap-2 group">
+          <a href="#" className="flex items-center gap-2 group" onClick={(e) => handleLinkClick(e, '#accueil')}>
             <div className="p-2 bg-gradient-to-br from-cyan-500 to-blue-500 rounded-lg group-hover:scale-110 transition-transform">
               <Code className="w-5 h-5 text-white" />
             </div>
             <span className="text-xl font-bold bg-gradient-to-r from-slate-900 to-slate-600 dark:from-white dark:to-slate-400 bg-clip-text text-transparent" style={{ fontFamily: 'Orbitron, monospace' }}>
-              ELTON<span className="text-cyan-500 dark:text-cyan-400">.</span>
+              NRBH<span className="text-cyan-500 dark:text-cyan-400">.Dev</span>
             </span>
           </a>
 
@@ -171,23 +136,19 @@ export default function Navbar({ isDark, toggleTheme }: { isDark: boolean; toggl
             initial={{ opacity: 0, height: 0 }}
             animate={{ opacity: 1, height: 'auto' }}
             exit={{ opacity: 0, height: 0 }}
-            transition={{ duration: 0.3, ease: 'easeInOut' }}
             className="md:hidden bg-white dark:bg-slate-900 border-b border-slate-200 dark:border-slate-800 overflow-hidden shadow-lg"
           >
             <div className="container mx-auto px-4 py-6 flex flex-col gap-4">
-              {navLinks.map((link, index) => (
-                <motion.a
+              {navLinks.map((link) => (
+                <a
                   key={link.name}
                   href={link.href}
                   onClick={(e) => handleLinkClick(e, link.href)}
-                  initial={{ opacity: 0, x: -20 }}
-                  animate={{ opacity: 1, x: 0 }}
-                  transition={{ delay: index * 0.05 }}
-                  className="text-lg font-medium text-slate-700 dark:text-slate-300 hover:text-cyan-600 dark:hover:text-cyan-400 transition-colors py-2 border-b border-slate-100 dark:border-slate-800 last:border-0"
-                  style={{ fontFamily: 'Rajdhani, sans-serif' }}
+                  className="text-lg font-medium text-slate-700 dark:text-slate-300 hover:text-cyan-600 dark:hover:text-cyan-400 transition-colors"
+                  style={{ fontFamily: 'Orbitron, monospace' }}
                 >
                   {link.name}
-                </motion.a>
+                </a>
               ))}
             </div>
           </motion.div>
