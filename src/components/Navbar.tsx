@@ -1,159 +1,171 @@
-import React, { useState, useEffect } from 'react';
-import { motion, AnimatePresence } from 'framer-motion';
-import { Menu, X, Code, Sun, Moon, Globe } from 'lucide-react';
-import { useLanguage } from './LanguageContext';
+'use client';
 
-export default function Navbar({ isDark, toggleTheme }: { isDark: boolean; toggleTheme: () => void }) {
+import { useState, useEffect } from 'react';
+import Link from 'next/link';
+import { Menu, X } from 'lucide-react';
+
+interface NavLink {
+  name: string;
+  href: string;
+}
+
+const Navbar: React.FC = () => {
+  const [isOpen, setIsOpen] = useState(false);
   const [isScrolled, setIsScrolled] = useState(false);
-  const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
-  const { language, setLanguage, t } = useLanguage();
 
-  const navLinks = [
-    { name: t('nav.home'), href: '#accueil' },
-    { name: t('nav.about'), href: '#apropos' },
-    { name: t('nav.education'), href: '#formation' },
-    { name: t('nav.skills'), href: '#skills' },
-    { name: t('nav.services'), href: '#services' },
-    { name: t('nav.projects'), href: '#projets' },
-    { name: t('nav.team'), href: '#equipe' },
-    { name: t('nav.contact'), href: '#contact' },
+  const navLinks: NavLink[] = [
+    { name: 'Home', href: '#home' },
+    { name: 'About', href: '#about' },
+    { name: 'Projects', href: '#projects' },
+    { name: 'Skills', href: '#skills' },
+    { name: 'Contact', href: '#contact' },
   ];
 
+  // Handle scroll effect for navbar background
   useEffect(() => {
     const handleScroll = () => {
-      setIsScrolled(window.scrollY > 50);
+      setIsScrolled(window.scrollY > 0);
     };
+
     window.addEventListener('scroll', handleScroll);
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
-  const toggleLanguage = () => {
-    setLanguage(language === 'fr' ? 'en' : 'fr');
-  };
+  // Close mobile menu when clicking outside
+  useEffect(() => {
+    const handleClickOutside = (e: MouseEvent | TouchEvent) => {
+      const target = e.target as HTMLElement;
+      if (isOpen && !target.closest('nav')) {
+        setIsOpen(false);
+      }
+    };
 
-  const handleLinkClick = (e: React.MouseEvent<HTMLAnchorElement>, href: string) => {
+    if (isOpen) {
+      document.addEventListener('click', handleClickOutside);
+      document.addEventListener('touchend', handleClickOutside);
+    }
+
+    return () => {
+      document.removeEventListener('click', handleClickOutside);
+      document.removeEventListener('touchend', handleClickOutside);
+    };
+  }, [isOpen]);
+
+  /**
+   * Enhanced link click handler with proper smooth scrolling and menu closing
+   * Handles both click and touch events for mobile devices
+   */
+  const handleLinkClick = (e: React.MouseEvent<HTMLAnchorElement> | React.TouchEvent<HTMLAnchorElement>, href: string) => {
+    // Prevent default navigation behavior
     e.preventDefault();
-    setIsMobileMenuOpen(false);
-
-    const targetId = href.replace('#', '');
-    const element = document.getElementById(targetId);
     
-    if (element) {
-      const headerOffset = 80;
-      const elementPosition = element.getBoundingClientRect().top;
-      const offsetPosition = elementPosition + window.scrollY - headerOffset;
+    // Close mobile menu immediately
+    setIsOpen(false);
 
+    // Extract the section ID from href
+    const sectionId = href.replace('#', '');
+    const targetElement = document.getElementById(sectionId);
+
+    if (targetElement) {
+      // Use smooth scroll behavior with proper timing
+      setTimeout(() => {
+        targetElement.scrollIntoView({
+          behavior: 'smooth',
+          block: 'start',
+        });
+      }, 100);
+    } else {
+      // Fallback: scroll to top if section not found
       window.scrollTo({
-        top: offsetPosition,
-        behavior: 'smooth'
+        top: 0,
+        behavior: 'smooth',
       });
     }
+  };
+
+  /**
+   * Toggle mobile menu with proper state management
+   */
+  const toggleMenu = () => {
+    setIsOpen(!isOpen);
+  };
+
+  /**
+   * Handle menu close on touch/click
+   */
+  const handleMenuClose = (e: React.MouseEvent<HTMLButtonElement> | React.TouchEvent<HTMLButtonElement>) => {
+    e.preventDefault();
+    e.stopPropagation();
+    setIsOpen(false);
   };
 
   return (
     <nav
       className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
-        isScrolled 
-          ? 'bg-white/80 dark:bg-slate-950/80 backdrop-blur-md border-b border-slate-200 dark:border-slate-800 shadow-sm dark:shadow-none' 
+        isScrolled
+          ? 'bg-gradient-to-r from-slate-900 to-slate-800 shadow-lg'
           : 'bg-transparent'
       }`}
     >
-      <div className="container mx-auto px-4">
-        <div className="flex items-center justify-between h-20">
-          <a href="#" className="flex items-center gap-2 group" onClick={(e) => handleLinkClick(e, '#accueil')}>
-            <div className="p-2 bg-gradient-to-br from-cyan-500 to-blue-500 rounded-lg group-hover:scale-110 transition-transform">
-              <Code className="w-5 h-5 text-white" />
-            </div>
-            <span className="text-xl font-bold bg-gradient-to-r from-slate-900 to-slate-600 dark:from-white dark:to-slate-400 bg-clip-text text-transparent" style={{ fontFamily: 'Orbitron, monospace' }}>
-              NRBH<span className="text-cyan-500 dark:text-cyan-400">.Dev</span>
-            </span>
-          </a>
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="flex justify-between items-center h-16">
+          {/* Logo/Brand */}
+          <div className="flex-shrink-0">
+            <Link href="#home" className="text-2xl font-bold text-blue-400">
+              Portfolio
+            </Link>
+          </div>
 
-          {/* Desktop Menu */}
-          <div className="hidden md:flex items-center gap-6 lg:gap-8">
+          {/* Desktop Navigation */}
+          <div className="hidden md:flex space-x-8">
             {navLinks.map((link) => (
               <a
                 key={link.name}
                 href={link.href}
                 onClick={(e) => handleLinkClick(e, link.href)}
-                className="text-sm font-medium text-slate-600 dark:text-slate-300 hover:text-cyan-600 dark:hover:text-cyan-400 transition-colors relative group"
-                style={{ fontFamily: 'Rajdhani, sans-serif' }}
+                className="text-gray-300 hover:text-blue-400 transition-colors duration-200"
               >
                 {link.name}
-                <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-cyan-500 dark:bg-cyan-400 group-hover:w-full transition-all duration-300"></span>
               </a>
             ))}
-            
-            {/* Language Toggle */}
-             <button
-              onClick={toggleLanguage}
-              className="p-2 rounded-full bg-slate-100 dark:bg-slate-800 text-slate-600 dark:text-slate-300 hover:text-cyan-600 dark:hover:text-cyan-400 transition-colors flex items-center gap-1"
-              aria-label="Toggle Language"
-            >
-              <Globe size={18} />
-              <span className="text-xs font-bold font-mono">{language.toUpperCase()}</span>
-            </button>
-
-            {/* Theme Toggle */}
-            <button
-              onClick={toggleTheme}
-              className="p-2 rounded-full bg-slate-100 dark:bg-slate-800 text-slate-600 dark:text-slate-300 hover:text-cyan-600 dark:hover:text-cyan-400 transition-colors"
-              aria-label="Toggle Theme"
-            >
-              {isDark ? <Sun size={20} /> : <Moon size={20} />}
-            </button>
           </div>
 
           {/* Mobile Menu Button */}
-          <div className="flex items-center gap-4 md:hidden">
-             <button
-              onClick={toggleLanguage}
-              className="p-2 rounded-full bg-slate-100 dark:bg-slate-800 text-slate-600 dark:text-slate-300 hover:text-cyan-600 dark:hover:text-cyan-400 transition-colors flex items-center gap-1"
-            >
-              <Globe size={18} />
-              <span className="text-xs font-bold font-mono">{language.toUpperCase()}</span>
-            </button>
-            <button
-              onClick={toggleTheme}
-              className="p-2 rounded-full bg-slate-100 dark:bg-slate-800 text-slate-600 dark:text-slate-300"
-            >
-               {isDark ? <Sun size={20} /> : <Moon size={20} />}
-            </button>
-            <button
-              onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
-              className="p-2 text-slate-700 dark:text-slate-300 hover:text-black dark:hover:text-white transition-colors"
-            >
-              {isMobileMenuOpen ? <X size={24} /> : <Menu size={24} />}
-            </button>
-          </div>
-        </div>
-      </div>
-
-      {/* Mobile Menu */}
-      <AnimatePresence>
-        {isMobileMenuOpen && (
-          <motion.div
-            initial={{ opacity: 0, height: 0 }}
-            animate={{ opacity: 1, height: 'auto' }}
-            exit={{ opacity: 0, height: 0 }}
-            className="md:hidden bg-white dark:bg-slate-900 border-b border-slate-200 dark:border-slate-800 overflow-hidden shadow-lg"
+          <button
+            onClick={toggleMenu}
+            onTouchEnd={toggleMenu}
+            aria-label="Toggle mobile menu"
+            className="md:hidden text-gray-300 hover:text-blue-400 transition-colors p-2"
           >
-            <div className="container mx-auto px-4 py-6 flex flex-col gap-4">
+            {isOpen ? <X size={24} /> : <Menu size={24} />}
+          </button>
+        </div>
+
+        {/* Mobile Navigation */}
+        {isOpen && (
+          <div
+            className="md:hidden bg-gradient-to-b from-slate-800 to-slate-900 border-t border-slate-700"
+            role="navigation"
+            aria-label="Mobile navigation"
+          >
+            <div className="px-2 pt-2 pb-3 space-y-1">
               {navLinks.map((link) => (
                 <a
                   key={link.name}
                   href={link.href}
                   onClick={(e) => handleLinkClick(e, link.href)}
-                  className="text-lg font-medium text-slate-700 dark:text-slate-300 hover:text-cyan-600 dark:hover:text-cyan-400 transition-colors"
-                  style={{ fontFamily: 'Orbitron, monospace' }}
+                  onTouchEnd={(e) => handleLinkClick(e, link.href)}
+                  className="block px-3 py-2 rounded-md text-gray-300 hover:text-blue-400 hover:bg-slate-700 transition-colors duration-200"
                 >
                   {link.name}
                 </a>
               ))}
             </div>
-          </motion.div>
+          </div>
         )}
-      </AnimatePresence>
+      </div>
     </nav>
   );
-}
+};
+
+export default Navbar;
