@@ -1,5 +1,4 @@
 import { useState, useEffect } from 'react';
-import Link from 'next/link';
 import { Menu, X } from 'lucide-react';
 
 interface NavLink {
@@ -25,7 +24,7 @@ const Navbar: React.FC = () => {
       setIsScrolled(window.scrollY > 0);
     };
 
-    window.addEventListener('scroll', handleScroll);
+    window. addEventListener('scroll', handleScroll);
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
@@ -53,7 +52,7 @@ const Navbar: React.FC = () => {
    * Enhanced link click handler with proper smooth scrolling and menu closing
    * Handles both click and touch events for mobile devices
    */
-  const handleLinkClick = (e: React.MouseEvent<HTMLAnchorElement> | React.TouchEvent<HTMLAnchorElement>, href: string) => {
+  const handleLinkClick = (e: React. MouseEvent<HTMLAnchorElement> | React.TouchEvent<HTMLAnchorElement>, href: string) => {
     // Prevent default navigation behavior
     e.preventDefault();
     
@@ -73,7 +72,7 @@ const Navbar: React.FC = () => {
         });
       }, 100);
     } else {
-      // Fallback: scroll to top if section not found
+      // Fallback:  scroll to top if section not found
       window.scrollTo({
         top: 0,
         behavior: 'smooth',
@@ -88,15 +87,6 @@ const Navbar: React.FC = () => {
     setIsOpen(!isOpen);
   };
 
-  /**
-   * Handle menu close on touch/click
-   */
-  const handleMenuClose = (e: React.MouseEvent<HTMLButtonElement> | React.TouchEvent<HTMLButtonElement>) => {
-    e.preventDefault();
-    e.stopPropagation();
-    setIsOpen(false);
-  };
-
   return (
     <nav
       className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
@@ -105,13 +95,13 @@ const Navbar: React.FC = () => {
           : 'bg-transparent'
       }`}
     >
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg: px-8">
         <div className="flex justify-between items-center h-16">
           {/* Logo/Brand */}
           <div className="flex-shrink-0">
-            <Link href="#home" className="text-2xl font-bold text-blue-400">
+            <a href="#home" className="text-2xl font-bold text-blue-400">
               Portfolio
-            </Link>
+            </a>
           </div>
 
           {/* Desktop Navigation */}
@@ -120,7 +110,7 @@ const Navbar: React.FC = () => {
               <a
                 key={link.name}
                 href={link.href}
-                onClick={(e) => handleLinkClick(e, link.href)}
+                onClick={(e) => handleLinkClick(e, link. href)}
                 className="text-gray-300 hover:text-blue-400 transition-colors duration-200"
               >
                 {link.name}
@@ -135,7 +125,7 @@ const Navbar: React.FC = () => {
             aria-label="Toggle mobile menu"
             className="md:hidden text-gray-300 hover:text-blue-400 transition-colors p-2"
           >
-            {isOpen ? <X size={24} /> : <Menu size={24} />}
+            {isOpen ?  <X size={24} /> :  <Menu size={24} />}
           </button>
         </div>
 
@@ -147,7 +137,7 @@ const Navbar: React.FC = () => {
             aria-label="Mobile navigation"
           >
             <div className="px-2 pt-2 pb-3 space-y-1">
-              {navLinks.map((link) => (
+              {navLinks. map((link) => (
                 <a
                   key={link.name}
                   href={link.href}
