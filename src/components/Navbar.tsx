@@ -33,21 +33,25 @@ const Navbar: React.FC = () => {
 
   // Close mobile menu when clicking outside
   useEffect(() => {
-    const handleClickOutside = (e: MouseEvent | TouchEvent) => {
+    if (!isOpen) return;
+
+    const handleClickOutside = (e: MouseEvent) => {
       const target = e.target as HTMLElement;
-      if (isOpen && !target.closest('nav')) {
+      const nav = document.querySelector('nav');
+      
+      if (nav && !nav.contains(target)) {
         setIsOpen(false);
       }
     };
 
-    if (isOpen) {
+    // Add small delay to prevent immediate closing
+    const timeoutId = setTimeout(() => {
       document.addEventListener('click', handleClickOutside);
-      document.addEventListener('touchend', handleClickOutside);
-    }
+    }, 100);
 
     return () => {
+      clearTimeout(timeoutId);
       document.removeEventListener('click', handleClickOutside);
-      document.removeEventListener('touchend', handleClickOutside);
     };
   }, [isOpen]);
 
@@ -182,7 +186,6 @@ const Navbar: React.FC = () => {
           {/* Mobile Menu Button */}
           <button
             onClick={toggleMenu}
-            onTouchEnd={toggleMenu}
             aria-label="Toggle mobile menu"
             className={`md:hidden p-2 ${
               isDarkMode ? 'text-gray-300 hover:text-blue-400' : 'text-gray-700 hover:text-blue-600'
@@ -209,7 +212,6 @@ const Navbar: React.FC = () => {
                   key={link.name}
                   href={link.href}
                   onClick={(e) => handleLinkClick(e, link.href)}
-                  onTouchEnd={(e) => handleLinkClick(e, link.href)}
                   className={`block px-3 py-2 rounded-md font-medium ${
                     isDarkMode 
                       ? 'text-gray-300 hover:text-blue-400 hover:bg-slate-700' 
